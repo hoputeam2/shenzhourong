@@ -1,3 +1,123 @@
+#wrapper{
+    margin: 0 auto;
+    font-family: "微软雅黑";
+}
 #index_example{
+    width: 100%;
+    height: 610px;
+    margin: 0 auto;
+    background: #d8d7dc;
+    padding: 65px 0 80px 0;
+}
+.index_example_box{
+    width: 1200px;
+    height: 610px;
+    text-align: center;
+    margin: 0 auto;
+    background: pink;
+    overflow: hidden;
+}
+.index_example_title{
+    font-size: 42px;
+    color: #1c9cd1;
+    height: 50px;
+}
+.index_example_info{
+    font-size:23px;
+    color: #333;
+}
+#index_example_change{
+    width: 3600px;
+    height: 462px;
+    position: relative;
+}
+/*三个案例总体的div*/
+.index_example_A,.index_example_B,.index_example_C{
+    width: 1200px;
+    height: 462px;
+    float: left;
+    background-repeat: no-repeat;
+}
+.index_example_A{
+    background-image: url("../img/first_images/018.jpg");
+}
+.index_example_B{
+    background-image: url("../img/first_images/019.jpg");
+}
+.index_example_C{
+    background-image: url("../img/first_images/020.jpg");
+}
+/*装文字的div*/
+.index_example_thing{
+    width: 380px;
+    height: 300px;
+    text-align: left;
+    margin-left: 100px;
+}
+.index_example_item{
+   font-size: 30px;
+    color: #fff;
+    margin: 30px 0;
+}
+.index_example_detail{
+    font-size: 23px;
+    color: #fff;
+}
+.index_example_check button{
+    width: 230px;
+    height: 60px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 21px;
+    background: none;
+    margin-top: 30px;
+}
+.index_example_check a{
+    text-decoration: none;
 
 }
+.index_example_check button:hover{
+    background: orange;
+}
+/*下面跳转的圆圈按钮*/
+#index_example_buttons{
+
+    z-index: 10;
+    position: absolute;
+    bottom: 80px;
+    left: 600px;
+}
+#index_example_buttons span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid #e3dfe5;
+    background: none;
+}
+.on{
+    background: #f3f5f2;
+}
+.index_example_arrow{
+    text-decoration: none;
+    position: absolute;
+    top: 160px;
+    z-index: 10;
+    display: none;
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+}
+#index_example_change:hover .index_example_arrow{
+    display: block;
+}
+#index_example_prev {
+    left: 0;
+}
+#index_example_next {
+    left:  1140px;
+}
+/*人物介绍介绍开始*/
