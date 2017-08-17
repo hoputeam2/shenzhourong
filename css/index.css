@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+#index_container{
+    width: 1903px;
+    height: 2000px;
+}
+/*导航栏*/
+nav{
+    width: 1200px;
+    height: 60px;
+    border: 1px solid orange;
+    position: fixed;
+    left: 350px;
+    color: white;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    width: 680px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+
+}
+nav ul li{
+    float: left;
+    margin-left: 50px;
+}
+/*导航栏结束*/
+
+/*首页轮播*/
+#index_carouse{
+    width: 1903px;
+    height:560px ;
+    overflow: hidden;
+
+}
+#index_img_list{
+    width: 5725px;
+    height: 561px;
+}
+
+#index_imgBtn{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left:900px;
+    top: 520px;
+
+}
+#index_imgBtn span{
+    margin-left: 10px;
+    float: left;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+#index_carouseArrow{
+    width: 1800px;
+    height: 80px;
+    position: absolute;
+    top:250px;
+    left:50px;
+    display: none;
+}
+#index_carouseArrow span{
+    font-size: 70px;
+    display: block;
+    color: white;
+    cursor: pointer;
+}
+#navPrevPic{
+    float: left;
+}
+#navNextPic{
+    float: right;
+}
+#index_carouse:hover #index_carouseArrow{
+    display: block;
+}
+/*第一个轮播结束*/
+
+/*官方动态轮播开始*/
+#index_newMessage{
+    width: 1903px;
+    height: 35px;
+    font-size: 12px;
+    background-color:#F2F2F2 ;
+    overflow: hidden;
+}
+#index_newMessageDetails{
+    margin: auto;
+    width: 1200px;
+    height: 35px;
+    line-height: 35px;
+}
+#index_messageTitle{
+    float: left;
+}
+#index_messageUl{
+    margin-left:50px;
+    float: left;
+    list-style: none;
+
+}
+#index_messageUl li{
+    float: left;
+    width: 350px;
+    height: 105px;
+    position: relative;
+    top: 0;
+}
+#index_newMessageDetails a{
+    text-decoration: none;
+    color: black;
+}
+#index_newMessageDetails a:hover{
+    color: steelblue;
+}
+#index_newMessageDetails span{
+    margin-left: 30px;
+}
+#index_messageMore{
+    float: right;
+    font-size: 14px;
+}
+
+/*官方动态轮播结束*/
+
+/*产品模块*/
+#index_productionDetails{
+    margin: auto;
+    width: 1200px;
+    height: 760px;
+    background-image:url("../img/first_images/bg1.png") ;
+
+
+}
+#index_productionMenu{
+    height: 200px;
+    background-color: white;
+    color: grey;
+    font-size: 14px;
+}
+#index_productionMenu dl{
+    width: 130px;
+    text-align: center;
+    float: left;
+    margin: 40px 50px;
+}
+.index_productionImg{
+    width:500px ;
+    height: 560px;
+    float: left;
+
+}
+.index_productionImg img{
+    margin-top: 100px;
+}
+.index_productionText{
+    width: 570px;
+    height: 560px;
+    float: left;
+    line-height: 30px;
+}
+.index_proTitle{
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2597BA;
+    margin: 60px 0 30px 0;
+}
+#index_productionCarouse button{
+    width:190px ;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: 1px solid white;
+    margin: 120px 0;
+    cursor: pointer;
+}
+#index_productionCarouse button:hover{
+    background-color: orangered;
+}
+
+/*产品模块结束*/
+
+
+#index_fixedBox{
+    width:65px ;
+    height: 195px;
+    position: fixed;
+    right: 0;
+    top: 350px;
+}
+#index_fixedBox ul{
+    list-style: none;
+
+}
+#index_fixedBox ul li{
+    padding: 10px;
+    margin-top:2px ;
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #2597BA;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
