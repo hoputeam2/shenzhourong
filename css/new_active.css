@@ -5,7 +5,7 @@
 }
 /*主体部分的左边栏*/
 #new_active_left{
-    width: 302px;
+    width: 300px;
     float: left;
 }
 /*左边栏的三个菜单*/
@@ -15,15 +15,19 @@
     padding:0;
 }
 /*列表和推荐阅读和联系我们标题共同的样式*/
-.new_active_nav li,.new_active_info .new_active_title{
+.new_active_nav li a,.new_active_info .new_active_title{
     height: 45px;
     line-height: 45px;
-    font-size: 20px;
-    color:#616976;
+    font-size: 18px;
+    color: #58606d;
     text-indent: 10px;
 }
 .new_active_nav li{
     border-bottom: 1px solid #E5e5e5;
+    text-indent: 10px;
+}
+.new_active_nav li a{
+    text-decoration: none;
 }
 .new_active_info .new_active_title{
     border: 1px solid #E5e5e5;
@@ -47,7 +51,60 @@
     text-decoration: none;
     color:#616976;
 }
-.new_active_read li a:hover{
-    color: #1cabe6;
+.new_active_read li a:hover,.new_active_nav li a:hover,.new_active_detail a:hover{
+    color: #1c9cd1;
 }
 /*右边图文混排样式*/
+#new_active_right{
+    width: 840px;
+    float: left;
+    margin-left:10px ;
+}
+.new_active_news{
+    border-bottom: 1px solid #F0F0F0;
+    margin: 6px 0 30px 0;
+}
+.new_active_news img{
+    margin: 10px 0;
+}
+/*.new_active_news img:hover{*/
+    /*width:843px;*/
+    /*height: 263px;*/
+/*}*/
+.new_active_heading{
+    margin: 13px 0;
+    font-size: 17px;
+    color:#474D57;
+}
+.new_active_detail{
+    font-size: 12px;
+    color: #626262;
+    line-height: 22px;
+}
+.new_active_detail a{
+    text-decoration: none;
+    color: #626262;
+    font-size: 12px;
+}
+/*换页栏样式*/
+.new_active_change{
+    margin-left:350px;
+    width: 575px;
+}
+.new_active_list{
+    list-style: none;
+    padding: 0;
+}
+.new_active_list li{
+    display: inline;
+    margin: 0 5px;
+    padding: 5px;
+}
+.new_active_list li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #626262;
+}
+.new_active_list li:hover{
+    background: #2397BC;
+}
