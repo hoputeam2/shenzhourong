@@ -1,3 +1,27 @@
+/*右边固定列表的样式*/
+#new_active_fixed{
+    width: 62px;
+    height: 196px;
+    position: absolute;
+    right: 0;
+    top:300px;
+}
+.new_active_item{
+    list-style: none;
+    padding: 0;
+}
+.new_active_item li{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #309CBE;
+    margin: 1px 0;
+}
+.new_active_item li img{
+    vertical-align: middle;
+}
+/*主体部分的样式*/
 #new_active_content{
     margin:0 auto;
     width: 1150px;
