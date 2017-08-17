@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+#production_content{
+    width: 1900px;
+    height: 2000px;
+    overflow: hidden;
+}
+
+/*导航栏*/
+nav{
+    width: 1200px;
+    height: 60px;
+    border: 1px solid orange;
+    position: fixed;
+    left: 350px;
+    color: white;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    width: 680px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+
+}
+nav ul li{
+    float: left;
+    margin-left: 50px;
+}
+/*导航栏结束*/
+
+/*页面导航*/
+
+#pro_pagenav{
+    margin: auto;
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+#pro_pagenav ul li{
+    font-size: 14px;
+    float: left;
+    width: 120px;
+    margin-right: 20px;
+    list-style-type: none;
+    cursor: pointer;
+}
+#pro_pagenav li:hover{
+    color: #2597BA;
+}
+#pro_pagenav button{;
+    width:135px ;
+    height: 60px;
+    float: right;
+    font-size: 16px;
+    color: white;
+    background-color: #2597BA;
+    border: 1px solid #2597BA;
+}
+/*页面导航结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
