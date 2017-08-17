@@ -47,7 +47,7 @@ nav ul li{
 #pro_pagenav ul li{
     font-size: 14px;
     float: left;
-    width: 120px;
+    width: 125px;
     margin-right: 20px;
     list-style-type: none;
     cursor: pointer;
@@ -66,8 +66,64 @@ nav ul li{
 }
 /*页面导航结束*/
 
-
-
+/*无人机*/
+#pro_UAV{
+    height: 605px;
+    background-color: #F2F2F2;
+}
+#pro_UAVdetails{
+    width: 1200px;
+    height: 605px;
+    margin: auto;
+}
+#pro_UAVleft{
+    width: 600px;
+    height: 605px;
+    float: left;
+}
+#pro_UAVleft img{
+    margin-top: 80px;
+}
+#pro_UAVleft button{
+    width: 190px;
+    height: 50px;
+    margin:40px 135px ;
+    background-color: orange;
+    border: 1px solid orange;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+#pro_UAVleft button:hover{
+    background-color: orangered;
+}
+#pro_UAVright{
+    width: 600px;
+    height: 605px;
+    float: left;
+    color: dimgray;
+    line-height: 30px;
+}
+#pro_UAVright span{
+    display: block;
+    margin-top: 30px;
+}
+#pro_UAVright .pro_UAVtitle{
+    margin-top: 60px;
+    font-size: 22px;
+    color: #2597BA;
+}
+#pro_creditAndLoan{
+    margin:auto;
+    width: 1200px;
+    height:480px ;
+    border: 1px solid darkred;
+}
+#pro_CALleft{
+    width: 600px;
+    height: 480px;
+    border: 1px solid cyan;
+}
 
 
 
