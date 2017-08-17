@@ -1,0 +1,53 @@
+#new_active_content{
+    margin:0 auto;
+    width: 1150px;
+    font-family: 微软雅黑;
+}
+/*主体部分的左边栏*/
+#new_active_left{
+    width: 302px;
+    float: left;
+}
+/*左边栏的三个菜单*/
+.new_active_nav{
+    list-style: none;
+    background: #EEEEEE;
+    padding:0;
+}
+/*列表和推荐阅读和联系我们标题共同的样式*/
+.new_active_nav li,.new_active_info .new_active_title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    color:#616976;
+    text-indent: 10px;
+}
+.new_active_nav li{
+    border-bottom: 1px solid #E5e5e5;
+}
+.new_active_info .new_active_title{
+    border: 1px solid #E5e5e5;
+    background: #EEEEEE;
+    margin: 40px 0 15px 0;
+}
+
+/*左边的推荐阅读和联系*/
+
+.new_active_read{
+    list-style: none;
+    padding:0;
+}
+.new_active_read li{
+    text-indent: 10px;
+    font-size: 13px;
+    height: 25px;
+    line-height: 25px;
+}
+.new_active_read li a{
+    text-decoration: none;
+    color:#616976;
+}
+.new_active_read li a:hover{
+    color: #1cabe6;
+}
+/*右边图文混排样式*/
