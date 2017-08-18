@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -16,42 +17,47 @@
             </p>
              <!--案例轮播-->
             <div id="index_example_change">
-                <!--案例A-->
-                <div class="index_example_A">
-                    <!--里面的内容-->
-                    <div class="index_example_thing">
-                        <p class="index_example_item">案例A:知名现金贷APP</p>
-                        <p class="index_example_detail">P2P平台转战消费金融领域，
-                            该如何搭建消费金融风控体系？
-                            如何实现线上快速放贷？……</p>
-                        <p class="index_example_check"><a href="#"><button>查看详情</button></a> </p>
+
+                <div id="index_example_pic" style="left: 0">
+                    <div class="index_example_A">
+                        <!--里面的内容-->
+                        <!--案例A-->
+                        <div class="index_example_thing">
+                            <p class="index_example_item">案例A:知名现金贷APP</p>
+                            <p class="index_example_detail">P2P平台转战消费金融领域，
+                                该如何搭建消费金融风控体系？
+                                如何实现线上快速放贷？……</p>
+                            <p class="index_example_check"><a href="#"><button>查看详情</button></a> </p>
+                        </div>
+                    </div>
+                    <div class="index_example_B">
+                        <!--案例B-->
+                        <div class="index_example_thing">
+                            <p class="index_example_item">案例B：大型教育培训机构</p>
+                            <p class="index_example_detail">场景端机构如何独立开展消费分期业
+                                务？如何从零搭建消费金融业务体
+                                系………</p>
+                            <p class="index_example_check"><a href="#"><button>查看详情</button></a> </p>
+                        </div >
+                    </div>
+                    <div class="index_example_C">
+                        <!--案例C-->
+                        <div class="index_example_thing">
+                            <p class="index_example_item">案例C：知名P2P平台</p>
+                            <p class="index_example_detail">P2P平台转战消费金融领域，
+                                该如何搭建消费金融风控体系？
+                                如何实现线上快速放贷？……</p>
+                            <p class="index_example_check"><a href="#"><button>查看详情</button></a> </p>
+                        </div>
                     </div>
                 </div>
-                <!--案例B-->
-                <div class="index_example_B" >
-                    <div class="index_example_thing">
-                        <p class="index_example_item">案例B：大型教育培训机构</p>
-                        <p class="index_example_detail">场景端机构如何独立开展消费分期业
-                            务？如何从零搭建消费金融业务体
-                            系………</p>
-                        <p class="index_example_check"><a href="#"><button>查看详情</button></a> </p>
-                    </div >
-                </div>
-                <!--案例C-->
-                <div class="index_example_C" >
-                    <div class="index_example_thing">
-                        <p class="index_example_item">案例C：知名P2P平台</p>
-                        <p class="index_example_detail">P2P平台转战消费金融领域，
-                            该如何搭建消费金融风控体系？
-                            如何实现线上快速放贷？……</p>
-                        <p class="index_example_check"><a href="#"><button>查看详情</button></a> </p>
-                    </div>
-                </div>
+                <!--圆圈-->
                 <div id="index_example_buttons">
                     <span class="on"></span>
                     <span></span>
                     <span></span>
                 </div>
+                <!--左右箭头-->
                 <a href="#" id="index_example_prev" class="index_example_arrow">&lt;</a>
                 <a href="#" id="index_example_next" class="index_example_arrow">&gt;</a>
             </div>
@@ -59,7 +65,6 @@
     </div>
     <!--知名人物介绍-->
     <div id="index_person">
-
         <ul class="index_person_list">
             <li class="index_person_dec">
                 <img src="../img/first_images/du.png">
@@ -92,42 +97,74 @@
                 <span>杨佳伟</span>
             </li>
         </ul>
-        <p>
+        <p class="index_person_detail index_person_show" >
             在不断变化的市场环境中，神州融不断革新风控技术，并整合消费金融生态上下游的力量，
             连接各类信贷场景与银行资金，是值得信赖的合作伙伴。
         </p>
-        <p>
+        <p class="index_person_detail">
             神州融秉承“打造银行级消费金融解决方案”的理念，对自身的专业技术，系统架构、
             流程规范、安全合规性都坚持了严苛的标准和要求，
             相信大数据风控会助力消费金融行业更安全快速的发展。
         </p>
-        <p>
+        <p class="index_person_detail">
             从“大数据风控专家”到提供“消费金融解决方案领导者”，神州融一直走在科技金融行业前列，
             为客户的业务发展保驾护航，在激烈的市场竞争中获得稳健的发展。
         </p>
-        <!--<p>-->
-            <!--神州融对消费金融行业的深刻理解和强大的技术实力，能够针对客户的独特需求设计定制化、-->
-            <!--开创性的解决方案。先进的业务理念和扎实的技术手段，可以降低非金融从业机构进入消费金融领域的门槛。-->
-        <!--</p>-->
-        <!--<p>-->
-            <!--在我们所接触的大数据风控供应商中，神州融的服务最全面也最专业的，从征信数据、IT系统、评分建模到资金对接，-->
-            <!--使客户无论处在业务发展的哪个阶段，都能获得专业的服务与支持。-->
-        <!--</p>-->
+        <p class="index_person_detail">
+            神州融对消费金融行业的深刻理解和强大的技术实力，能够针对客户的独特需求设计定制化、
+            开创性的解决方案。先进的业务理念和扎实的技术手段，可以降低非金融从业机构进入消费金融领域的门槛。
+        </p>
+        <p class="index_person_detail">
+            在我们所接触的大数据风控供应商中，神州融的服务最全面也最专业的，从征信数据、IT系统、评分建模到资金对接，
+            使客户无论处在业务发展的哪个阶段，都能获得专业的服务与支持。
+        </p>
     </div>
     <!--最新动态部分-->
     <div id="index_latest">
-        <p>最新动态</p>
+        <p class="index_latest_bigtitle">最新动态</p>
         <!--左边切换-->
         <div class="index_latest_left">
-            <ul>
-                <li><a href="#">公司动态</a></li>
-                <li><a href="#">媒体报道</a></li>
-                <li><a href="#">行业动态</a></li>
+            <ul class="index_latest_title">
+                <li class="index_latest_dec">公司动态</li>
+                <li class="index_latest_dec">媒体报道</li>
+                <li class="index_latest_dec">行业动态</li>
             </ul>
-            <ul></ul>
+            <ul class="index_latest_detail index_latest_detail_show">
+                <li><a href="../html/new_active.html">07/12|神州融受邀出席2017（第十六届）中国互...</a></li>
+                <li><a href="../html/new_active.html">03/22|【风控智囊团第一期干货整理】消费金融...</a></li>
+                <li><a href="../html/new_active.html">03/10|限时招募！这个社群聚集了风控圈内的最...</a></li>
+                <li><a href="../html/new_active.html">01/16|神州融应邀出席2016中国国际消费金融发...</a></li>
+                <li><a href="../html/new_active.html">10/19|神州融助力桔子分期升级大数据风控 搭...</a></li>
+                <li><a href="../html/new_active.html">12/04|两万人挤爆云栖大会，大数据风控成亮点</a></li>
+                <li><a href="../html/new_active.html">更多》</a></li>
+            </ul>
+            <ul class="index_latest_detail">
+                <li><a href="../html/new_active.html">09/26|转型消费金融你能过这四道坎么？</a></li>
+                <li><a href="../html/new_active.html">06/24|中国互联网大会评选结果揭晓神州融荣摘...</a></li>
+                <li><a href="../html/new_active.html">06/20|神州融布局消费金融自动化风控 为信贷...</a></li>
+                <li><a href="../html/new_active.html">06/20|18个月增长17倍 手机贷大数据风控系统...</a></li>
+                <li><a href="../html/new_active.html">06/20|神州融助力桔子分期升级大数据风控 搭...</a></li>
+                <li><a href="../html/new_active.html">11/20|两万人挤爆云栖大会，大数据风控成亮点</a></li>
+                <li><a href="../html/new_active.html">更多》</a></li>
+            </ul>
+            <ul class="index_latest_detail">
+                <li><a href="../html/new_active.html">04/13|买单侠：医美与蓝领消费金融风控套路</a></li>
+                <li><a href="../html/new_active.html">12/05|从获客、风控、资金角度分析现金贷（发...</a></li>
+                <li><a href="../html/new_active.html">01/17|消费金融公司年末加速扩容，探析银行入...</a></li>
+                <li><a href="../html/new_active.html">12/22|环球美联宣告破产 消费金融分期贷躺枪</a></li>
+                <li><a href="../html/new_active.html">01/07|国内大数据公司名单汇总</a></li>
+                <li><a href="../html/new_active.html">12/28|自动决策|信贷评分决策|决策引擎</a></li>
+                <li><a href="../html/new_active.html">更多》</a></li>
+            </ul>
         </div>
         <!--右边图片-->
-        <div class="index_latest_right"></div>
+        <div class="index_latest_right">
+            <p>最新活动</p>
+            <div class="index_latest_img">
+                <img src="../img/first_images/xinwen.jpg">
+            </div>
+
+        </div>
     </div>
     <!--logo标志部分-->
     <div id="index_somelogo">

@@ -17,7 +17,7 @@
     overflow: hidden;
 }
 .index_example_title{
-    font-size: 42px;
+    font-size: 36px;
     color: #1c9cd1;
     height: 50px;
 }
@@ -26,16 +26,21 @@
     color: #333;
 }
 #index_example_change{
-    width: 3600px;
+    width: 1200px;
     height: 462px;
     position: relative;
+
 }
 /*三个案例总体的div*/
+#index_example_pic{
+    position: absolute;
+    width: 3600px;
+    height: 462px;
+}
 .index_example_A,.index_example_B,.index_example_C{
     width: 1200px;
     height: 462px;
     float: left;
-    background-repeat: no-repeat;
 }
 .index_example_A{
     background-image: url("../img/first_images/018.jpg");
@@ -51,23 +56,24 @@
     width: 380px;
     height: 300px;
     text-align: left;
-    margin-left: 100px;
+    margin: 100px 0 0 100px;
+    z-index: 20;
 }
 .index_example_item{
-   font-size: 30px;
+   font-size: 25px;
     color: #fff;
     margin: 30px 0;
 }
 .index_example_detail{
-    font-size: 23px;
+    font-size: 21px;
     color: #fff;
 }
 .index_example_check button{
-    width: 230px;
+    width: 200px;
     height: 60px;
     border: 1px solid #fff;
     color: #fff;
-    font-size: 21px;
+    font-size: 20px;
     background: none;
     margin-top: 30px;
 }
@@ -77,6 +83,7 @@
 }
 .index_example_check button:hover{
     background: orange;
+    cursor: pointer;
 }
 /*下面跳转的圆圈按钮*/
 #index_example_buttons{
@@ -92,11 +99,11 @@
     height: 12px;
     margin-left: 10px;
     border-radius: 50%;
-    border: 1px solid #e3dfe5;
-    background: none;
+    border:1px solid #faf5f5;
+
 }
 .on{
-    background: #f3f5f2;
+    background: #f6f1f9;
 }
 .index_example_arrow{
     text-decoration: none;
@@ -112,6 +119,8 @@
 }
 #index_example_change:hover .index_example_arrow{
     display: block;
+    cursor: pointer;
+
 }
 #index_example_prev {
     left: 0;
@@ -138,9 +147,9 @@
 }
 .index_person_dec{
     display: inline-block;
-    margin: 0 60px;
+    margin: 0 56px;
     text-align: center;
-    width: 115px;
+    width: 119px;
     height: 220px;
 }
 .index_person_dec span{
@@ -149,13 +158,98 @@
     font-size: 16px;
     line-height: 30px;
 }
-
+.index_person_dec:hover span{
+    color: orange;
+    cursor: pointer;
+}
+.index_person_dec img{
+    border:2px solid transparent ;
+    border-radius: 50%;
+}
+.index_person_dec:hover img{
+    border:2px solid orange ;
+    border-radius: 50%;
+}
+.index_person_detail{
+    color: orange;
+    text-align: center;
+    display: none;
+}
+.index_person_show{
+    display: block;
+}
 /*最新动态部分*/
 #index_latest{
-    width: 100%;
+    width: 1200px;
     height: 351px;
+    margin: 0 auto;
     padding-bottom:105px ;
-    background: pink;
+}
+.index_latest_left{
+    width: 796px;
+    height: 198px;
+    float: left;
+}
+.index_latest_title{
+    list-style: none;
+    padding:0;
+    width: 796px;
+    height: 21px;
+}
+.index_latest_dec{
+    display: inline-block;
+    float: left;
+    margin-right: 37px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 21px;
+}
+.index_latest_dec:hover,.index_latest_right p:hover {
+    color: #1c9cd1;
+    cursor: pointer;
+}
+.index_latest_detail{
+    list-style: none;
+    padding:0;
+    display: none;
+}
+.index_latest_detail_show{
+    display: block;
+}
+.index_latest_detail li{
+    display: inline-block;
+    width: 380px;
+    height: 49px;
+    line-height: 48px;
+    font-size: 14px;
+}
+.index_latest_detail li a{
+    color: #58606d;
+    text-decoration: none;
+}
+.index_latest_detail li a:hover{
+    color: #1c9cd1;
+    cursor: pointer;
+}
+/*最新动态右边图片*/
+.index_latest_right{
+    width: 375px;
+    height: 215px;
+    float: left;
+}
+.index_latest_img{
+    width: 375px;
+    height: 160px;
+    overflow: hidden;
+}
+.index_latest_img img{
+    width: 375px;
+    height: 160px;
+}
+.index_latest_img img:hover{
+    width: 110%;
+    height: 110%;
+    transition:all .8s ease-in-out;
 }
 /*很多logo部分　*/
 #index_somelogo{
@@ -164,18 +258,18 @@
     padding: 60px 0 86px 0;
     background: #ebebeb;
 }
-#index_somelogo p{
+#index_somelogo p,.index_latest_bigtitle{
     font-size: 36px;
     color: #2597ba;
     line-height: 60px;
     text-align: center;
-    padding-bottom: 46px;
 }
+
 .index_somelogo_list{
     list-style: none;
     padding: 0;
     width: 1200px;
-    height: 250px;
+    height: 144px;
     margin: 0 auto;
 }
 .index_somelogo_list li{
@@ -193,5 +287,6 @@
 }
 .index_somelogo_list li img:hover{
     border: 2px solid #2397BC;
+    cursor: pointer;
 }
 
