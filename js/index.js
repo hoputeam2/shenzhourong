@@ -9,7 +9,7 @@ window.onload=function() {
     var index_example_prev = document.getElementById("index_example_prev");
     var index_example_next = document.getElementById("index_example_next");
     var index_example_list = document.getElementById("index_example_pic");
-    var index_example_button = document.getElementsByTagName("span");
+    var index_example_button = document.getElementById("index_example_buttons").getElementsByTagName("span");
    //绑定事件
     index_example_prev.addEventListener("click", function () {
         moving(1200, 0, "-2400px");
