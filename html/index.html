@@ -5,6 +5,69 @@
     <title>首页</title>
 
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../js/tool.js"></script>
+
+    <script>
+        window.onload=function(){
+        var content = getId("index_carouse");
+
+        var list = getId("index_img_list");
+
+        var prev = getId("navPrevPic");
+
+        var next = getId("navNextPic");
+
+        var button = getId("index_imgBtn").getElementsByTagName("span");
+
+        content.timer=null;
+
+           next.addEventListener("click",function(){
+                moving(-1905,-3810,0);
+           });
+           prev.addEventListener("click",function(){
+                moving(1905,0,-3810);
+            });
+
+           for(var i=0;i<button.length;i++){
+               (function(n){
+                   button[i].addEventListener("mouseover",function(){
+                       list.style.left=n*(-1905)+"px";
+                       for( var j=0;j<button.length;j++){
+                           button[j].setAttribute("class","")
+                       }
+                       button[n].setAttribute("class","on")
+                   })
+
+               })(i)
+
+           }
+
+            content.timer=setInterval(function(){
+                moving(-1905,-3810,0);
+            },3000);
+            content.onmouseover=function(){
+                clearInterval(content.timer);
+            };
+            content.onmouseout=function() {
+                clearInterval(content.timer);
+                content.timer=setInterval(function(){
+                    moving(-1905,-3810,0);
+                },3000);
+            };
+
+        setInterval((function(){
+           TXTmoving(-35,-70)
+        })(),4000)
+
+        }
+
+
+    </script>
+
+
+
+
+
 </head>
 <body>
 <div id="index_container">
@@ -21,7 +84,7 @@
         </ul>
     </nav>
     <div id="index_carouse">
-        <div id="index_img_list">
+        <div id="index_img_list" style="left: 0">
             <img src="../img/first_images/01_11_.jpg">
             <img src="../img/first_images/01%20_10_.jpg">
             <img src="../img/first_images/01_13.jpg">
@@ -31,7 +94,7 @@
             <span id="navNextPic">&gt;</span>
         </div>
         <div id="index_imgBtn">
-            <span></span>
+            <span class="on"></span>
             <span></span>
             <span></span>
         </div>
@@ -39,7 +102,7 @@
     <div id="index_newMessage">
         <div id="index_newMessageDetails">
             <span id="index_messageTitle">官方动态：</span>
-            <ul id="index_messageUl">
+            <ul id="index_messageUl" style="top: 0">
                 <li>
                     <pre>
 <a href="#">对话消费金融，神州融受邀参加20...<span>16/09/26</span></a>

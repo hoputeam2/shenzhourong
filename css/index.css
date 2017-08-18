@@ -15,6 +15,7 @@ nav{
     position: fixed;
     left: 350px;
     color: white;
+    z-index: 999;
 }
 nav ul{
     list-style: none;
@@ -34,14 +35,20 @@ nav ul li{
 
 /*首页轮播*/
 #index_carouse{
-    width: 1903px;
+    width: 1900px;
     height:560px ;
+    cursor: pointer;
     overflow: hidden;
 
 }
 #index_img_list{
     width: 5725px;
     height: 561px;
+    transition:all .5s ease-in-out;
+    position: relative;
+}
+#index_img_list img{
+    margin-left: -5px;
 }
 
 #index_imgBtn{
@@ -61,6 +68,9 @@ nav ul li{
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
+}
+#index_imgBtn .on{
+    background-color: red;
 }
 #index_carouseArrow{
     width: 1800px;
@@ -108,14 +118,13 @@ nav ul li{
     margin-left:50px;
     float: left;
     list-style: none;
-
+    position: relative;
 }
 #index_messageUl li{
     float: left;
     width: 350px;
     height: 105px;
-    position: relative;
-    top: 0;
+
 }
 #index_newMessageDetails a{
     text-decoration: none;
