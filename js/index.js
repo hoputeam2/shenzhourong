@@ -24,6 +24,7 @@ function moving(speed,terminal,isleft){
     button[btn_idx].setAttribute("class","on");
 
 }
+
 function TXTmoving(speed,terminal){
     var TXTlist=getId("index_messageUl");
     var top_val = parseInt(TXTlist.style.top);

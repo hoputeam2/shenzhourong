@@ -5,62 +5,83 @@
     <title>首页</title>
 
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <script src="../js/tool.js"></script>
+    <script src="../js/index.js"></script>
 
     <script>
-        window.onload=function(){
-        var content = getId("index_carouse");
+        window.onload=function() {
+            var content = getId("index_carouse");
 
-        var list = getId("index_img_list");
+            var list = getId("index_img_list");
 
-        var prev = getId("navPrevPic");
+            var prev = getId("navPrevPic");
 
-        var next = getId("navNextPic");
+            var next = getId("navNextPic");
 
-        var button = getId("index_imgBtn").getElementsByTagName("span");
+            var button = getId("index_imgBtn").getElementsByTagName("span");
 
-        content.timer=null;
+            content.timer = null;
 
-           next.addEventListener("click",function(){
-                moving(-1905,-3810,0);
-           });
-           prev.addEventListener("click",function(){
-                moving(1905,0,-3810);
+            next.addEventListener("click", function () {
+                moving(-1905, -3810, 0);
+            });
+            prev.addEventListener("click", function () {
+                moving(1905, 0, -3810);
             });
 
-           for(var i=0;i<button.length;i++){
-               (function(n){
-                   button[i].addEventListener("mouseover",function(){
-                       list.style.left=n*(-1905)+"px";
-                       for( var j=0;j<button.length;j++){
-                           button[j].setAttribute("class","")
-                       }
-                       button[n].setAttribute("class","on")
-                   })
+            for (var i = 0; i < button.length; i++) {
+                (function (n) {
+                    button[i].addEventListener("mouseover", function () {
+                        list.style.left = n * (-1905) + "px";
+                        for (var j = 0; j < button.length; j++) {
+                            button[j].setAttribute("class", "")
+                        }
+                        button[n].setAttribute("class", "on")
+                    })
 
-               })(i)
+                })(i)
 
-           }
+            }
 
-            content.timer=setInterval(function(){
-                moving(-1905,-3810,0);
-            },3000);
-            content.onmouseover=function(){
+            content.timer = setInterval(function () {
+                moving(-1905, -3810, 0);
+            }, 3000);
+            content.onmouseover = function () {
                 clearInterval(content.timer);
             };
-            content.onmouseout=function() {
+            content.onmouseout = function () {
                 clearInterval(content.timer);
-                content.timer=setInterval(function(){
-                    moving(-1905,-3810,0);
-                },3000);
+                content.timer = setInterval(function () {
+                    moving(-1905, -3810, 0);
+                }, 3000);
             };
 
-        setInterval((function(){
-           TXTmoving(-35,-70)
-        })(),4000)
+            var TXTlist = getId("index_messageUl");
+            TXTlist.timer=null;
+            TXTlist.timer = setInterval(function () {
+                TXTmoving(-35, -70);
+            }, 4000);
+            TXTlist.onmouseover = function () {
+                clearInterval(TXTlist.timer);
+            };
+            TXTlist.onmouseout = function () {
+                clearInterval(TXTlist.timer);
+                TXTlist.timer = setInterval(function () {
+                    TXTmoving(-35,-70);
+                }, 4000);
+            }
+
+
+
+
+
+
+
+
+
+
+
 
         }
-
 
     </script>
 
@@ -75,10 +96,31 @@
     <nav>
         <img src="../img/first_images/145x45baise.png">
         <ul>
-            <li>产品服务</li>
+            <li id="index_prolist">产品服务
+                <ul id="index_proSecNav">
+                    <li>风控无人机</li>
+                    <li>信贷管理系统</li>
+                    <li>大数据征信</li>
+                    <li>银行资金合规对接</li>
+                    <li>风控咨询&风控建模</li>
+                </ul>
+            </li>
             <li>客户案例</li>
-            <li>最新动态</li>
-            <li>关于我们</li>
+            <li id="index_newlist">最新动态
+                <ul id="index_newSecNav">
+                    <li>公司动态</li>
+                    <li>媒体报道</li>
+                    <li>行业动态</li>
+                </ul>
+            </li>
+            <li id="index_aboutlist">关于我们
+            <ul id="index_aboutSecNav">
+                <li>公司介绍</li>
+                <li>人才招聘</li>
+                <li>合作伙伴</li>
+                <li>联系我们</li>
+            </ul>
+            </li>
             <li>申请使用</li>
             <li>400-8190-416</li>
         </ul>

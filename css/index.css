@@ -4,8 +4,8 @@
     outline: none;
 }
 #index_container{
-    width: 1903px;
-    height: 2000px;
+    width: 100vw;
+    height: 3000px;
 }
 /*导航栏*/
 nav{
@@ -13,9 +13,10 @@ nav{
     height: 60px;
     border: 1px solid orange;
     position: fixed;
-    left: 350px;
-    color: white;
+    left: 5vw;
+    color: #FFF;
     z-index: 999;
+
 }
 nav ul{
     list-style: none;
@@ -30,7 +31,69 @@ nav ul{
 nav ul li{
     float: left;
     margin-left: 50px;
+    cursor: pointer;
 }
+/*二级导航*/
+#index_proSecNav{
+    background-color: white;
+    width: 150px;
+    height:200px ;
+    line-height: 40px;
+    color: #000000;
+    opacity: 0.8;
+    display: none;
+    position: absolute;
+    left: 520px;
+    top: 60px;
+}
+#index_prolist:hover #index_proSecNav{
+    display: block;
+}
+
+
+#index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
+    float: none;
+    margin: 0;
+}
+#index_proSecNav li:hover,#index_newSecNav li:hover,#index_aboutSecNav li:hover{
+    background-color: #2597BA;
+}
+
+#index_newSecNav{
+    background-color: white;
+    width: 150px;
+    height:125px ;
+    color: #000000;
+    line-height: 40px;
+    opacity: 0.8;
+    display: none;
+    position: absolute;
+    left: 736px;
+    top: 60px;
+}
+#index_newlist:hover #index_newSecNav{
+    display: block;
+}
+
+#index_aboutSecNav{
+    background-color: white;
+    width: 150px;
+    height:160px ;
+    color: #000000;
+    line-height: 40px;
+    opacity: 0.8;
+    display: none;
+    position: absolute;
+    left: 848px;
+    top: 60px;
+}
+
+#index_aboutlist:hover #index_aboutSecNav{
+    display: block;
+}
+
+
+
 /*导航栏结束*/
 
 /*首页轮播*/
@@ -99,7 +162,7 @@ nav ul li{
 
 /*官方动态轮播开始*/
 #index_newMessage{
-    width: 1903px;
+    width: 100vw;
     height: 35px;
     font-size: 12px;
     background-color:#F2F2F2 ;
@@ -119,6 +182,7 @@ nav ul li{
     float: left;
     list-style: none;
     position: relative;
+    transition:all .5s ease-in-out;
 }
 #index_messageUl li{
     float: left;
