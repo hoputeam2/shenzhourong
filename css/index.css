@@ -2,11 +2,138 @@
     margin: 0 auto;
     font-family: "微软雅黑";
 }
+/*上面风控无人机切换部分*/
+#index_function{
+    width: 1200px;
+    height: 688px;
+    padding-top: 60px;
+    margin: 0 auto;
+    background-image: url("../img/first_images/bg1.png");
+}
+.index_title_icon,.index_icon_list{
+    width: 1200px;
+    height: 160px;
+}
+.index_icon_list{
+    list-style: none;
+    padding: 0;
+}
+.index_icon_list li{
+    display: inline-block;
+    margin-right: 61px;
+    float: left;
+    text-align: center;
+    width: 168px;
+    height: 155px;
+}
+.index_icon_list li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 155px;
+    line-height: 251px;
+    font-size: 18px;
+    color: #959595;
+}
+.index_icon_list li a:hover{
+    color: #1c9cd1;
+    cursor: pointer;
+}
+/*每个图标悬停改变背景*/
+.index_item1{
+    background: url("../img/first_images/icon2-2.png") center top;
+}
+.index_item1:hover{
+    background: url("../img/first_images/icon1.png") center top;
+    cursor: pointer;
+}
+.index_item2{
+    background: url("../img/first_images/icon3-3.png") center top;
+}
+.index_item2:hover{
+    background: url("../img/first_images/icon2.png") center top;
+    cursor: pointer;
+}
+.index_item3{
+    background: url("../img/first_images/icon102.png") center top;
+}
+.index_item3:hover{
+    background: url("../img/first_images/icon3.png") center top;
+    cursor: pointer;
+}
+.index_item4{
+    background: url("../img/first_images/icon5-5.png") center top;
+}
+.index_item4:hover{
+    background: url("../img/first_images/icon4.png") center top;
+    cursor: pointer;
+}
+.index_item5{
+    background: url("../img/first_images/icon1-5.png") center top;
+}
+.index_item5:hover{
+    background: url("../img/first_images/icon5.png") center top;
+    cursor: pointer;
+}
+.index_item1,.index_item2,.index_item3,.index_item4,.index_item5,
+.index_item1:hover,.index_item2:hover,.index_item3:hover,.index_item4:hover,.index_item5:hover
+{
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*下方切换样式*/
+.index_bd_img{
+    float: left;
+    width: 470px;
+    margin-right: 45px;
+    padding-top: 120px;
+}
+.index_bd{
+    display: none;
+}
+.index_bd_show{
+    display: block;
+}
+.index_bd_text {
+    float: left;
+    width: 632px;
+    padding-top: 60px;
+}
+.index_bd_text h2{
+    display: block;
+    line-height: 45px;
+    font-size: 36px;
+    color: #2597ba;
+    margin-bottom: 30px;
+    font-weight:500;
+}
+.index_bd_text p{
+    width: 100%;
+    line-height: 35px;
+    color: #535353;
+    font-size: 18px;
+    height: 245px;
+    overflow: hidden
+}
+#index_function button{
+    display: block;
+    width: 187px;
+    height: 47px;
+    line-height: 47px;
+    background: #edab00;
+    text-align: center;
+    margin-bottom: 27px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/*案例轮播样式。*/
 #index_example{
     width: 100%;
     height: 610px;
     margin: 0 auto;
-    background: #d8d7dc;
+    background: #f0eff4;
     padding: 65px 0 80px 0;
 }
 .index_example_box{
