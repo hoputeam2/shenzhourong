@@ -9,18 +9,20 @@
 }
 /*导航栏*/
 nav{
-    width: 1200px;
+    width: 100vw;
     height: 60px;
-    border: 1px solid orange;
     position: fixed;
-    left: 5vw;
+    left:0;
     color: #FFF;
     z-index: 999;
-
+}
+nav img{
+    margin:5px 100px;
 }
 nav ul{
     list-style: none;
     float: right;
+    margin-right: 12vw;
     width: 680px;
     height: 60px;
     text-align: center;
@@ -43,7 +45,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 520px;
+    left: 39vw;
     top: 60px;
 }
 #index_prolist:hover #index_proSecNav{
@@ -68,7 +70,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 736px;
+    left: 54vw;
     top: 60px;
 }
 #index_newlist:hover #index_newSecNav{
@@ -84,7 +86,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 848px;
+    left: 62vw;
     top: 60px;
 }
 
