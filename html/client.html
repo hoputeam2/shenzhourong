@@ -6,8 +6,106 @@
     <link type="text/css" rel="stylesheet" href="../css/client.css"/>
 </head>
 <body>
+
+
+<!--JS-->
+<script>
+//<!--头部-->
+    document.onscroll=function(){
+        var tit = document.getElementsByTagName("nav")[0];
+        var tittop=tit.offsetTop;
+        var navimg=tit.getElementsByTagName("img")[0];
+        var btop = document.body.scrollTop||document.documentElement.scrollTop;
+        if(btop>tittop){
+            tit.setAttribute("style","background-color:white;color:black;border:1px solid black;");
+            navimg.setAttribute("src","../img/iphone_logo02.png");
+        }
+        else{
+            tit.setAttribute("style","");
+            navimg.setAttribute("src","../img/145x45baise.png");
+        }
+
+
+//    回到顶部
+            var obj=document.getElementById("up");
+            var clientHeight=document.documentElement.clientHeight;//可视区域的高度
+            window.onscroll=function(){//onscroll为滚动滚动条事件，即这个函数在滚动条滚动时触发
+
+                var Top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
+                if (Top>=clientHeight) {
+                    obj.style.display='block'
+                }
+                else{
+                   obj.style.display='none'
+                }
+            };
+    }
+
+</script>
+
+
    <div id="client_content">
-       <div id="client_head"></div>
+       <div id="client_box">
+           <ul>
+               <li class="tel">
+                   <a href="#"></a>
+                   <div >
+                       <span>电话：400-8190-416</span>
+                   </div>
+               </li>
+
+               <li class="wx">
+                   <a href="#"></a>
+                   <div >
+                       <img style="border: 0" src="../img/about_images/erweima.png" />
+                   </div>
+               </li>
+
+               <li class="QQ">
+                   <a href="#"></a>
+               </li>
+
+               <li id="up" class="arrow">
+                   <a href="#"></a>
+               </li>
+
+           </ul>
+       </div>
+       <div id="client_head">
+           <nav>
+               <img src="../img/145x45baise.png">
+               <!--<img src="../img/first_images/iphone_logo02.png">-->
+               <ul>
+                   <li id="index_prolist">产品服务
+                       <ul id="index_proSecNav">
+                           <li>风控无人机</li>
+                           <li>信贷管理系统</li>
+                           <li>大数据征信</li>
+                           <li>银行资金合规对接</li>
+                           <li>风控咨询&风控建模</li>
+                       </ul>
+                   </li>
+                   <li>客户案例</li>
+                   <li id="index_newlist">最新动态
+                       <ul id="index_newSecNav">
+                           <li>公司动态</li>
+                           <li>媒体报道</li>
+                           <li>行业动态</li>
+                       </ul>
+                   </li>
+                   <li id="index_aboutlist">关于我们
+                       <ul id="index_aboutSecNav">
+                           <li>公司介绍</li>
+                           <li>人才招聘</li>
+                           <li>合作伙伴</li>
+                           <li>联系我们</li>
+                       </ul>
+                   </li>
+                   <li>申请使用</li>
+                   <li>400-8190-416</li>
+               </ul>
+           </nav>
+       </div>
        <div id="client_caseA">
            <!--//案例A-->
            <div id="client_case_A">
@@ -18,10 +116,10 @@
                    同时，资金成本高企、资金造血能力不足，更成为平台发展的瓶颈。
                </div>
 
-               <strong>痛点：</strong>
+               <strong><a href="#">痛点：</a></strong>
                     <p>需要优化风控建模，控制坏账率。 <br/>资金成本高企，缺乏对接优质资金的渠道和能力</p>
 
-               <strong>点击查看解决方案→</strong>
+               <strong><a href="#">点击查看解决方案→</a></strong>
                 </div>
                <div id="client_picA"> </div>
            </div>
@@ -37,11 +135,11 @@
                    如果学员不再续费，教育机构还需要兜底交还消费金融机构垫付的剩余学费；而作为跨界者，金融和技术的双重壁垒让其在业务开展过程中遇到重重阻碍。<br />
                </div>
 
-               <strong>痛点：</strong>
+               <strong><a href="#">痛点：</a></strong>
                    <p>与消费金融平台合作的条件不利，利润受限。 <br/>跨界、从零开展消费金融业务难度巨大。</p>
 
 
-               <strong>点击查看解决方案→</strong>
+               <strong><a href="#">点击查看解决方案→</a></strong>
                </div>
                <div id="client_picB">
                    <img style="float: left" src="../img/client_images/01%20_4.jpg"/>
@@ -60,10 +158,10 @@
                        <br />
                    </div>
 
-                   <strong>痛点：</strong>
+                   <strong><a href="#">痛点：</a></strong>
                    <p>转型过程中，原有业务架构不适配消费金融业务。 <br/>过去依赖人工的线下风控体系无法适应线上快速放贷的需求。</p>
 
-                   <strong>点击查看解决方案→</strong>
+                   <strong><a href="#">点击查看解决方案→</a></strong>
                </div>
                <div id="client_picC"> </div>
         </div>
@@ -89,11 +187,11 @@
        <div id="client_class">
            <!--//一站式，大数据-->
           <ul>
-           <li><img src="../img/first_images/iconyi.png" />一站式</li>
-           <li><img src="../img/first_images/iconda.png" />大数据</li>
-           <li><img src="../img/first_images/iconyin.png" />银行级</li>
-           <li><img src="../img/first_images/iconquan.png" />全流程</li>
-           <li><img src="../img/first_images/iconzi.png" />自动化</li>
+           <li><a href="#" ><img src="../img/first_images/iconyi.png" />一站式</a></li>
+           <li><a href="#"> <img src="../img/first_images/iconda.png" />大数据</a></li>
+           <li><a href="#"><img src="../img/first_images/iconyin.png" />银行级</a></li>
+           <li><a href="#"><img src="../img/first_images/iconquan.png" />全流程</a></li>
+           <li><a href="#"><img src="../img/first_images/iconzi.png" />自动化</a></li>
            </ul>
            </div>
        </div>
@@ -102,37 +200,37 @@
        <div id="client_foot">
         <div id="client_foot-box">
            <ul>
-               <li class="client_list">快速入口</li>
-               <li>首页</li>
-               <li>服务</li>
-               <li>关于</li>
-               <li>新闻</li>
-               <li>试用</li>
+               <li class="client_list"><a href="#">快速入口</a></li>
+               <li><a href="#">首页</a></li>
+               <li><a href="#">服务</a></li>
+               <li><a href="#">关于</a></li>
+               <li><a href="#">新闻</a></li>
+               <li><a href="#">试用</a></li>
            </ul>
 
            <ul>
-               <li class="client_list">产品服务</li>
-               <li>风控无人机</li>
-               <li>信贷管理系统</li>
-               <li>大数据征信</li>
-               <li>银行资金合规对接</li>
-               <li>风控咨询及评分建模</li>
+               <li class="client_list"><a href="#">产品服务</a></li>
+               <li><a href="#">风控无人机</a></li>
+               <li><a href="#">信贷管理系统</a></li>
+               <li><a href="#">大数据征信</a></li>
+               <li><a href="#">银行资金合规对接</a></li>
+               <li><a href="#">风控咨询及评分建模</a></li>
            </ul>
 
            <ul>
-               <li class="client_list">关于我们</li>
-               <li>公司介绍</li>
-               <li>合作伙伴</li>
-               <li>人才招聘</li>
-               <li>联系我们</li>
+               <li class="client_list"><a href="#">关于我们</a></li>
+               <li><a href="#">公司介绍</a></li>
+               <li><a href="#">合作伙伴</a></li>
+               <li><a href="#">人才招聘</a></li>
+               <li><a href="#">联系我们</a></li>
            </ul>
 
            <ul>
-               <li class="client_list">联系我们</li>
-               <li>电话：400-8190-416 (9:30-18:30 工作日)</li>
-               <li>商务：bd@shenzhourong.com</li>
-               <li>招聘：zhaopin@shenzhourong.com</li>
-               <li>地址：北京市海淀区丹棱街1号互联网金融中心1602</li>
+               <li class="client_list"><a href="#">联系我们</a></li>
+               <li><a href="#">电话：400-8190-416 (9:30-18:30 工作日)</a></li>
+               <li><a href="#">商务：bd@shenzhourong.com</a></li>
+               <li><a href="#">招聘：zhaopin@shenzhourong.com</a></li>
+               <li><a href="#">地址：北京市海淀区丹棱街1号互联网金融中心1602</a></li>
            </ul>
 
             <div id="client_code">
