@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../css/about-container.css" type="text/css" rel="stylesheet">
+    <link href="../css/about.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<!--about头部-->
+<div id="about-head">
+    <img src="../img/about_images/top.jpg">
+</div>
 <!--about中间主要内容-->
+<script src="../js/about.js"></script>
 <div id="about-container">
     <div class="about-main">
         <!--about主要导航-->
@@ -166,69 +171,72 @@
 </div>
 <!--about五大服务结束-->
 
-<!--about脚部开始-->
+<!--about底部开始-->
 <div id="about-foot">
-    <div id="about-footer">
-        <!--about脚部上部分-->
-        <div id="about-footerTop">
-            <!--about脚部上部信息部分-->
-            <ul class="about-footerTopInfo">
-                <!--about脚部上部信息区域部分开始-->
-                <!--about脚部快速入口部分-->
-                <li class="about-footerTopInfoZone">
-                    <a href="#">快速入口</a>
-                    <ul class="about-footerTopInfoList>
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#">服务</a></li>
-                        <li><a href="#">关于</a></li>
-                        <li><a href="#">新闻</a></li>
-                        <li><a href="#">试用</a></li>
-                    </ul>
-                </li>
-                <!--about脚部产品服务部分-->
-                <li class="about-footerTopInfoZone">
-                    <a href="#">产品服务</a>
-                    <ul class="about-footerTopInfoList>
-                        <li><a href="#">风控无人机</a></li>
-                        <li><a href="#">信贷管理系统</a></li>
-                        <li><a href="#">大数据征信</a></li>
-                        <li><a href="#">银行资金合规对接</a></li>
-                        <li><a href="#">风控咨询及评分建模</a></li>
-                    </ul>
-                </li>
-                <!--about脚部关于我们部分-->
-                <li class="about-footerTopInfoZone">
-                    <a href="#">关于我们</a>
-                    <ul class="about-footerTopInfoList>
-                        <li><a href="#">公司介绍</a></li>
-                        <li><a href="#">合作伙伴</a></li>
-                        <li><a href="#">人才招聘</a></li>
-                        <li><a href="#">联系我们</a></li>
-                    </ul>
-                </li>
-                <!--about脚部联系我们部分-->
-                <li class="about-footerTopInfoZone">
-                    <a href="#">联系我们</a>
-                    <ul class="about-footerTopInfoList>
-                        <li><a href="#">电话：400-8190-416（9:30-18：30 工作日）</a></li>
-                        <li><a href="#">商务：bd@shenzhourong.com</a></li>
-                        <li><a href="#">招聘：zhaopin@shenzhourong.com</a></li>
-                        <li><a href="#">地址：北京市海淀区丹棱街1号互联网金融中心1602</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!--about脚部上部信息区域部分结束-->
-                <!--about脚部上部二维码部分-->
-            <div class="about-footerTopQRcode">
-                <div><img src="../img/about_images/erweima.png"></div>
+    <div id="about-footMain">
+        <!--about底部上开始-->
+        <div id="about-footTop">
+            <!--about底部上信息开始-->
+            <div id="about-footInfo">
+                <ul>
+                    <li><span><a href="#" style="font-size:16px;">快速入口</a></span></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">服务</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">试用</a></li>
+                </ul>
+                <ul>
+                    <li><span><a href="#" style="font-size:16px;">产品服务</a></span></li>
+                    <li><a href="#">风控无人机</a></li>
+                    <li><a href="#">信贷管理系统</a></li>
+                    <li><a href="#">大数据征信</a></li>
+                    <li><a href="#">银行资信合规对接</a></li>
+                    <li><a href="#">风控咨询及评分建模</a></li>
+                </ul>
+                <ul>
+                    <li><span><a href="#" style="font-size:16px;">关于我们</a></span></li>
+                    <li><a href="#">公司介绍</a></li>
+                    <li><a href="#">合作伙伴</a></li>
+                    <li><a href="#">人才招聘</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <ul>
+                    <li><span><a href="#" style="font-size:16px;">联系我们</a></span></li>
+                    <li><a href="#">电话：400-8190-416（9:30-18:30工作日）</a></li>
+                    <li><a href="#">商务：bd@shenzhourong.com</a></li>
+                    <li><a href="#">招聘：zhaopin@shenzhourong.com</a></li>
+                    <li><a href="#">地址：北京市海淀区丹棱街1号互联网金融中心1602</a></li>
+                </ul>
+            </div>
+            <!--about底部上信息结束-->
+            <!--about底部二维码-->
+            <div id="about-footQRcode">
+                <img src="../img/about_images/erweima.png">
                 <span>扫一扫官方微信</span>
-                <span>了解更多资讯</span>
+                <span>了解更多咨询</span>
             </div>
         </div>
-        <div id="about-footerBottom"></div>
-        <div id="about-copyright"></div>
+        <!--about底部上结束-->
+        <!--about底部友情链接-->
+        <div id="about-footBottom">
+            <span>友情链接：</span>
+            <a href="#">桔子分期</a>
+        </div>
+        <!--about底部版权-->
+        <div id="about-footCopyright">
+            <div id="about-footCopyrightMain">
+                <span>Copyright ©2017 shenzhourong.com. All Rights Reserved. 神州融版权所有
+                    <a href="#">站长统计</a>
+                    <br>
+                    北京神州微融金融信息服务有限公司
+                </span>
+                <br>
+                <span>京ICP备14039713号-3</span>
+            </div>
+        </div>
     </div>
 </div>
-<!--about脚部结束-->
+<!--about底部结束-->
 </body>
 </html>
