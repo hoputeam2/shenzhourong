@@ -2,10 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>new_active</title>
     <link rel="stylesheet" href="../css/new_active.css">
+    <script>
+        document.onscroll=function(){
+            var tit = document.getElementsByTagName("nav")[0];
+            var tittop=tit.offsetTop;
+            var navimg=tit.getElementsByTagName("img")[0];
+            var btop = document.body.scrollTop||document.documentElement.scrollTop;
+            if(btop>tittop){
+                tit.setAttribute("style","background-color:white;color:black;");
+                navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
+            }
+            else{
+                tit.setAttribute("style","");
+                navimg.setAttribute("src","../img/first_images/145x45baise.png");
+            }
+
+        }
+    </script>
 </head>
 <body>
+    <!--头部-->
+
+    <div id="content">
+        <nav>
+            <img src="../img/first_images/145x45baise.png">
+            <ul>
+                <li id="index_prolist">产品服务
+                    <ul id="index_proSecNav">
+                        <li>风控无人机</li>
+                        <li>信贷管理系统</li>
+                        <li>大数据征信</li>
+                        <li>银行资金合规对接</li>
+                        <li>风控咨询&风控建模</li>
+                    </ul>
+                </li>
+                <li>客户案例</li>
+                <li id="index_newlist">最新动态
+                    <ul id="index_newSecNav">
+                        <li>公司动态</li>
+                        <li>媒体报道</li>
+                        <li>行业动态</li>
+                    </ul>
+                </li>
+                <li id="index_aboutlist">关于我们
+                    <ul id="index_aboutSecNav">
+                        <li>公司介绍</li>
+                        <li>人才招聘</li>
+                        <li>合作伙伴</li>
+                        <li>联系我们</li>
+                    </ul>
+                </li>
+                <li>申请使用</li>
+                <li>400-8190-416</li>
+            </ul>
+        </nav>
+    </div>
     <!--右边绝对定位部分-->
     <div id="new_active_fixed">
         <ul class="new_active_item">
@@ -145,6 +198,70 @@
                 <li><a href="#">下一页</a></li>
                 <li><a href="#">末页</a></li>
             </ul>
+        </div>
+    </div>
+    <!--尾部-->
+    <div id="client_apply">
+        <!--申请试用-->
+        <div id="client_try">
+            <span>神州融大数据风控平台</span>
+            <p>详细的购买咨询 专业的配置推荐 灵活的价格方案 1对1贴心服务</p>
+            <input type="button" value="申请试用"/>
+        </div>
+    </div>
+    <div id="client_class">
+        <!--//一站式，大数据-->
+        <ul>
+            <li><a href="#" ><img src="../img/first_images/iconyi.png" />一站式</a></li>
+            <li><a href="#"> <img src="../img/first_images/iconda.png" />大数据</a></li>
+            <li><a href="#"><img src="../img/first_images/iconyin.png" />银行级</a></li>
+            <li><a href="#"><img src="../img/first_images/iconquan.png" />全流程</a></li>
+            <li><a href="#"><img src="../img/first_images/iconzi.png" />自动化</a></li>
+        </ul>
+    </div>
+    <div id="client_foot">
+        <div id="client_foot-box">
+            <ul>
+                <li class="client_list"><a href="#">快速入口</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">服务</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">试用</a></li>
+            </ul>
+            <ul>
+                <li class="client_list"><a href="#">产品服务</a></li>
+                <li><a href="#">风控无人机</a></li>
+                <li><a href="#">信贷管理系统</a></li>
+                <li><a href="#">大数据征信</a></li>
+                <li><a href="#">银行资金合规对接</a></li>
+                <li><a href="#">风控咨询及评分建模</a></li>
+            </ul>
+            <ul>
+                <li class="client_list"><a href="#">关于我们</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">合作伙伴</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+            <ul>
+                <li class="client_list"><a href="#">联系我们</a></li>
+                <li><a href="#">电话：400-8190-416 (9:30-18:30 工作日)</a></li>
+                <li><a href="#">商务：bd@shenzhourong.com</a></li>
+                <li><a href="#">招聘：zhaopin@shenzhourong.com</a></li>
+                <li><a href="#">地址：北京市海淀区丹棱街1号互联网金融中心1602</a></li>
+            </ul>
+            <div id="client_code">
+                <img src="../img/first_images/erweima.png" />
+                <p>扫一扫官方微信</p>
+                <p>了解更多资讯</p>
+            </div>
+            <hr style="float: left;width: 1210px"/>
+            <footer>
+                Copyright&nbsp;&copy2017 shenzhourong.com.All Rights Reserved.神州融版权所有 站长统计 <br/>
+                北京神州微融金融信息服务有限公司 <br/>
+                京ICP备14039713号-3
+            </footer>
         </div>
     </div>
 </body>

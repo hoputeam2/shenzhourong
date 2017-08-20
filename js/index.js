@@ -35,7 +35,7 @@ window.onload=function() {
             index_example_list.style.left = index_left_value + "px";
         }
         for (var i = 0; i < index_example_button.length; i++) {
-            index_example_button[i].setAttribute("class", "");
+            index_example_button[i].setAttribute("class", " ");
         }
         index_example_button[index_left_value / -1200].setAttribute("class", "on");
     }
@@ -83,19 +83,57 @@ window.onload=function() {
 
 
         //人物切换
-        var index_focus_obj = document.getElementsByClassName("index_person_dec");
-        var index_details_obj = document.getElementsByClassName("index_person_detail");
-        for (var m = 0; m < index_focus_obj.length; m++) {
-            index_focus_obj[m].index = m;
-            index_focus_obj[m].onmouseover = function () {
-                for (var j = 0; j < index_details_obj.length; j++) {
-                    index_details_obj[j].style.display = "none";
-                    index_focus_obj[j].style = "black";
-                }
-                this.style.color = "#2597ba";
-                index_details_obj[this.index].style.display = "block";
-            }
+    var index_focus_box=document.getElementById("index_person_list");
+    var index_box_list=index_focus_box.getElementsByTagName("li");
+    var index_info_div=document.getElementById("index_person_info");
+    var index_detail_p=index_info_div.getElementsByClassName("index_person_detail");
+    var timers=null;
+    var now=0;
+
+    for(var i=0;i<index_box_list.length;i++){
+        index_box_list[i].index=i;
+        index_box_list[i].onmouseover=function(){
+            for(var j=0;j<index_detail_p.length;j++){
+                index_detail_p[j].className=' ';
+                now=this.index;
+            }index_detail_p[now].className ='index_person_detail';
+//            for (var j = 0; j < index_details_obj.length; j++) {
+//                    index_details_obj[j].style.display = "none";
+//                    index_focus_obj[j].style = "black";
+//                }
         }
+    }
+    timers=setInterval(trik() ,1500);
+    function trik(){
+        if(now==index_detail_p.length-1){
+            now=0;
+        }else{
+            now++;
+        }
+        for(var i=0;i<index_detail_p.length;i++){
+            index_detail_p[i].className= ' ';
+        }
+        index_detail_p[now].className = 'index_person_detail';
+    }
+    index_focus_box.onmouseover = function(){
+        clearInterval(timers);
+    };index_focus_box.onmouseout=function(){
+        timers=setInterval(trik,1200);
+    };
+
+//        var index_focus_obj = document.getElementsByClassName("index_person_dec");
+//        var index_details_obj = document.getElementsByClassName("index_person_detail");
+//        for (var m = 0; m < index_focus_obj.length; m++) {
+//            index_focus_obj[m].index = m;
+//            index_focus_obj[m].onmouseover = function () {
+//                for (var j = 0; j < index_details_obj.length; j++) {
+//                    index_details_obj[j].style.display = "none";
+//                    index_focus_obj[j].style = "black";
+//                }
+//                this.style.color = "#2597ba";
+//                index_details_obj[this.index].style.display = "block";
+//            }
+//        }
 
         //最新动态切换
         var index_news_focus = document.getElementsByClassName("index_latest_dec");
@@ -111,5 +149,23 @@ window.onload=function() {
                 index_news_detail[this.index].style.display = "block";
             }
         }
-}
+};
 
+
+
+//头部js
+document.onscroll=function(){
+    var tit = document.getElementsByTagName("nav")[0];
+    var tittop=tit.offsetTop;
+    var navimg=tit.getElementsByTagName("img")[0];
+    var btop = document.body.scrollTop||document.documentElement.scrollTop;
+    if(btop>tittop){
+        tit.setAttribute("style","background-color:white;color:black;");
+        navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
+    }
+    else{
+        tit.setAttribute("style","");
+        navimg.setAttribute("src","../img/first_images/145x45baise.png");
+    }
+
+}
