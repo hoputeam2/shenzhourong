@@ -9,22 +9,60 @@
 
     <script>
         window.onload=function(){
+
             document.onscroll=function(){
-               navscroll();
+                navscroll();
+            };
+
+            var next=getId("pro_NextPic");
+            var prev=getId("pro_PrevPic");
+            prev.addEventListener("click", function () {
+                moving(1260,0,-2520)
+            });
+
+            next.addEventListener("click", function () {
+                moving(-1260,-2520,0)
+            });
+
+
+            var product = document.getElementsByTagName("dl");
+            var button = document.getElementsByTagName("p");
+            var list = getId("pro_carouselist");
+            for (var i = 0; i < product.length; i++) {
+                (function (n) {
+                    product[i].addEventListener("mouseover", function () {
+                        clearInterval(list.timer);
+                        list.style.left = n * (-1260) + "px";
+                        for (var j = 0; j < button.length; j++) {
+                            button[j].setAttribute("class", "");
+                        }
+                        button[n].setAttribute("class", "on")
+
+                    });
+                    product[i].addEventListener("mouseout", function () {
+                        list.timer = setInterval(function () {
+                            moving(-1260,-2520,0);
+                        }, 3000);
+                    })
+
+                })(i)
+
             }
-        }
+            list.timer = setInterval(function () {
+                moving(-1260,-2520,0);
+            }, 3000);
+            list.onmouseover = function () {
+                clearInterval(list.timer);
+            };
+            list.onmouseout = function () {
+                clearInterval(list.timer);
+                list.timer = setInterval(function () {
+                    moving(-1260,-2520,0);
+                }, 3000);
+            };
+
+        };
     </script>
-
-
-
-
-
-
-
-
-
-
-
 
 </head>
 <body>
@@ -103,15 +141,15 @@
           </span>
         <dl>
             <dt><img src="../img/protect_images/icon29.png"></dt>
-            <dd>审批系统</dd>
+            <dd>审批系统 <p class="on"><img src="../img/protect_images/icon35.png"></p></dd>
         </dl>
         <dl>
             <dt><img src="../img/protect_images/icon30.png"></dt>
-            <dd>财务系统</dd>
+            <dd>财务系统<p><img src="../img/protect_images/icon35.png"></p></dd>
         </dl>
         <dl>
             <dt><img src="../img/protect_images/icon31.png"></dt>
-            <dd>催收系统</dd>
+            <dd>催收系统<p><img src="../img/protect_images/icon35.png"></p></dd>
         </dl>
     </div>
         <div id="pro_CALright">
@@ -119,12 +157,12 @@
             <button type="submit" class="pro_button">查看详情</button>
         </div>
     </div>
+    <div id="pro_carouseArrow">
+        <span id="pro_PrevPic">&lt;</span>
+        <span id="pro_NextPic">&gt;</span>
+    </div>
     <div id="pro_carouse">
         <div id="pro_carouseDetails">
-            <div id="pro_carouseArrow">
-                <span id="pro_PrevPic">&lt;</span>
-                <span id="pro_NextPic">&gt;</span>
-            </div>
             <div id="pro_carouselist" style="left:0">
                 <div class="pro_carouseText">
                     <span class="pro_carouseTitle">审批系统</span>
@@ -220,8 +258,71 @@
         </div>
     </div>
     </div>
+    <div id="foot">
+        <div id="foot_pic">
+        <h1>神州融大数据风控平台</h1><br>
+        <span>详细的购买咨询 专业的配置推荐 灵活的价格方案 1对1贴心服务</span><br>
+        <button>申请使用</button>
+        </div>
+        <div id="foot_servelist">
+            <ul>
+                <li><a href="#"><img src="../img/first_images/iconyi.png">一站式</a></li>
+                <li><a href="#"><img src="../img/first_images/iconda.png">大数据</a></li>
+                <li><a href="#"><img src="../img/first_images/iconyin.png">银行级</a></li>
+                <li><a href="#"><img src="../img/first_images/iconquan.png">全流程</a></li>
+                <li style="border: none"><a href="#"><img src="../img/first_images/iconzi.png">自动化</a></li>
+            </ul>
+        </div>
+        <div id="foot_fastentrance">
+        <div id="foot_list">
+            <ul>
+                <li class="foot_listTitle"><a href="#">快速入口</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">服务</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">试用</a></li>
+            </ul>
+            <ul>
+                <li class="foot_listTitle"><a href="#">产品服务</a></li>
+                <li><a href="#">风控无人机</a></li>
+                <li><a href="#">信贷管理系统</a></li>
+                <li><a href="#">大数据征信</a></li>
+                <li><a href="#">银行资信合规对接</a></li>
+                <li><a href="#">风控咨询及评分建模</a></li>
+            </ul>
+            <ul>
+                <li class="foot_listTitle"><a href="#">关于我们</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">合作伙伴</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+            <ul>
+                <li class="foot_listTitle"><a href="#">联系我们</a></li>
+                <li><a href="#">电话：400-8190-416（9:30-18:30 工作日）</a></li>
+                <li><a href="#">商务：bd@shenzhourong.com</a></li>
+                <li><a href="#">商务：bd@shenzhourong.com</a></li>
+                <li><a href="#">招聘：zhaopin@shenzhourong.com</a></li>
+                <li><a href="#">地址：北京市海淀区丹棱街1号互联网金融中心1602</a></li>
+            </ul>
+            <div id="foot_wechat"><img src="../img/first_images/erweima.png"><br>扫一扫官方微信了解更多咨询</div>
+
+        </div>
+            <div id="foot_copyright">
+                Copyright ©2017 shenzhourong.com. All Rights Reserved. 神州融版权所有 站长统计<br>
+                北京神州微融金融信息服务有限公司<br>
+                京ICP备14039713号-3
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
 
 </div>
-
 </body>
 </html>
