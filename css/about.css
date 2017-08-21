@@ -4,8 +4,53 @@
     font-size:14px;
 }
 /*about头部*/
-#about-head>img{
+#about-head{
     width:100%;
+    background-color: #535353;
+}
+#about-headMain{
+    width:1200px;
+    margin:0 auto;
+    z-index: 2;
+    position: relative;
+    padding: 8px 0;
+
+}
+#about-headNav{
+    float:right;
+    list-style-type: none;
+    text-align: center;
+}
+#about-headNav>li{
+    float:left;
+    width:115px;
+}
+#about-headNav>li>a{
+    text-decoration: none;
+    color:#ffffff;
+    margin:0 auto;
+    line-height:49px;
+}
+.about-headNavDrop{
+    list-style-type: none;
+    background-color:#add8e6;
+    width:136px;
+    opacity: 0.8;
+    display: none;
+
+}
+.about-headNavDrop>li>a{
+    text-decoration: none;
+    line-height:32px;
+    color:#434242;
+}
+.about-headNavDrop>li:hover{
+    background-color:#2597ba;
+}
+#about-headBanner{
+    z-index: 1;
+    position: relative;
+    top: -65px;
 }
 
 /*about中间主要部分*/
@@ -15,9 +60,11 @@ div{
 #about-container{
     width:100%;
     overflow:hidden;
+    margin-top: -69px;
 }
 /*about主要导航*/
 #about-containerNav{
+    width:100%;
     background:#fff;
     position:relative;
 }
