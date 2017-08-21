@@ -19,7 +19,7 @@ window.onload=function() {
     });
     for (var i = 0; i < index_example_button.length; i++) {
         (function (n) {
-            index_example_button[n].onclick = function (n) {
+            index_example_button[n].onclick = function () {
                 circle(this, n);
             }
         })(i);
@@ -57,7 +57,6 @@ window.onload=function() {
     container.onmouseover = function () {
         clearInterval(timer);
         clearInterval(timer1);
-
     };
     container.onmouseout = function () {
         clearInterval(timer);
@@ -65,77 +64,108 @@ window.onload=function() {
         timer1 = setInterval(function () {
             moving(-1200, -2400, "0px");
         }, 1700);
-    }
+    };
 //        风控无人机部分切换
-        var index_function_focus = document.getElementsByClassName("index_icon");
-        var index_function_detail = document.getElementsByClassName("index_bd");
-        for (var k = 0; k < index_function_focus.length; k++) {
-            index_function_focus[k].index = k;
-            index_function_focus[k].onmouseover = function () {
-                for (var j = 0; j < index_function_detail.length; j++) {
-                    index_function_detail[j].style.display = "none";
-                    index_function_focus[j].style = "black";
-                }
-                this.style.color = "#1c9cd1";
-                index_function_detail[this.index].style.display = "block";
-            }
+     var index_bd_box=document.getElementsByClassName("index_bd");
+     var index_button_img=document.getElementsByClassName("index_icon");
+
+            for(var x=0;x<index_button_img.length;x++){
+                (function(n){
+                    index_button_img.onmouseover=function(){
+                        imgChange(this,n);
+                    }
+            })(x);
         }
+
+    function imgChange(that,n){
+          
+    }
+        //
+        //var index_function_focus = document.getElementsByClassName("index_icon");
+        //var index_function_detail = document.getElementsByClassName("index_bd");
+        //for (var k = 0; k < index_function_focus.length; k++) {
+        //    index_function_focus[k].index = k;
+        //    (function (n){
+        //        index_function_focus[n].onmouseover = function () {
+        //            for (var j = 0; j < index_function_detail.length; j++) {
+        //
+        //                index_function_detail[j].style.display = "none";
+        //                index_function_focus[j].style.display = "block";
+        //                console.log(index_function_focus[j].style.display);
+        //
+        //            }
+        //
+        //            this.style.color = "#1c9cd1";
+        //            console.log("当前鼠标指向索引："+n);
+        //            index_function_detail[this.index].style.display = "block";
+        //        }
+        //    })(k)
+        //}
+        //
+        // var index_bd=document.getElementsByClassName("index_bd");
+
+
+
 
 
         //人物切换
-    var index_focus_box=document.getElementById("index_person_list");
-    var index_box_list=index_focus_box.getElementsByTagName("li");
-    var index_info_div=document.getElementById("index_person_info");
-    var index_detail_p=index_info_div.getElementsByClassName("index_person_detail");
-    var timers=null;
-    var now=0;
 
-    for(var i=0;i<index_box_list.length;i++){
-        index_box_list[i].index=i;
-        index_box_list[i].onmouseover=function(){
-            for(var j=0;j<index_detail_p.length;j++){
-                index_detail_p[j].className=' ';
-                now=this.index;
-            }index_detail_p[now].className ='index_person_detail';
-//            for (var j = 0; j < index_details_obj.length; j++) {
-//                    index_details_obj[j].style.display = "none";
-//                    index_focus_obj[j].style = "black";
-//                }
+    (function(){
+        var times=null;
+        var times1=null;
+        var index_focus_box=document.getElementById("index_person_dec");
+        var index_dl=document.getElementsByClassName("index_person_list");
+        var index_box_list=index_focus_box.getElementsByClassName("index_person_ditail");
+        var index_img=index_focus_box.getElementsByTagName("dt");
+        var index_dd=index_focus_box.getElementsByTagName("dd");
+        for(var i=0;i<index_box_list.length;i++){
+            index_img[i].index=index_box_list[i].index=i;
         }
-    }
-    timers=setInterval(trik() ,1500);
-    function trik(){
-        if(now==index_detail_p.length-1){
-            now=0;
-        }else{
-            now++;
+        var num=0;
+        times=setInterval(function(){
+            tric();
+        },1600);
+        function tric(){
+            var idx=num++%(index_box_list.length);
+            for(var i=0;i<index_box_list.length;i++){
+                index_box_list[i].style.display="none";
+                index_img[i].setAttribute("class","");
+                for(var j=0;j<index_dd.length;j++){
+                    index_dd[j].style.color="#fff";
+                }
+             }
+            index_box_list[idx].style.cssText="color:orange;position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
+            index_img[idx].setAttribute("class","active1");
+            index_dd[idx].style.color="orange";
         }
-        for(var i=0;i<index_detail_p.length;i++){
-            index_detail_p[i].className= ' ';
+        for(var k=0;k<index_dl.length;k++){
+            index_dl[k].index=k;
+            index_dl[k].onmouseover=function(){
+                index_img[k].setAttribute("class","active1");
+                index_dd[k].style.color="orange";
+                index_box_list[k].style.color="orange";
+            };
         }
-        index_detail_p[now].className = 'index_person_detail';
-    }
-    index_focus_box.onmouseover = function(){
-        clearInterval(timers);
-    };index_focus_box.onmouseout=function(){
-        timers=setInterval(trik,1200);
-    };
 
-//        var index_focus_obj = document.getElementsByClassName("index_person_dec");
-//        var index_details_obj = document.getElementsByClassName("index_person_detail");
-//        for (var m = 0; m < index_focus_obj.length; m++) {
-//            index_focus_obj[m].index = m;
-//            index_focus_obj[m].onmouseover = function () {
-//                for (var j = 0; j < index_details_obj.length; j++) {
-//                    index_details_obj[j].style.display = "none";
-//                    index_focus_obj[j].style = "black";
-//                }
-//                this.style.color = "#2597ba";
-//                index_details_obj[this.index].style.display = "block";
-//            }
-//        }
+        index_focus_box.onmouseover=function(){
+            clearInterval(times);
+            clearInterval(times1);
+        };
+
+        index_focus_box.onmouseout=function(){
+            clearInterval(times);
+            clearInterval(times1);
+            times1=setInterval(function(){
+                tric();
+            },1600)
+        };
+
+    })();
+
+
 
         //最新动态切换
+    (function(){
         var index_news_focus = document.getElementsByClassName("index_latest_dec");
         var index_news_detail = document.getElementsByClassName("index_latest_detail");
         for (var k = 0; k < index_news_focus.length; k++) {
@@ -149,6 +179,8 @@ window.onload=function() {
                 index_news_detail[this.index].style.display = "block";
             }
         }
+    })();
+
 };
 
 

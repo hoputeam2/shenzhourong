@@ -13,37 +13,40 @@ nav{
 nav img{
     margin:5px 100px;
 }
-nav ul{
+nav #main_nav{
     list-style: none;
     float: right;
     margin-right: 12vw;
-    width: 680px;
+    width: 780px;
     height: 60px;
     text-align: center;
     line-height: 60px;
     font-size: 14px;
 }
-nav ul li{
+#main_nav li{
+    width: 130px;
     float: left;
-    margin-left: 50px;
     cursor: pointer;
 }
-/*二级导航*/
+/*二级菜单*/
 #index_proSecNav{
     background-color: white;
-    width: 150px;
-    height:200px ;
+    width: 130px;
+    height:210px ;
     line-height: 40px;
     color: #000000;
     opacity: 0.8;
     display: none;
-    position: absolute;
-    left: 39vw;
-    top: 60px;
+    position: relative;
+    list-style: none;
+    text-align: center;
 }
+
 #index_prolist:hover #index_proSecNav{
     display: block;
 }
+
+
 #index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
     float: none;
     margin: 0;
@@ -54,15 +57,16 @@ nav ul li{
 
 #index_newSecNav{
     background-color: white;
-    width: 150px;
+    width: 130px;
     height:125px ;
     color: #000000;
     line-height: 40px;
+    float: left;
     opacity: 0.8;
     display: none;
-    position: absolute;
-    left: 54vw;
-    top: 60px;
+    position: relative;
+    list-style: none;
+    text-align: center;
 }
 #index_newlist:hover #index_newSecNav{
     display: block;
@@ -70,20 +74,21 @@ nav ul li{
 
 #index_aboutSecNav{
     background-color: white;
-    width: 150px;
+    width: 130px;
     height:160px ;
     color: #000000;
     line-height: 40px;
     opacity: 0.8;
     display: none;
-    position: absolute;
-    left: 62vw;
-    top: 60px;
+    position: relative;
+    list-style: none;
+    text-align: center;
 }
 
 #index_aboutlist:hover #index_aboutSecNav{
     display: block;
 }
+
 /*导航栏结束*/
 
 #content{
@@ -100,8 +105,11 @@ nav ul li{
     height: 688px;
     padding-top: 60px;
     margin: 0 auto;
+    overflow: hidden;
     background-image: url("../img/first_images/bg1.png");
+    position: relative;
 }
+
 .index_title_icon,.index_icon_list{
     width: 1200px;
     height: 160px;
@@ -174,21 +182,21 @@ nav ul li{
     cursor: pointer;
 }
 /*下方切换样式*/
+.index_bd_detail{
+    width: 6000px;
+    height: 400px;
+    position: absolute;
+          }
 .index_bd_img{
     float: left;
-    width: 470px;
+    width: 500px;
     margin-right: 45px;
     padding-top: 120px;
 }
-.index_bd{
-    display: none;
-}
-.index_bd_show{
-    display: block;
-}
+
 .index_bd_text {
     float: left;
-    width: 632px;
+    width: 655px;
     padding-top: 60px;
 }
 .index_bd_text h2{
@@ -298,7 +306,6 @@ nav ul li{
 }
 .index_example_check a{
     text-decoration: none;
-
 }
 .index_example_check button:hover{
     background: orange;
@@ -306,7 +313,6 @@ nav ul li{
 }
 /*下面跳转的圆圈按钮*/
 #index_example_buttons{
-
     z-index: 10;
     position: absolute;
     bottom: 80px;
@@ -360,22 +366,27 @@ nav ul li{
      width: 1200px;
      height: 430px;
      margin: 0 auto;
+    position: relative;
  }
 .index_person_list{
-
+    color: orange;
     width: 240px;
     height: 220px;
     float: left;
+    line-height: 40px;
 }
 
 .index_person_ditail{
-    color: orange;
     display: none;
 }
 .show{
+    display: block;
+    color:orange;
+    position:absolute;
+    top:250px;
+    left:40px;
     width: 1200px;
     text-align: center;
-    display: block;
 }
 .index_person_list dt{
     width: 111px;
@@ -388,18 +399,6 @@ nav ul li{
     color: #edab00;
 }
 
-.index_person_list img{
-    border:2px solid transparent ;
-    border-radius: 50%;
-}
-.index_person_list:hover img{
-    border:2px solid orange ;
-    border-radius: 50%;
-}
-
-.index_person_show{
-    display: block;
-}
 /*最新动态部分*/
 #index_latest{
     width: 1200px;
@@ -632,4 +631,14 @@ footer{
     position: relative;
     top: 21px;
     left: 263px;
+}
+
+
+
+/*测试*/
+
+.active1{
+    border:2px solid orange;
+    overflow: hidden;
+    border-radius: 50%;
 }
