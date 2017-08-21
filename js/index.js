@@ -52,18 +52,15 @@ function navscroll(){
     }
 }
 
-
+/*页面JS*/
 window.onload=function() {
+
+    /*大图滚动*/
     var content = getId("index_carouse");
-
     var list = getId("index_img_list");
-
     var prev = getId("navPrevPic");
-
     var next = getId("navNextPic");
-
     var button = getId("index_imgBtn").getElementsByTagName("span");
-
     content.timer = null;
 
     next.addEventListener("click", function () {
@@ -100,6 +97,7 @@ window.onload=function() {
         }, 3000);
     };
 
+    /*最新消息的文字滚动*/
     var TXTlist = getId("index_messageUl");
     TXTlist.timer=null;
     TXTlist.timer = setInterval(function () {
@@ -120,7 +118,4 @@ window.onload=function() {
         navscroll();
     }
 
-
-
-
-}
+};
