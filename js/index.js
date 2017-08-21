@@ -66,44 +66,56 @@ window.onload=function() {
         }, 1700);
     };
 //        风控无人机部分切换
-     var index_bd_box=document.getElementsByClassName("index_bd");
-     var index_button_img=document.getElementsByClassName("index_icon");
-
-            for(var x=0;x<index_button_img.length;x++){
-                (function(n){
-                    index_button_img.onmouseover=function(){
-                        imgChange(this,n);
-                    }
-            })(x);
-        }
-
-    function imgChange(that,n){
-          
+    var section_timer=null;
+    var section_timer1=null;
+    var container_main=document.getElementById("container_main");
+    var section_list =document.getElementById("section_list");
+    var section=document.getElementsByClassName("section_title");
+//绑定事件
+    for(var j=0;j<section.length;j++){
+        (function(n){
+            section[n].onmouseover=function(){
+                button_switch(this,n);
+            }
+        })(j);
     }
-        //
-        //var index_function_focus = document.getElementsByClassName("index_icon");
-        //var index_function_detail = document.getElementsByClassName("index_bd");
-        //for (var k = 0; k < index_function_focus.length; k++) {
-        //    index_function_focus[k].index = k;
-        //    (function (n){
-        //        index_function_focus[n].onmouseover = function () {
-        //            for (var j = 0; j < index_function_detail.length; j++) {
-        //
-        //                index_function_detail[j].style.display = "none";
-        //                index_function_focus[j].style.display = "block";
-        //                console.log(index_function_focus[j].style.display);
-        //
-        //            }
-        //
-        //            this.style.color = "#1c9cd1";
-        //            console.log("当前鼠标指向索引："+n);
-        //            index_function_detail[this.index].style.display = "block";
-        //        }
-        //    })(k)
-        //}
-        //
-        // var index_bd=document.getElementsByClassName("index_bd");
+//事件处理函数
+    function Switch(ori,ter,spe){
+        var section_left_val=parseInt(section_list.style.left);
+        if(section_left_val===ter){
+            section_left_val=ori;
+        }else {
+            section_left_val+=spe;
+        }
+        section_list.style.left=section_left_val+"px";
+        for(var i=0;i<section.length;i++){
+            section[i].setAttribute("id","");
+        }
+        section[section_left_val/-1200].setAttribute("id","on");
+    }
+//按钮切换
+    function button_switch(that,num) {
+        for(var i=0;i<section.length;i++){
+            section[i].setAttribute("id","");
+        }
+        that.setAttribute("id","on");
+        //控制图片移动到当前位置
+        section_list.style.left=num*(-1200)+"px";
+    }
+//添加定时器
+    section_timer=setInterval(function(){
+        Switch(0,-4800,-1200)
+    },1600);
 
+    container_main.onmouseover=function(){
+        clearInterval(section_timer);
+        clearInterval(section_timer1)
+    };
+    container_main.onmouseout=function(){
+        section_timer1=setInterval(function(){
+            Switch(0, -4800, -1200)
+        },1600);
+    };
 
 
 
@@ -138,15 +150,6 @@ window.onload=function() {
             index_img[idx].setAttribute("class","active1");
             index_dd[idx].style.color="orange";
         }
-        for(var k=0;k<index_dl.length;k++){
-            index_dl[k].index=k;
-            index_dl[k].onmouseover=function(){
-                index_img[k].setAttribute("class","active1");
-                index_dd[k].style.color="orange";
-                index_box_list[k].style.color="orange";
-            };
-        }
-
         index_focus_box.onmouseover=function(){
             clearInterval(times);
             clearInterval(times1);

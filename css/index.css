@@ -100,133 +100,116 @@ nav #main_nav{
     font-family: "微软雅黑";
 }
 /*上面风控无人机切换部分*/
-#index_function{
+#container_main {
     width: 1200px;
-    height: 688px;
-    padding-top: 60px;
-    margin: 0 auto;
-    overflow: hidden;
-    background-image: url("../img/first_images/bg1.png");
-    position: relative;
+    margin: 60px auto 0;
 }
 
-.index_title_icon,.index_icon_list{
-    width: 1200px;
-    height: 160px;
+/*5个切换按钮*/
+.container_head{
+    width:1200px;
+    height: 150px;
 }
-.index_icon_list{
-    list-style: none;
-    padding: 0;
-}
-.index_icon_list li{
-    display: inline-block;
-    margin-right: 61px;
+.section_title{
     float: left;
+    margin-left: 50px;
+    width: 170px;
+    height: 155px;
+}
+
+.section_title dt {
+    width: 170px;
+    height: 120px;
+}
+.section1{  background: url("../img/first_images/icon2-2.png") no-repeat center;  }
+.section2{  background: url("../img/first_images/icon3-3.png") no-repeat center;  }
+.section3{  background: url("../img/first_images/icon102.png") no-repeat center;  }
+.section4{  background: url("../img/first_images/icon5-5.png") no-repeat center;  }
+.section5{  background: url("../img/first_images/icon1-5.png") no-repeat center;  }
+
+.section_title dd{
     text-align: center;
-    width: 168px;
-    height: 155px;
 }
-.index_icon_list li a{
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 155px;
-    line-height: 251px;
-    font-size: 18px;
+.section_title dd a{
     color: #959595;
+    font-size: 18px;
+    line-height: 35px;
+    text-decoration: none;
 }
-.index_icon_list li a:hover{
-    color: #1c9cd1;
-    cursor: pointer;
+#on .section1{  background: url("../img/first_images/icon1.png") no-repeat center;  }
+#on .section2{  background: url("../img/first_images/icon2.png") no-repeat center;  }
+#on .section3{  background: url("../img/first_images/icon3.png") no-repeat center;  }
+#on .section4{  background: url("../img/first_images/icon4.png") no-repeat center;  }
+#on .section5{  background: url("../img/first_images/icon5.png") no-repeat center;  }
+
+
+/*板块详情*/
+#section_details{
+    overflow: hidden;
+    position: relative;
+    width: 1200px;
+    height: 578px;
+    background: url("../img/first_images/bg1.png");
 }
-/*每个图标悬停改变背景*/
-.index_item1{
-    background: url("../img/first_images/icon2-2.png") center top;
-}
-.index_item1:hover{
-    background: url("../img/first_images/icon1.png") center top;
-    cursor: pointer;
-}
-.index_item2{
-    background: url("../img/first_images/icon3-3.png") center top;
-}
-.index_item2:hover{
-    background: url("../img/first_images/icon2.png") center top;
-    cursor: pointer;
-}
-.index_item3{
-    background: url("../img/first_images/icon102.png") center top;
-}
-.index_item3:hover{
-    background: url("../img/first_images/icon3.png") center top;
-    cursor: pointer;
-}
-.index_item4{
-    background: url("../img/first_images/icon5-5.png") center top;
-}
-.index_item4:hover{
-    background: url("../img/first_images/icon4.png") center top;
-    cursor: pointer;
-}
-.index_item5{
-    background: url("../img/first_images/icon1-5.png") center top;
-}
-.index_item5:hover{
-    background: url("../img/first_images/icon5.png") center top;
-    cursor: pointer;
-}
-.index_item1,.index_item2,.index_item3,.index_item4,.index_item5,
-.index_item1:hover,.index_item2:hover,.index_item3:hover,.index_item4:hover,.index_item5:hover
-{
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-/*下方切换样式*/
-.index_bd_detail{
-    width: 6000px;
-    height: 400px;
+#section_list{
     position: absolute;
-          }
-.index_bd_img{
+    top:0;
+    left: 0;
+    margin-top: 100px;
+    width: 6020px;
+    height: 480px;
+    list-style-type: none;
+}
+#section_list>li{
     float: left;
-    width: 500px;
-    margin-right: 45px;
-    padding-top: 120px;
+    width: 1200px;
+    height: 480px;
 }
 
-.index_bd_text {
+.section_img{
     float: left;
-    width: 655px;
-    padding-top: 60px;
+    width: 470px;
+    height: 360px;
 }
-.index_bd_text h2{
+/*板块介绍*/
+.section_introduce{
+    position: relative;
+    margin: 0 50px ;
+    float: right;
+    width: 630px;
+    height: 480px;
+}
+
+.section_introduce>span{
     display: block;
     line-height: 45px;
     font-size: 36px;
     color: #2597ba;
     margin-bottom: 30px;
-    font-weight:500;
 }
-.index_bd_text p{
+.section_introduce>p{
     width: 100%;
+    height: 135px;
     line-height: 35px;
     color: #535353;
     font-size: 18px;
-    height: 245px;
-    overflow: hidden
 }
-#index_function button{
+.section_introduce>a{
     display: block;
+    position: absolute;
+    top:380px;
+    left: 0;
     width: 187px;
     height: 47px;
     line-height: 47px;
-    background: #edab00;
-    text-align: center;
-    margin-bottom: 27px;
     font-size: 18px;
     color: #fff;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    background: #edab00;
+    text-align: center;
+}
+.section_introduce>a:hover{
+    background: #f60;
 }
 /*案例轮播样式。*/
 #index_example{
