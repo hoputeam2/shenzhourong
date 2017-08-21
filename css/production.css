@@ -7,6 +7,11 @@
     width: 100vw;
     height:4800px;
 }
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
 
 nav{
     width: 100vw;
@@ -257,7 +262,7 @@ nav a{
     overflow: hidden;
 }
 #pro_carouselist{
-    width: 3800px;
+    width: 3900px;
     height: 300px;
     position: relative;
     top: 100px;
@@ -266,11 +271,9 @@ nav a{
 #pro_carouseArrow{
     width: 1200px;
     height: 1px;
-    float: left;
     z-index: 999;
-    position: absolute;
-    top:1700px;
-    left:18%;
+    position: relative;
+    top:217px;
     font-weight: bold;
 }
 #pro_carouseArrow span{
@@ -289,7 +292,7 @@ nav a{
     width: 540px;
     height: 300px;
     float: left;
-    margin: 0 60px 0 30px;
+    margin: -108px 60px 0 30px;
     line-height:1.5;
     font-size:14px;
     color: white;
@@ -395,7 +398,7 @@ nav a{
     color: dimgray;
 }
 #foot_list{
-    width: 1500px;
+    width: 90vw;
     height: 280px;
     margin: auto;
     font-size: 14px;
