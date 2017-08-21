@@ -5,72 +5,73 @@
     <title>client</title>
     <link type="text/css" rel="stylesheet" href="../css/client.css"/>
 </head>
+<script src="client_title.js"></script>
 <body>
 
 
 <!--JS-->
 <script>
-//<!--头部-->
-window.onload=function(){
-    document.onscroll=function(){
-        var tit = document.getElementsByTagName("nav")[0];
-        var tittop=tit.offsetTop;
-        var navimg=tit.getElementsByTagName("img")[0];
-        var btop = document.body.scrollTop||document.documentElement.scrollTop;
-        if(btop>tittop){
-            tit.setAttribute("style","background-color:white;color:black;border:1px solid white;");
-            navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
-        }
-        else{
-            tit.setAttribute("style","");
-            navimg.setAttribute("src","../img/first_images/baise.png");
-        }
-
-
-//    回到顶部
-            var obj=document.getElementById("up");
-            var clientHeight=document.documentElement.clientHeight;//可视区域的高度
-            window.onscroll=function(){//onscroll为滚动滚动条事件，即这个函数在滚动条滚动时触发
-
-                var Top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
-                if (Top>=clientHeight) {
-                    obj.style.display='block'
-                }
-                else{
-                   obj.style.display='none'
-                }
-            };
-
-//        底部图片
-//      获取滚动条
-        var scrollTop=document.body.scrollTop;
-//       获取id
-        var img=document.getElementById('client_apply');
-
-        console.log(scrollTop);
-//        事件绑定
-
-//        img.addEventListener("",function(){
-////                scrollone();
-//        })
-
-            if(scrollTop>1451){
-                    img.style.transition="all 1s";
-                    img.style.transform="translate(0,10px)";
-
-            }
-        else if(scrollTop<1451){
-                img.style.transition="all 1s";
-                img.style.transform="translate(0,-10px)";
-
-            }
-          else{
-                img.style.transition="";
-                img.style.transform="";
-            }
-
-    }
- }
+////<!--头部-->
+//window.onload=function(){
+//    document.onscroll=function(){
+//        var tit = document.getElementsByTagName("nav")[0];
+//        var tittop=tit.offsetTop;
+//        var navimg=tit.getElementsByTagName("img")[0];
+//        var btop = document.body.scrollTop||document.documentElement.scrollTop;
+//        if(btop>tittop){
+//            tit.setAttribute("style","background-color:white;color:black;border:1px solid white;");
+//            navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
+//        }
+//        else{
+//            tit.setAttribute("style","");
+//            navimg.setAttribute("src","../img/first_images/baise.png");
+//        }
+//
+//
+////    回到顶部
+//            var obj=document.getElementById("up");
+//            var clientHeight=document.documentElement.clientHeight;//可视区域的高度
+//            window.onscroll=function(){//onscroll为滚动滚动条事件，即这个函数在滚动条滚动时触发
+//
+//                var Top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
+//                if (Top>=clientHeight) {
+//                    obj.style.display='block'
+//                }
+//                else{
+//                   obj.style.display='none'
+//                }
+//            };
+//
+////        底部图片
+////      获取滚动条
+//        var scrollTop=document.body.scrollTop;
+////       获取id
+//        var img=document.getElementById('client_apply');
+//
+//        console.log(scrollTop);
+////        事件绑定
+//
+////        img.addEventListener("",function(){
+//////                scrollone();
+////        })
+//
+//            if(scrollTop>1451){
+//                    img.style.transition="all 1s";
+//                    img.style.transform="translate(0,10px)";
+//
+//            }
+//        else if(scrollTop<1451){
+//                img.style.transition="all 1s";
+//                img.style.transform="translate(0,-10px)";
+//
+//            }
+//          else{
+//                img.style.transition="";
+//                img.style.transform="";
+//            }
+//
+//    }
+// }
 
 </script>
 
@@ -105,8 +106,7 @@ window.onload=function(){
        <div id="client_head">
            <nav>
                <img src="../img/first_images/baise.png">
-               <!--<img src="../img/first_images/iphone_logo02.png">-->
-               <ul>
+               <ul id="main_nav">
                    <li id="index_prolist">产品服务
                        <ul id="index_proSecNav">
                            <li>风控无人机</li>
@@ -214,27 +214,7 @@ window.onload=function(){
              <span>神州融大数据风控平台</span>
              <p>详细的购买咨询 专业的配置推荐 灵活的价格方案 1对1贴心服务</p>
              <input type="button" value="申请试用"/>
-               <script>
-                       var client_try=document.getElementById("client_try");
-                       var button1=client_try.getElementsByTagName("input")[0];
-                       console.log(client_try);
-                       console.log(button1);
-                       button1.addEventListener("click" ,function () {
-                           var a=prompt("小盆友！你点我啦！\n输入：我爱你！\n就原谅你***");
-                           if(a=="我爱你"){
-                               alert("艹");
-                           }
-                           else
-                           {
-                               window.close();
-                           }
 
-                       });
-
-
-
-
-               </script>
            </div>
        </div>
        <div id="client_class">
