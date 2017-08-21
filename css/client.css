@@ -15,7 +15,7 @@ nav{
     z-index: 999;
 }
 nav img{
-    margin:5px 100px;
+    margin:5px 337px;
 }
 nav ul{
     list-style: none;
@@ -43,7 +43,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 39vw;
+    left: 53vw;
     top: 60px;
 }
 #index_prolist:hover #index_proSecNav{
@@ -68,7 +68,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 54vw;
+    left: 64vw;
     top: 60px;
 }
 #index_newlist:hover #index_newSecNav{
@@ -84,7 +84,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 62vw;
+    left: 69vw;
     top: 60px;
 }
 
@@ -140,12 +140,7 @@ background-image: url(../img/about_images/icon17.png);
 #client_box ul .arrow a{
     background-image: url(../img/first_images/icon19.png);
 }
-/*#client_box ul .tel span{*/
-    /*font-size: 18px;*/
-    /*color: #2597ba;*/
-    /*margin-left: 5px;*/
-    /*line-height: 60px;*/
-/*}*/
+
 #client_box ul .tel:hover a{
 
     background: url(../img/about_images/icon20dzf.png);
@@ -203,10 +198,6 @@ background-image: url(../img/about_images/icon17.png);
 #client_box ul .wx:hover div{
     display: block;
 }
-/*#client_box ul .wx span{*/
-    /*background-image: url(../img/about_images/erweima.png);*/
-/*}*/
-
 
 /*整个DIV*/
 #client_content{
@@ -412,16 +403,17 @@ input{
     font-size: 20px;
     font-weight:bolder;
     margin-top: 6px;
-    border-right: 1px solid dimgray;
+    border-right: 1px solid darkgrey;
     float:left;
     text-align: center;
     line-height: 100px;
 }
+#client_class .line{
+    border-right: 0;
+}
 #client_class li img{
     vertical-align: middle;
 }
-
-
 
 #client_foot{
     width: 1905px;
