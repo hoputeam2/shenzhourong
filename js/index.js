@@ -42,12 +42,19 @@ function navscroll(){
     var tit = document.getElementsByTagName("nav")[0];
     var navimg=tit.getElementsByTagName("img")[0];
     var btop = document.body.scrollTop||document.documentElement.scrollTop;
+    var a = tit.getElementsByTagName("a");
     if(btop>0){
-        tit.setAttribute("style","background-color:white;color:black;");
+        tit.setAttribute("style","background-color:white;");
+        for(var i = 0;i< a.length;i++){
+            a[i].setAttribute("style","color:black")
+        }
         navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
     }
     else{
         tit.setAttribute("style","");
+        for(var i = 0;i< a.length;i++){
+            a[i].setAttribute("style","")
+        }
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
     }
 }

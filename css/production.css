@@ -28,6 +28,10 @@ nav #main_nav{
     line-height: 60px;
     font-size: 14px;
 }
+nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 #main_nav li{
     width: 130px;
     float: left;
