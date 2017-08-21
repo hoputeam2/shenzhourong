@@ -210,16 +210,18 @@ nav ul li{
 }
 #dl1{
     background: url("../img/protect_images/icon32.png") no-repeat;
+    background-position: 62px 28px;
 }
 #dl2{
     background: url("../img/protect_images/icon33.png") no-repeat;
+    background-position: 73px 22px;
 }
 #dl3{
     background:url("../img/protect_images/icon34.png") no-repeat;
+    background-position: 67px 23px;
 }
 #pro_CALleft .logoturn{
     background-color: #2597BA;
-    background-position: 65px 30px;
     color: white;
 }
 #pro_CALleft p{

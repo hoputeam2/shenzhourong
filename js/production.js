@@ -90,18 +90,16 @@ window.onload=function(){
                     product[c].setAttribute("class","")
                 }
                 product[n].setAttribute("class","logoturn");
-
-
             });
             product[i].addEventListener("mouseout", function () {
                 list.timer = setInterval(function () {
                     moving(-1260,-2520,0);
                 }, 3000);
             })
-
         })(i)
-
     }
+
+
     list.timer = setInterval(function () {
         moving(-1260,-2520,0);
     }, 3000);
