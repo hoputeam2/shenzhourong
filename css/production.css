@@ -45,7 +45,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 39vw;
+    left: 53vw;
     top: 60px;
 }
 #index_prolist:hover #index_proSecNav{
@@ -70,7 +70,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 54vw;
+    left: 64vw;
     top: 60px;
 }
 #index_newlist:hover #index_newSecNav{
@@ -86,7 +86,7 @@ nav ul li{
     opacity: 0.8;
     display: none;
     position: absolute;
-    left: 62vw;
+    left: 69vw;
     top: 60px;
 }
 
@@ -101,11 +101,14 @@ nav ul li{
 /*页面导航*/
 
 #pro_pagenav{
-    margin: auto;
-    width: 1200px;
+    width: 100vw;
     height: 60px;
     line-height: 60px;
     text-align: center;
+}
+
+#pro_pagenav ul{
+    margin-left:10vw ;
 }
 
 #pro_pagenav ul li{
@@ -125,6 +128,7 @@ nav ul li{
     float: right;
     font-size: 16px;
     color: white;
+    margin-right: 10vw;
     background-color: #2597BA;
     border: 1px solid #2597BA;
 }
@@ -204,6 +208,20 @@ nav ul li{
     margin:80px 27px 0 0;
     color: #2597BB;
 }
+#dl1{
+    background: url("../img/protect_images/icon32.png") no-repeat;
+}
+#dl2{
+    background: url("../img/protect_images/icon33.png") no-repeat;
+}
+#dl3{
+    background:url("../img/protect_images/icon34.png") no-repeat;
+}
+#pro_CALleft .logoturn{
+    background-color: #2597BA;
+    background-position: 65px 30px;
+    color: white;
+}
 #pro_CALleft p{
     position: relative;
     top: 30px;
@@ -242,10 +260,12 @@ nav ul li{
 }
 #pro_carouseArrow{
     width: 1200px;
-    height: 95px;
+    height: 1px;
+    float: left;
+    z-index: 999;
     position: absolute;
-    top:1600px;
-    left: 80px;
+    top:1700px;
+    left:18%;
     font-weight: bold;
 }
 #pro_carouseArrow span{
@@ -319,12 +339,13 @@ nav ul li{
 /*底部*/
 #foot_pic{
     width: 100vw;
-    height:410px ;
+    height:380px ;
     padding-top: 80px;
     color: white;
     text-align: center;
     line-height: 30px;
-    background-image: url("../img/first_images/bg33.jpg");
+    background: url("../img/first_images/bg33.jpg") no-repeat;
+
 }
 #foot_pic button{
     width: 190px;
@@ -340,7 +361,7 @@ nav ul li{
     background-color: orangered;
 }
 #foot_servelist{
-    width: 85vw;
+    width:60vw;
     height:90px ;
     margin: auto;
     padding: 10px 0;
@@ -368,7 +389,7 @@ nav ul li{
     color: dimgray;
 }
 #foot_list{
-    width: 90vw;
+    width: 80vw;
     height: 280px;
     margin: auto;
     font-size: 14px;
@@ -388,7 +409,7 @@ nav ul li{
 #foot_fastentrance ul{
     float: left;
     list-style: none;
-    margin:4vh 6vw 0 0;
+    margin:4vh 4vw 0 3vw;
 }
 #foot_wechat{
     width: 110px;

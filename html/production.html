@@ -6,64 +6,6 @@
     <title>产品服务</title>
     <link rel="stylesheet" type="text/css" href="../css/production.css">
     <script src="../js/production.js"></script>
-
-    <script>
-        window.onload=function(){
-
-            document.onscroll=function(){
-                navscroll();
-            };
-
-            var next=getId("pro_NextPic");
-            var prev=getId("pro_PrevPic");
-            prev.addEventListener("click", function () {
-                moving(1260,0,-2520)
-            });
-
-            next.addEventListener("click", function () {
-                moving(-1260,-2520,0)
-            });
-
-
-            var product = document.getElementsByTagName("dl");
-            var button = document.getElementsByTagName("p");
-            var list = getId("pro_carouselist");
-            for (var i = 0; i < product.length; i++) {
-                (function (n) {
-                    product[i].addEventListener("mouseover", function () {
-                        clearInterval(list.timer);
-                        list.style.left = n * (-1260) + "px";
-                        for (var j = 0; j < button.length; j++) {
-                            button[j].setAttribute("class", "");
-                        }
-                        button[n].setAttribute("class", "on")
-
-                    });
-                    product[i].addEventListener("mouseout", function () {
-                        list.timer = setInterval(function () {
-                            moving(-1260,-2520,0);
-                        }, 3000);
-                    })
-
-                })(i)
-
-            }
-            list.timer = setInterval(function () {
-                moving(-1260,-2520,0);
-            }, 3000);
-            list.onmouseover = function () {
-                clearInterval(list.timer);
-            };
-            list.onmouseout = function () {
-                clearInterval(list.timer);
-                list.timer = setInterval(function () {
-                    moving(-1260,-2520,0);
-                }, 3000);
-            };
-
-        };
-    </script>
-
 </head>
 <body>
 <div id="production_content">
@@ -139,15 +81,15 @@
               配置或模块化独立运行。使用业务范围：平台涵盖消费金融、车贷、房贷、网商贷、POS贷等不同业务类型，并可以设定最佳
               实践的风控流程、评分模型及业务风控策略体系<br>
           </span>
-        <dl>
+        <dl id="dl1" class="logoturn">
             <dt><img src="../img/protect_images/icon29.png"></dt>
             <dd>审批系统 <p class="on"><img src="../img/protect_images/icon35.png"></p></dd>
         </dl>
-        <dl>
+        <dl id="dl2">
             <dt><img src="../img/protect_images/icon30.png"></dt>
             <dd>财务系统<p><img src="../img/protect_images/icon35.png"></p></dd>
         </dl>
-        <dl>
+        <dl id="dl3">
             <dt><img src="../img/protect_images/icon31.png"></dt>
             <dd>催收系统<p><img src="../img/protect_images/icon35.png"></p></dd>
         </dl>
@@ -157,12 +99,13 @@
             <button type="submit" class="pro_button">查看详情</button>
         </div>
     </div>
-    <div id="pro_carouseArrow">
-        <span id="pro_PrevPic">&lt;</span>
-        <span id="pro_NextPic">&gt;</span>
-    </div>
+
     <div id="pro_carouse">
         <div id="pro_carouseDetails">
+            <div id="pro_carouseArrow">
+                <span id="pro_PrevPic">&lt;</span>
+                <span id="pro_NextPic">&gt;</span>
+            </div>
             <div id="pro_carouselist" style="left:0">
                 <div class="pro_carouseText">
                     <span class="pro_carouseTitle">审批系统</span>
@@ -259,7 +202,7 @@
     </div>
     </div>
     <div id="foot">
-        <div id="foot_pic">
+        <div id="foot_pic" style="background-position: 0">
         <h1>神州融大数据风控平台</h1><br>
         <span>详细的购买咨询 专业的配置推荐 灵活的价格方案 1对1贴心服务</span><br>
         <button>申请使用</button>

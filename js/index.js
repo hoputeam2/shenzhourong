@@ -40,15 +40,87 @@ function TXTmoving(speed,terminal){
 /*导航栏滚动滚动条改变样式*/
 function navscroll(){
     var tit = document.getElementsByTagName("nav")[0];
-    var tittop=tit.offsetTop;
     var navimg=tit.getElementsByTagName("img")[0];
     var btop = document.body.scrollTop||document.documentElement.scrollTop;
-    if(btop>tittop){
-        tit.setAttribute("style","background-color:white;color:black;border:1px solid black;");
+    if(btop>0){
+        tit.setAttribute("style","background-color:white;color:black;");
         navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
     }
     else{
         tit.setAttribute("style","");
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
     }
+}
+
+
+window.onload=function() {
+    var content = getId("index_carouse");
+
+    var list = getId("index_img_list");
+
+    var prev = getId("navPrevPic");
+
+    var next = getId("navNextPic");
+
+    var button = getId("index_imgBtn").getElementsByTagName("span");
+
+    content.timer = null;
+
+    next.addEventListener("click", function () {
+        moving(-1905, -3810, 0);
+    });
+    prev.addEventListener("click", function () {
+        moving(1905, 0, -3810);
+    });
+
+    for (var i = 0; i < button.length; i++) {
+        (function (n) {
+            button[i].addEventListener("mouseover", function () {
+                list.style.left = n * (-1905) + "px";
+                for (var j = 0; j < button.length; j++) {
+                    button[j].setAttribute("class", "")
+                }
+                button[n].setAttribute("class", "on")
+            })
+
+        })(i)
+
+    }
+
+    content.timer = setInterval(function () {
+        moving(-1905, -3810, 0);
+    }, 3000);
+    content.onmouseover = function () {
+        clearInterval(content.timer);
+    };
+    content.onmouseout = function () {
+        clearInterval(content.timer);
+        content.timer = setInterval(function () {
+            moving(-1905, -3810, 0);
+        }, 3000);
+    };
+
+    var TXTlist = getId("index_messageUl");
+    TXTlist.timer=null;
+    TXTlist.timer = setInterval(function () {
+        TXTmoving(-35, -70);
+    }, 4000);
+    TXTlist.onmouseover = function () {
+        clearInterval(TXTlist.timer);
+    };
+    TXTlist.onmouseout = function () {
+        clearInterval(TXTlist.timer);
+        TXTlist.timer = setInterval(function () {
+            TXTmoving(-35,-70);
+        }, 4000);
+    };
+
+
+    document.onscroll=function(){
+        navscroll();
+    }
+
+
+
+
 }
