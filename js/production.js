@@ -33,7 +33,7 @@ function navscroll(){
             var left_val = parseInt(list.style.left);
             var btn_idx;
             var button = document.getElementsByTagName("p");
-            var dl = document.getElementsByTagName("dl");
+            var product = document.getElementsByTagName("dl");
 
             if(left_val===terminal){
                 left_val=isleft;
@@ -48,10 +48,13 @@ function navscroll(){
                 button[k].setAttribute("class","")
             }
             button[btn_idx].setAttribute("class","on");
-            for(var c=0;c<dl.length;c++){
-                dl[c].setAttribute("class","")
+
+            for(var c=0;c<product.length;c++){
+                product[c].setAttribute("class","");
+                product[c].getElementsByTagName("img")[0].setAttribute("style","");
             }
-            dl[btn_idx].setAttribute("class","logoturn");
+            product[btn_idx].setAttribute("class","logoturn");
+            product[btn_idx].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
         }
 
 window.onload=function(){
@@ -90,11 +93,15 @@ window.onload=function(){
                     product[c].setAttribute("class","")
                 }
                 product[n].setAttribute("class","logoturn");
+                product[n].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
             });
             product[i].addEventListener("mouseout", function () {
                 list.timer = setInterval(function () {
                     moving(-1260,-2520,0);
                 }, 3000);
+                for(var c=0;c<product.length;c++){
+                    product[c].getElementsByTagName("img")[0].setAttribute("style","");
+                }
             })
         })(i)
     }
