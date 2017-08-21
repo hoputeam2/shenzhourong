@@ -19,35 +19,35 @@ nav{
 nav img{
     margin:5px 100px;
 }
-nav ul{
+nav #main_nav{
     list-style: none;
     float: right;
     margin-right: 12vw;
-    width: 680px;
+    width: 780px;
     height: 60px;
     text-align: center;
     line-height: 60px;
     font-size: 14px;
-
 }
-nav ul li{
+#main_nav li{
+    width: 130px;
     float: left;
-    margin-left: 50px;
     cursor: pointer;
 }
-/*二级导航*/
+/*二级菜单*/
 #index_proSecNav{
     background-color: white;
-    width: 150px;
-    height:200px ;
+    width: 130px;
+    height:210px ;
     line-height: 40px;
     color: #000000;
     opacity: 0.8;
     display: none;
-    position: absolute;
-    left: 53vw;
-    top: 60px;
+    position: relative;
+    list-style: none;
+    text-align: center;
 }
+
 #index_prolist:hover #index_proSecNav{
     display: block;
 }
@@ -63,15 +63,16 @@ nav ul li{
 
 #index_newSecNav{
     background-color: white;
-    width: 150px;
+    width: 130px;
     height:125px ;
     color: #000000;
     line-height: 40px;
+    float: left;
     opacity: 0.8;
     display: none;
-    position: absolute;
-    left: 64vw;
-    top: 60px;
+    position: relative;
+    list-style: none;
+    text-align: center;
 }
 #index_newlist:hover #index_newSecNav{
     display: block;
@@ -79,15 +80,15 @@ nav ul li{
 
 #index_aboutSecNav{
     background-color: white;
-    width: 150px;
+    width: 130px;
     height:160px ;
     color: #000000;
     line-height: 40px;
     opacity: 0.8;
     display: none;
-    position: absolute;
-    left: 69vw;
-    top: 60px;
+    position: relative;
+    list-style: none;
+    text-align: center;
 }
 
 #index_aboutlist:hover #index_aboutSecNav{
