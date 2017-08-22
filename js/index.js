@@ -70,13 +70,6 @@ window.onload=function() {
 
 
 
-
-
-
-
-
-
-
 //        风控无人机部分切换
     var section_timer=null;
     var section_timer1=null;
@@ -138,7 +131,7 @@ window.onload=function() {
         var times=null;
         var times1=null;
         var index_focus_box=document.getElementById("index_person_dec");
-        var index_dl=document.getElementsByClassName("index_person_list");
+        //var index_dl=document.getElementsByClassName("index_person_list");
         var index_box_list=index_focus_box.getElementsByClassName("index_person_ditail");
         var index_img=index_focus_box.getElementsByTagName("dt");
         var index_dd=index_focus_box.getElementsByTagName("dd");
@@ -153,7 +146,7 @@ window.onload=function() {
         //var num=0;
         times=setInterval(function(){
             tric();
-        },1600);
+        },1000);
         function tric(){
             //var idx=num++%(index_box_list.length);
             var idx=start++%(index_box_list.length);
@@ -188,7 +181,7 @@ window.onload=function() {
             clearInterval(times1);
             times1=setInterval(function(){
                 tric(start);
-            },1600)
+            },1000)
         };
 
         //for(var y=0;y<index_dl.length;y++){
