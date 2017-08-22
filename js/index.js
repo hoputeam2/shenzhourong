@@ -96,14 +96,6 @@ window.onload=function() {
     };
 
 
-
-
-
-
-
-
-
-
     //轮播部分
     var timer = null;
     var timer1 = null;
@@ -333,14 +325,39 @@ document.onscroll=function(){
     var tit = document.getElementsByTagName("nav")[0];
     var tittop=tit.offsetTop;
     var navimg=tit.getElementsByTagName("img")[0];
+    var a = tit.getElementsByTagName("a");
     var btop = document.body.scrollTop||document.documentElement.scrollTop;
+    //       获取body的高度
+    var clientHeight = document.documentElement.clientHeight;
+//       滚动条滚动事件
+    var height = document.documentElement.scrollTop || document.body.scrollTop;
+//       console.log(height);
+    var obj = document.getElementById("up");
+
+
+    /*滚动超过一个屏幕显示回到顶部的div*/
+    if (height >= clientHeight) {
+        obj.style.display = 'block';
+    }
+    else {
+        obj.style.display = 'none'
+    }
+
+    /*导航栏*/
     if(btop>tittop){
         tit.setAttribute("style","background-color:white;color:black;");
+        for(var i = 0;i< a.length;i++){
+            a[i].setAttribute("style","color:black")
+        }
         navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
     }
     else{
         tit.setAttribute("style","");
+        for(var i = 0;i< a.length;i++){
+            a[i].setAttribute("style","")
+        }
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
     }
 
-}
+};
+
