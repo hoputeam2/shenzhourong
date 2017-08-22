@@ -134,9 +134,11 @@ window.onload=function(){
                     list.timer = setInterval(function () {
                         moving(-1260,-2520,0);
                     }, 3000);
+
                     for(var c=0;c<product.length;c++){
                         /*清除dt中图片的透明度*/
                         product[c].getElementsByTagName("img")[0].setAttribute("style","");
+                        product[n].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
                     }
                 })
          })(i)
