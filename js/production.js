@@ -67,7 +67,23 @@ function navscroll(){
             product[btn_idx].setAttribute("class","logoturn");
             product[btn_idx].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
         }
+//回到顶部
+window.onscroll=function(){
+//       获取body的高度
+    var clientHeight=document.documentElement.clientHeight;
+//       滚动条滚动事件
+    var height=document.documentElement.scrollTop||document.body.scrollTop;
+//       console.log(height);
+    var obj=document.getElementById("up");
 
+    if(height>=clientHeight){
+        obj.style.display='block';
+    }
+    else{
+        obj.style.display='none'
+    }
+};
+//回到顶部end
 
 /*页面JS*/
 window.onload=function(){
