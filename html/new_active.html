@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <title>new_active</title>
     <link rel="stylesheet" href="../css/new_active.css">
-    <script>
-        document.onscroll=function(){
-            var tit = document.getElementsByTagName("nav")[0];
-            var tittop=tit.offsetTop;
-            var navimg=tit.getElementsByTagName("img")[0];
-            var a = tit.getElementsByTagName("a");
-            var btop = document.body.scrollTop||document.documentElement.scrollTop;
-            if(btop>tittop){
-                tit.setAttribute("style","background-color:white;");
-                for(var i = 0;i< a.length;i++){
-                    a[i].setAttribute("style","color:black")
-                }
-                navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
-            }
-            else{
-                tit.setAttribute("style","");
-                for(var i = 0;i< a.length;i++){
-                    a[i].setAttribute("style","")
-                }
-                navimg.setAttribute("src","../img/first_images/145x45baise.png");
-            }
+    <script src="../js/new_active.js"></script>
 
-        }
-    </script>
 </head>
 <body>
     <!--头部-->
 
     <div id="content">
+        <div id="index_fixedBox">
+            <ul>
+                <li class="tel">
+                    <a href="#"></a>
+                    <div >
+                        <span>电话：400-8190-416</span>
+                    </div>
+                </li>
+                <li class="wx">
+                    <a href="#"></a>
+                    <div >
+                        <img style="border: 0" src="../img/about_images/erweima.png" />
+                    </div>
+                </li>
+                <li class="QQ">
+                    <a href="#"></a>
+                </li>
+                <li id="up" class="arrow">
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
         <nav>
             <a href="index.html"><img src="../img/first_images/145x45baise.png"></a>
             <ul id="main_nav">
@@ -66,14 +66,7 @@
             </ul>
         </nav>
     </div>
-    <!--右边绝对定位部分-->
-    <div id="new_active_fixed">
-        <ul class="new_active_item">
-            <li><img src="../img/about_images/icon16.png"></li>
-            <li><img src="../img/about_images/icon17.png"></li>
-            <li><img src="../img/about_images/icon18.png"></li>
-        </ul>
-    </div>
+
     <!--中间主体部分-->
     <div id="new_active_content">
         <!--主体部分的左边栏-->
