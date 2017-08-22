@@ -22,6 +22,10 @@ nav img{
     width: 145px;
 
 }
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
 /*about头部右边导航list*/
 nav #main_nav{
     list-style: none;

@@ -6,10 +6,14 @@ window.onscroll=function(){
     var navimg=tit.getElementsByTagName("img")[0];
     var tit2=document.getElementById("about-containerNav");
     var btop = document.body.scrollTop||document.documentElement.scrollTop;
+    var a = tit.getElementsByTagName("a");
 
     if(btop>0&&btop<360){
 
         tit.setAttribute("style","background-color:white;color:black;");
+        for(var i = 0;i< a.length;i++){
+            a[i].setAttribute("style","color:black")
+        }
         navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
         tit2.setAttribute("style","");
 
@@ -20,7 +24,10 @@ window.onscroll=function(){
     else{
         tit.setAttribute("style","");
         tit2.setAttribute("style","");
+        for(var i = 0;i< a.length;i++){
+            a[i].setAttribute("style","")
+        }
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
     }
 
-}
+};
