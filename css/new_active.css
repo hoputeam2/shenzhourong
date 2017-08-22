@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    left:0;
+    color: #FFF;
+    z-index: 999;
+}
+nav img{
+    margin:5px 100px;
+}
+nav #main_nav{
+    list-style: none;
+    float: right;
+    margin-right: 12vw;
+    width: 780px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+}
+#main_nav li{
+    width: 130px;
+    float: left;
+    cursor: pointer;
+}
+/*二级菜单*/
+#index_proSecNav{
+    background-color: white;
+    width: 130px;
+    height:210px ;
+    line-height: 40px;
+    color: #000000;
+    opacity: 0.8;
+    display: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+#index_prolist:hover #index_proSecNav{
+    display: block;
+}
+
+
+#index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
+    float: none;
+    margin: 0;
+}
+#index_proSecNav li:hover,#index_newSecNav li:hover,#index_aboutSecNav li:hover{
+    background-color: #2597BA;
+}
+
+#index_newSecNav{
+    background-color: white;
+    width: 130px;
+    height:125px ;
+    color: #000000;
+    line-height: 40px;
+    float: left;
+    opacity: 0.8;
+    display: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+#index_newlist:hover #index_newSecNav{
+    display: block;
+}
+
+#index_aboutSecNav{
+    background-color: white;
+    width: 130px;
+    height:160px ;
+    color: #000000;
+    line-height: 40px;
+    opacity: 0.8;
+    display: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+#index_aboutlist:hover #index_aboutSecNav{
+    display: block;
+}
+
+/*导航栏结束*/
+
+#content{
+    background-image: url("../img/newActive_images/top.jpg");
+    height: 359px;
+}
+/*右边固定列表的样式*/
+#new_active_fixed{
+    width: 62px;
+    height: 196px;
+    position: absolute;
+    right: 0;
+    top:300px;
+}
+.new_active_item{
+    list-style: none;
+    padding: 0;
+}
+.new_active_item li{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #309CBE;
+    margin: 1px 0;
+}
+.new_active_item li img{
+    vertical-align: middle;
+}
+/*主体部分的样式*/
+#new_active_content{
+    margin:0 auto;
+    width: 1150px;
+    font-family: "微软雅黑";
+}
+/*主体部分的左边栏*/
+#new_active_left{
+    width: 300px;
+    float: left;
+}
+/*左边栏的三个菜单*/
+.new_active_nav{
+    list-style: none;
+    background: #EEEEEE;
+    padding:0;
+}
+/*列表和推荐阅读和联系我们标题共同的样式*/
+.new_active_nav li a,.new_active_info .new_active_title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #58606d;
+    text-indent: 10px;
+}
+.new_active_nav li{
+    border-bottom: 1px solid #E5e5e5;
+    text-indent: 10px;
+}
+.new_active_nav li a{
+    text-decoration: none;
+}
+.new_active_info .new_active_title{
+    border: 1px solid #E5e5e5;
+    background: #EEEEEE;
+    margin: 40px 0 15px 0;
+}
+/*左边的推荐阅读和联系*/
+.new_active_read{
+    list-style: none;
+    padding:0;
+}
+.new_active_read li{
+    text-indent: 10px;
+    font-size: 13px;
+    height: 25px;
+    line-height: 25px;
+}
+.new_active_read li a{
+    text-decoration: none;
+    color:#616976;
+}
+.new_active_read li a:hover,.new_active_nav li a:hover,.new_active_detail a:hover{
+    color: #1c9cd1;
+}
+/*右边图文混排样式*/
+#new_active_right{
+    width: 840px;
+    float: left;
+    margin-left:10px ;
+}
+.new_active_news{
+    border-bottom: 1px solid #F0F0F0;
+    margin: 6px 0 30px 0;
+}
+.new_active_img{
+    width: 838px;
+    height: 258px;
+    overflow: hidden;
+
+}
+.new_active_img img{
+    width: 838px;
+    height: 258px;
+    margin: 10px 0;
+}
+.new_active_img img:hover{
+    width: 110%;
+    height: 110%;
+    transition:all .5s ease-in-out;
+}
+.new_active_heading{
+    margin: 13px 0;
+    font-size: 17px;
+    color:#474D57;
+}
+.new_active_detail{
+    font-size: 12px;
+    color: #626262;
+    line-height: 22px;
+}
+.new_active_detail a{
+    text-decoration: none;
+    color: #626262;
+    font-size: 12px;
+}
+/*换页栏样式*/
+.new_active_change{
+    margin-left:350px;
+    width: 575px;
+}
+.new_active_list{
+    list-style: none;
+    padding: 0;
+}
+.new_active_list li{
+    display: inline;
+    margin: 0 5px;
+    padding: 5px;
+}
+.new_active_list li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #626262;
+}
+.new_active_list li:hover{
+    background: #2397BC;
+}
+
+/*尾部*/
+#client_apply{
+    width: 1905px;
+    height: 438px;
+    background-image:url(../img/first_images/bg33.jpg);
+}
+#client_try{
+    width: 800px;
+    height: 200px;
+    border:0 solid red;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 114px;
+}
+#client_try span {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    line-height:58px;
+
+}
+#client_try p{
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70px;
+}
+input{
+    width: 201px;
+    height: 57px;
+    color: #ffffff;
+    font-size: 28px;
+    border: 0;
+    background-color:gold;
+}
+#client_try input:hover{
+    background-color: orange;
+}
+
+/*一站式，大数据*/
+#client_class a{
+    color: #000000;
+    text-decoration: none;
+}
+#client_class{
+    width: 1905px;
+    height: 108px;
+    background-color: #ffffff;
+}
+#client_class ul{
+    width: 1109px;
+    height: 100px;
+    margin: auto;
+    list-style-type: none;
+}
+
+#client_class li{
+    width: 216px;
+    height: 86px;
+    font-size: 20px;
+    font-weight:bolder;
+    margin-top: 6px;
+    border-right: 1px solid dimgray;
+    float:left;
+    text-align: center;
+    line-height: 100px;
+}
+#client_class li img{
+    vertical-align: middle;
+}
+/*底部*/
+#client_foot{
+    width: 1905px;
+    height: 412px;
+    background-color:#E5E5E5;
+}
+#client_foot-box {
+    width: 1214px;
+    height: 400px;
+    color: dimgray;
+    border: 0 solid goldenrod;
+    margin: auto;
+}
+#client_foot-box ul{
+    float:left;
+    border: 0 solid black;
+    list-style-type: none;
+    margin: 26px 30px;
+}
+#client_foot-box ul li{
+    font-size: 13px;
+    margin-top: 18px;
+}
+#client_foot-box .client_list{
+    font-size: 20px;
+    margin-bottom: 36px;
+}
+#client_foot-box a{
+    color:dimgray ;
+    text-decoration: none;
+}
+#client_code{
+    width: 112px;
+    height: 186px;
+    border: 0 solid red;
+    float: right;
+    margin-top: 36px;
+}
+#client_code p{
+    width: 150px;
+    line-height: 28px;
+}
+footer{
+    float: left;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    position: relative;
+    top: 21px;
+    left: 263px;
+}
