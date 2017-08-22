@@ -5,6 +5,15 @@
 function getId(id) {
     return document.getElementById(id)?document.getElementById(id):null;
 }
+/*绑定时间*/
+function addEvent(obj,event,fn){
+         if (obj.addEventListener) {
+                 obj.addEventListener(event,fn,false);
+            }else{
+                 obj.attachEvent("on"+event,fn);
+             }
+     }
+
 /*导航吸顶变换样式*/
 function navscroll(){
     var tit = document.getElementsByTagName("nav")[0];
@@ -96,11 +105,12 @@ window.onload=function(){
     var next=getId("pro_NextPic");
     var prev=getId("pro_PrevPic");
     /*给箭头绑定事件*/
-    prev.addEventListener("click", function () {
+    addEvent(prev,"click",function () {
         clearInterval(list.timer);
         moving(1260,0,-2520)
     });
-    next.addEventListener("click", function () {
+
+    addEvent(next,"click",function () {
         clearInterval(list.timer);
         moving(-1260,-2520,0)
     });
@@ -111,7 +121,7 @@ window.onload=function(){
     var list = getId("pro_carouselist");
     for (var i = 0; i < product.length; i++) {
         (function (n) {
-            product[i].addEventListener("mouseover", function () {
+            addEvent(product[i],"mouseover",function () {
                 clearInterval(list.timer);
                 /*鼠标悬浮LOGO时对应内容切换*/
                 list.style.left = n * (-1260) + "px";
@@ -129,18 +139,18 @@ window.onload=function(){
                 /*dt中图片透明度变为0*/
                 product[n].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
             });
+//
+
                 /*鼠标移出LOGO时的绑定事件*/
-                product[i].addEventListener("mouseout", function () {
+                addEvent(product[i],"mouseout",function () {
                     list.timer = setInterval(function () {
                         moving(-1260,-2520,0);
                     }, 3000);
-
                     for(var c=0;c<product.length;c++){
                         /*清除dt中图片的透明度*/
                         product[c].getElementsByTagName("img")[0].setAttribute("style","");
-                        product[n].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
                     }
-                })
+                });
          })(i)
     }
 
