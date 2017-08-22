@@ -49,6 +49,8 @@ window.onload=function() {
         index_example_list.style.left = n * (-1200) + "px";
     }
 
+
+
 //定时器
     timer = setInterval(function () {
         moving(-1200, -2400, "0px");
@@ -65,6 +67,16 @@ window.onload=function() {
             moving(-1200, -2400, "0px");
         }, 1700);
     };
+
+
+
+
+
+
+
+
+
+
 //        风控无人机部分切换
     var section_timer=null;
     var section_timer1=null;
@@ -130,15 +142,21 @@ window.onload=function() {
         var index_box_list=index_focus_box.getElementsByClassName("index_person_ditail");
         var index_img=index_focus_box.getElementsByTagName("dt");
         var index_dd=index_focus_box.getElementsByTagName("dd");
+        var click_obj=document.getElementsByClassName("test");
+        var start=0;
+        for(var k=0;k<5;k++){
+            click_obj[k].idx=k;
+        }
         for(var i=0;i<index_box_list.length;i++){
             index_img[i].index=index_box_list[i].index=i;
         }
-        var num=0;
+        //var num=0;
         times=setInterval(function(){
             tric();
         },1600);
         function tric(){
-            var idx=num++%(index_box_list.length);
+            //var idx=num++%(index_box_list.length);
+            var idx=start++%(index_box_list.length);
             for(var i=0;i<index_box_list.length;i++){
                 index_box_list[i].style.display="none";
                 index_img[i].setAttribute("class","");
@@ -150,18 +168,45 @@ window.onload=function() {
             index_img[idx].setAttribute("class","active1");
             index_dd[idx].style.color="orange";
         }
-        index_focus_box.onmouseover=function(){
-            clearInterval(times);
-            clearInterval(times1);
-        };
 
+        (function(){
+            index_focus_box.onmouseover=function(e){
+                clearInterval(times);
+                clearInterval(times1);
+                if(e.target.nodeName=='IMG') {
+                    start = e.target.idx;
+                    for (var j = 0; j < index_img.length; j++) {
+                        index_img[j].setAttribute("class","");
+                    }
+                    e.target.parentNode.setAttribute("class","active1");
+                    document.getElementsByClassName("dd"+start)[0].style.color="orange";
+                }
+            }
+        })(i);
         index_focus_box.onmouseout=function(){
             clearInterval(times);
             clearInterval(times1);
             times1=setInterval(function(){
-                tric();
+                tric(start);
             },1600)
         };
+
+        //for(var y=0;y<index_dl.length;y++){
+        //    (function(n){
+        //        index_dl[n].onmouseover=function(){
+        //            clearInterval(times);
+        //            clearInterval(times1);
+        //            for(var j=0;j<index_dd.length;j++){
+        //                index_box_list[j].style.color="position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
+        //                index_img[j].setAttribute("class","");
+        //                index_dd[j].style.color="";
+        //            }
+        //            index_box_list[n].style.cssText="color:orange;position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
+        //            index_img[n].setAttribute("class","active1");
+        //            index_dd[n].style.color="orange";
+        //        }
+        //    })(y);
+        //}
 
     })();
 
