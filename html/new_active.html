@@ -9,13 +9,20 @@
             var tit = document.getElementsByTagName("nav")[0];
             var tittop=tit.offsetTop;
             var navimg=tit.getElementsByTagName("img")[0];
+            var a = tit.getElementsByTagName("a");
             var btop = document.body.scrollTop||document.documentElement.scrollTop;
             if(btop>tittop){
-                tit.setAttribute("style","background-color:white;color:black;");
+                tit.setAttribute("style","background-color:white;");
+                for(var i = 0;i< a.length;i++){
+                    a[i].setAttribute("style","color:black")
+                }
                 navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
             }
             else{
                 tit.setAttribute("style","");
+                for(var i = 0;i< a.length;i++){
+                    a[i].setAttribute("style","")
+                }
                 navimg.setAttribute("src","../img/first_images/145x45baise.png");
             }
 
@@ -27,9 +34,9 @@
 
     <div id="content">
         <nav>
-            <img src="../img/first_images/145x45baise.png">
+            <a href="index.html"><img src="../img/first_images/145x45baise.png"></a>
             <ul id="main_nav">
-                <li id="index_prolist">产品服务
+                <li id="index_prolist"><a href="production.html">产品服务</a>
                     <ul id="index_proSecNav">
                         <li>风控无人机</li>
                         <li>信贷管理系统</li>
@@ -38,15 +45,15 @@
                         <li>风控咨询&风控建模</li>
                     </ul>
                 </li>
-                <li>客户案例</li>
-                <li id="index_newlist">最新动态
+                <li><a href="client.html">客户案例</a></li>
+                <li id="index_newlist"><a href="new_active.html">最新动态</a>
                     <ul id="index_newSecNav">
                         <li>公司动态</li>
                         <li>媒体报道</li>
                         <li>行业动态</li>
                     </ul>
                 </li>
-                <li id="index_aboutlist">关于我们
+                <li id="index_aboutlist"><a href="about.html">关于我们</a>
                     <ul id="index_aboutSecNav">
                         <li>公司介绍</li>
                         <li>人才招聘</li>

@@ -28,6 +28,10 @@ nav #main_nav{
     float: left;
     cursor: pointer;
 }
+#main_nav li a{
+    color: #ffffff;
+    text-decoration: none;
+}
 /*二级菜单*/
 #index_proSecNav{
     background-color: white;
