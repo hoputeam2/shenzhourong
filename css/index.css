@@ -92,9 +92,123 @@ nav #main_nav{
 /*导航栏结束*/
 
 #content{
-    background-image: url("../img/newActive_images/top.jpg");
-    height: 359px;
+    height: 550px;
 }
+
+/*首页轮播*/
+#index_carouse{
+    width: 1900px;
+    height:560px ;
+    cursor: pointer;
+    overflow: hidden;
+    margin: auto;
+
+}
+#index_img_list{
+    width: 5725px;
+    height: 561px;
+    transition:all .5s ease-in-out;
+    position: relative;
+}
+#index_img_list img{
+    margin-left: -5px;
+}
+
+#index_imgBtn{
+    width: 200px;
+    height: 50px;
+    position:absolute;
+    left:50%;
+    top: 500px;
+
+}
+#index_imgBtn span{
+    margin-left: 10px;
+    float: left;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+#index_imgBtn .on{
+    background-color: red;
+}
+#index_carouseArrow{
+    width: 1800px;
+    height: 80px;
+    float: left;
+    z-index: 999;
+    position: relative;
+    top:-335px;
+    left: 50px;
+    display: none;
+}
+#index_carouseArrow span{
+    font-size: 70px;
+    display: block;
+    color: white;
+    cursor: pointer;
+}
+#navPrevPic{
+    float: left;
+}
+#navNextPic{
+    float: right;
+}
+#index_carouse:hover #index_carouseArrow{
+    display: block;
+}
+/*第一个轮播结束*/
+
+/*官方动态轮播开始*/
+#index_newMessage{
+    width: 100vw;
+    height: 35px;
+    font-size: 12px;
+    background-color:#F2F2F2 ;
+    overflow: hidden;
+}
+#index_newMessageDetails{
+    margin: auto;
+    width: 1200px;
+    height: 35px;
+    line-height: 35px;
+}
+#index_messageTitle{
+    float: left;
+}
+#index_messageUl{
+    margin-left:50px;
+    float: left;
+    list-style: none;
+    position: relative;
+    transition:all .5s ease-in-out;
+}
+#index_messageUl li{
+    float: left;
+    width: 350px;
+    height: 105px;
+
+}
+#index_newMessageDetails a{
+    text-decoration: none;
+    color: black;
+}
+#index_newMessageDetails a:hover{
+    color: steelblue;
+}
+#index_newMessageDetails span{
+    margin-left: 30px;
+}
+#index_messageMore{
+    float: right;
+    font-size: 14px;
+}
+
+/*官方动态轮播结束*/
+
 #wrapper{
     margin: 0 auto;
     font-family: "微软雅黑";
