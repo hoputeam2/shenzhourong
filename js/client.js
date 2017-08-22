@@ -19,11 +19,13 @@ window.onload=function(){
 
 //    回到顶部
         var obj=document.getElementById("up");
-        var clientHeight=document.documentElement.clientHeight;//可视区域的高度
-        window.onscroll=function(){//onscroll为滚动滚动条事件，即这个函数在滚动条滚动时触发
+//       获取body的高度
+        var height=document.documentElement.clientHeight;
+//        滚动条滚动事件
+        window.onscroll=function(){
 
-            var Top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
-            if (Top>=clientHeight) {
+            var top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
+            if (top>=height) {
                 obj.style.display='block'
             }
             else{
