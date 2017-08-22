@@ -16,11 +16,14 @@ nav{
 }
 
 /*about导航logo*/
-nav img{
+#about-logo{
     margin-left: 350px;
 
     width: 145px;
 
+}
+#about-logo>img{
+    padding:12px 0;
 }
 /*about头部右边导航list*/
 nav #main_nav{
@@ -29,8 +32,8 @@ nav #main_nav{
     margin-right: 330px;
     width: 780px;
     height: 60px;
+    margin-top:-49px;
     text-align: center;
-    line-height: 60px;
     font-size: 14px;
 }
 #main_nav li{
