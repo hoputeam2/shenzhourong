@@ -4,55 +4,60 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="../css/about.css" type="text/css" rel="stylesheet">
+    <script src="../js/about.js"></script>
 </head>
-<body>
-<!--about头部导航-->
-<div id="about-head">
-    <div id="about-headMain">
-        <a href="#"><img src="../img/first_images/145x45baise.png"></a>
-        <ul id="about-headNav">
-            <li>
-                <a href="#">产品服务</a>
-                <ul class="about-headNavDrop">
-                    <li><a href="#">风控无人机</a></li>
-                    <li><a href="#">信贷管理系统</a></li>
-                    <li><a href="#">大数据征信</a></li>
-                    <li><a href="#">银行资金合规对接</a></li>
-                    <li><a href="#">风控咨询&评分建模</a></li>
-                </ul>
-            </li>
-            <li><a href="#">客户案例</a></li>
-            <li>
-                <a href="#">最新动态</a>
-                <ul class="about-headNavDrop">
-                    <li><a href="#">公司动态</a></li>
-                    <li><a href="#">媒体报道</a></li>
-                    <li><a href="#">行业动态</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">关于我们</a>
-                <ul class="about-headNavDrop">
-                    <li><a href="#">公司介绍</a></li>
-                    <li><a href="#">合作伙伴</a></li>
-                    <li><a href="#">人才招聘</a></li>
-                    <li><a href="#">联系我们</a></li>
-                </ul>
-            </li>
-            <li><a href="#">申请试用</a></li>
-            <li><a href="#">400-8190-416</a></li>
-        </ul>
-    </div>
-    <div id="about-headBanner">
-        <img src="../img/about_images/top.jpg">
-    </div>
-</div>
 
-<!--about中间主要内容-->
-<script src="../js/about.js"></script>
+<body>
+<!--about头部开始-->
+<!--about头部导航条-->
+<div id="content">
+    <nav>
+        <!--about导航logo-->
+        <img src="../img/first_images/145x45baise.png">
+        <!--about二级菜单栏-->
+        <!--about头部右边导航list-->
+        <ul id="main_nav">
+            <li id="index_prolist">产品服务
+                <!--about下拉栏产品服务-->
+                <ul id="index_proSecNav">
+                    <li>风控无人机</li>
+                    <li>信贷管理系统</li>
+                    <li>大数据征信</li>
+                    <li>银行资金合规对接</li>
+                    <li>风控咨询&风控建模</li>
+                </ul>
+            </li>
+            <li>客户案例</li>
+            <li id="index_newlist">最新动态
+                <!--about下拉栏最新动态-->
+                <ul id="index_newSecNav">
+                    <li>公司动态</li>
+                    <li>媒体报道</li>
+                    <li>行业动态</li>
+                </ul>
+            </li>
+            <li id="index_aboutlist">关于我们
+                <!--about下拉栏关于我们-->
+                <ul id="index_aboutSecNav">
+                    <li>公司介绍</li>
+                    <li>人才招聘</li>
+                    <li>合作伙伴</li>
+                    <li>联系我们</li>
+                </ul>
+            </li>
+            <li>申请使用</li>
+            <li>400-8190-416</li>
+        </ul>
+    </nav>
+</div>
+<!--about头部背景图-->
+<div id="bg"></div>
+<!--about头部结束-->
+
+<!--about中间主要内容开始-->
 <div id="about-container">
     <div class="about-main">
-        <!--about主要导航-->
+        <!--about主要部分导航-->
         <div id="about-containerNav">
             <!--about左边介绍导航-->
             <div id="about-containerLeftnav">
@@ -194,6 +199,7 @@
     <a href="#" id="about-applyProbationButton">申请试用</a>
 </div>
 <!--about申请试用部分结束-->
+<!--about中间主要内容结束-->
 
 <!--about五大服务开始-->
 <div id="about-fivServeFunc">

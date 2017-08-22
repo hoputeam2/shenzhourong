@@ -3,57 +3,108 @@
     margin:0;
     font-size:14px;
 }
-/*about头部*/
-#about-head{
-    width:100%;
-    background-color: #535353;
-}
-#about-headMain{
-    width:1200px;
-    margin:0 auto;
-    z-index: 2;
-    position: relative;
-    padding: 8px 0;
+/*about头部开始*/
+nav{
+
+    width: 1900px;
+    height: 60px;
+    float: left;
+    position: fixed;
+    top:0;
+    color: #fff;
 
 }
-#about-headNav{
-    float:right;
-    list-style-type: none;
+
+/*about导航logo*/
+nav img{
+    margin-left: 350px;
+
+    width: 145px;
+
+}
+/*about头部右边导航list*/
+nav #main_nav{
+    list-style: none;
+    float: right;
+    margin-right: 330px;
+    width: 780px;
+    height: 60px;
     text-align: center;
+    line-height: 60px;
+    font-size: 14px;
 }
-#about-headNav>li{
-    float:left;
-    width:115px;
+#main_nav li{
+    width: 130px;
+    float: left;
+    cursor: pointer;
 }
-#about-headNav>li>a{
-    text-decoration: none;
-    color:#ffffff;
-    margin:0 auto;
-    line-height:49px;
-}
-.about-headNavDrop{
-    list-style-type: none;
-    background-color:#add8e6;
-    width:136px;
+/*about二级菜单*/
+/*about下拉栏产品服务*/
+#index_proSecNav{
+    background-color: white;
+    width: 130px;
+    height:210px ;
+    line-height: 40px;
+    color: #000000;
     opacity: 0.8;
     display: none;
-
-}
-.about-headNavDrop>li>a{
-    text-decoration: none;
-    line-height:32px;
-    color:#434242;
-}
-.about-headNavDrop>li:hover{
-    background-color:#2597ba;
-}
-#about-headBanner{
-    z-index: 1;
     position: relative;
-    top: -65px;
+    list-style: none;
+    text-align: center;
 }
+#index_prolist:hover #index_proSecNav{
+    display: block;
+}
+#index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
+    float: none;
+    margin: 0;
+}
+#index_proSecNav li:hover,#index_newSecNav li:hover,#index_aboutSecNav li:hover{
+    background-color: #2597BA;
+}
+/*about下拉栏最新动态*/
+#index_newSecNav{
+    background-color: white;
+    width: 130px;
+    height:125px ;
+    color: #000000;
+    line-height: 40px;
+    float: left;
+    opacity: 0.8;
+    display: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+#index_newlist:hover #index_newSecNav{
+    display: block;
+}
+/*about下拉栏关于我们*/
+#index_aboutSecNav{
+    background-color: white;
+    width: 130px;
+    height:160px ;
+    color: #000000;
+    line-height: 40px;
+    opacity: 0.8;
+    display: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+#index_aboutlist:hover #index_aboutSecNav{
+    display: block;
+}
+/*about头部背景图*/
+#bg{
+    width: 1900px;
+    height: 420px;
+    background-image: url("../img/about_images/top.jpg");
+}
+/*about头部结束*/
 
-/*about中间主要部分*/
+
+/*about中间主要部分开始*/
 div{
     display: block;
 }
@@ -62,11 +113,11 @@ div{
     overflow:hidden;
     margin-top: -69px;
 }
-/*about主要导航*/
+/*about主要部分导航*/
+
 #about-containerNav{
     width:100%;
     background:#fff;
-    position:relative;
 }
 #about-containerLeftnav{
     width: 1200px;
@@ -114,7 +165,7 @@ div{
 }
 /*about中间主要部分结束*/
 
-/*about申请使用部分*/
+/*about申请使用部分开始*/
 /*about申请使用背景*/
 #about-try{
     width:100%;
@@ -205,6 +256,7 @@ div{
     background:url("../img/first_images/iconzi.png") no-repeat left center;
 }
 /*about五大服务结束*/
+
 
 /*about底部*/
 #about-foot{
