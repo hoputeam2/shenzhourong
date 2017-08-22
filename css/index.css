@@ -125,9 +125,9 @@ nav a{
 #index_imgBtn{
     width: 200px;
     height: 50px;
-    position:relative;
+    position:absolute;
     left:50%;
-    top: -50px;
+    top: 500px;
 
 }
 #index_imgBtn span{
@@ -146,9 +146,11 @@ nav a{
 #index_carouseArrow{
     width: 1800px;
     height: 80px;
-    position: absolute;
-    top:250px;
-    left:3%;
+    float: left;
+    z-index: 999;
+    position: relative;
+    top:-335px;
+    left: 50px;
     display: none;
 }
 #index_carouseArrow span{
