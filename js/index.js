@@ -333,8 +333,6 @@ document.onscroll=function(){
     var height = document.documentElement.scrollTop || document.body.scrollTop;
 //       console.log(height);
     var obj = document.getElementById("up");
-
-
     /*滚动超过一个屏幕显示回到顶部的div*/
     if (height >= clientHeight) {
         obj.style.display = 'block';
