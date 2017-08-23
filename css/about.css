@@ -17,7 +17,7 @@ nav{
 
 /*about导航logo*/
 nav img{
-    margin-left: 350px;
+    margin:10px 0 0 350px;
 
     width: 145px;
 
@@ -160,7 +160,6 @@ div{
     background: #eeeeee;
     color:#434242;
     padding:56px 0 100px;
-    border-top: 1px solid yellow;
 }
 #about-containerInfo>div{
     line-height:25px;

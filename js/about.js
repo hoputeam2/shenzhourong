@@ -35,8 +35,6 @@ window.onscroll=function(){
 //       获取body的高度
     var height=document.documentElement.clientHeight;
 //        滚动条滚动事件
-    window.onscroll=function(){
-
         var top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
         if (top>=height) {
             obj.style.display='block'
@@ -46,4 +44,3 @@ window.onscroll=function(){
         }
     };
 
-};
