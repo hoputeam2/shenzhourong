@@ -30,4 +30,20 @@ window.onscroll=function(){
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
     }
 
+    //    回到顶部
+    var obj=document.getElementById("up");
+//       获取body的高度
+    var height=document.documentElement.clientHeight;
+//        滚动条滚动事件
+    window.onscroll=function(){
+
+        var top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
+        if (top>=height) {
+            obj.style.display='block'
+        }
+        else{
+            obj.style.display='none'
+        }
+    };
+
 };

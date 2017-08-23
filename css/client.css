@@ -207,6 +207,9 @@ background-image: url("../img/about_images/icon17.png");
 #client_box ul .wx:hover div{
     display: block;
 }
+#up{
+    display: none;
+}
 
 /*整个DIV*/
 #client_content{

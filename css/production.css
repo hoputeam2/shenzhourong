@@ -540,6 +540,9 @@ nav a{
 #index_fixedBox ul .wx:hover div{
     display: block;
 }
+#up{
+    display: none;
+}
 /*固定DIV结束*/
 
 
