@@ -224,6 +224,7 @@ nav #main_nav{
     list-style: none;
     background: #EEEEEE;
     padding:0;
+    margin-top: 17px;
 }
 /*列表和推荐阅读和联系我们标题共同的样式*/
 .new_active_nav li a,.new_active_info .new_active_title{
