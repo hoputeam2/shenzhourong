@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by Administrator on 2017/8/18.
  */
 window.onload=function() {
@@ -260,14 +260,7 @@ window.onload=function() {
             index_focus_box.onmouseover=function(e){
                 clearInterval(times);
                 clearInterval(times1);
-                if(e.target.nodeName=='IMG') {
-                    start = e.target.idx;
-                    for (var j = 0; j < index_img.length; j++) {
-                        index_img[j].setAttribute("class","");
-                    }
-                    e.target.parentNode.setAttribute("class","active1");
-                    document.getElementsByClassName("dd"+start)[0].style.color="orange";
-                }
+               
             }
         })(i);
         index_focus_box.onmouseout=function(){
