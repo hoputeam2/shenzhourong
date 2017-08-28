@@ -100,10 +100,10 @@ window.onload=function() {
     var timer = null;
     var timer1 = null;
     var container = document.getElementById("index_example_change");
-    var index_example_prev = document.getElementById("index_example_prev");
-    var index_example_next = document.getElementById("index_example_next");
-    var index_example_list = document.getElementById("index_example_pic");
-    var index_example_button = document.getElementById("index_example_buttons").getElementsByTagName("span");
+    var index_example_prev = document.getElementById("index_example_prev");   //左箭头
+    var index_example_next = document.getElementById("index_example_next");    //右箭头
+    var index_example_list = document.getElementById("index_example_pic");    //装图片的容器
+    var index_example_button = document.getElementById("index_example_buttons").getElementsByTagName("span");   //小圆圈按钮集合
     //绑定事件
     index_example_prev.addEventListener("click", function () {
         moving(1200, 0, "-2400px");
@@ -119,9 +119,9 @@ window.onload=function() {
         })(i);
     }
     //编写函数
-    function moving(speed, terminal, flag) {
+    function moving(speed, terminal, flag) {         //运动的速度，达到的极限值，判断左右方向
         var index_left_value = parseInt(index_example_list.style.left);
-        if (index_left_value === terminal) {
+        if (index_left_value === terminal) {           //判断是否达到极限值
             index_example_list.style.left = flag;
             index_left_value = parseInt(index_example_list.style.left);
         } else {
@@ -135,7 +135,7 @@ window.onload=function() {
     }
 
     //控制下方的圆圈切换
-    function circle(that, n) {
+    function circle(that, n) {           //遍历圆圈数组，先清除样式，再添加样式
         for (var i = 0; i < index_example_button.length; i++) {
             index_example_button[i].setAttribute("class", "");
         }
@@ -150,11 +150,11 @@ window.onload=function() {
         moving(-1200, -2400, "0px");
     }, 1700);
 
-    container.onmouseover = function () {
+    container.onmouseover = function () {    //鼠标悬停时清除定时器
         clearInterval(timer);
         clearInterval(timer1);
     };
-    container.onmouseout = function () {
+    container.onmouseout = function () {      //鼠标移走重新启动定时器
         clearInterval(timer);
         clearInterval(timer1);
         timer1 = setInterval(function () {
@@ -179,7 +179,7 @@ window.onload=function() {
         })(j);
     }
 //事件处理函数
-    function Switch(ori,ter,spe){
+    function Switch(ori,ter,spe){             //运动的速度，达到的极限值，判断左右方向
         var section_left_val=parseInt(section_list.style.left);
         if(section_left_val===ter){
             section_left_val=ori;
@@ -193,7 +193,7 @@ window.onload=function() {
         section[section_left_val/-1200].setAttribute("id","on");
     }
 //按钮切换
-    function button_switch(that,num) {
+    function button_switch(that,num) {        //遍历头像数组，先清除样式，再添加样式
         for(var i=0;i<section.length;i++){
             section[i].setAttribute("id","");
         }
@@ -206,11 +206,11 @@ window.onload=function() {
         Switch(0,-4800,-1200)
     },1600);
 
-    container_main.onmouseover=function(){
+    container_main.onmouseover=function(){         //鼠标悬停时清除定时器
         clearInterval(section_timer);
         clearInterval(section_timer1)
     };
-    container_main.onmouseout=function(){
+    container_main.onmouseout=function(){        //鼠标移走重新启动定时器
         section_timer1=setInterval(function(){
             Switch(0, -4800, -1200)
         },1600);
@@ -225,7 +225,6 @@ window.onload=function() {
         var times=null;
         var times1=null;
         var index_focus_box=document.getElementById("index_person_dec");
-        //var index_dl=document.getElementsByClassName("index_person_list");
         var index_box_list=index_focus_box.getElementsByClassName("index_person_ditail");
         var index_img=index_focus_box.getElementsByTagName("dt");
         var index_dd=index_focus_box.getElementsByTagName("dd");
@@ -237,12 +236,10 @@ window.onload=function() {
         for(var i=0;i<index_box_list.length;i++){
             index_img[i].index=index_box_list[i].index=i;
         }
-        //var num=0;
         times=setInterval(function(){
             tric();
         },1000);
-        function tric(){
-            //var idx=num++%(index_box_list.length);
+        function tric(){                      //遍历文字部分数组，先清除样式，再添加样式
             var idx=start++%(index_box_list.length);
             for(var i=0;i<index_box_list.length;i++){
                 index_box_list[i].style.display="none";
@@ -251,50 +248,25 @@ window.onload=function() {
                     index_dd[j].style.color="#fff";
                 }
              }
+             //人头部分设置样式
             index_box_list[idx].style.cssText="color:orange;position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
             index_img[idx].setAttribute("class","active1");
             index_dd[idx].style.color="orange";
         }
 
         (function(){
-            index_focus_box.onmouseover=function(e){
+            index_focus_box.onmouseover=function(){     //鼠标悬停时清除定时器
                 clearInterval(times);
                 clearInterval(times1);
-                //if(e.target.nodeName=='IMG') {
-                //    start = e.target.idx;
-                //    for (var j = 0; j < index_img.length; j++) {
-                //        index_img[j].setAttribute("class","");
-                //    }
-                //    e.target.parentNode.setAttribute("class","active1");
-                //    document.getElementsByClassName("dd"+start)[0].style.color="orange";
-                //}
             }
         })(i);
-        index_focus_box.onmouseout=function(){
+        index_focus_box.onmouseout=function(){       //鼠标移走重新启动定时器
             clearInterval(times);
             clearInterval(times1);
             times1=setInterval(function(){
                 tric(start);
             },1000)
         };
-
-        //for(var y=0;y<index_dl.length;y++){
-        //    (function(n){
-        //        index_dl[n].onmouseover=function(){
-        //            clearInterval(times);
-        //            clearInterval(times1);
-        //            for(var j=0;j<index_dd.length;j++){
-        //                index_box_list[j].style.color="position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
-        //                index_img[j].setAttribute("class","");
-        //                index_dd[j].style.color="";
-        //            }
-        //            index_box_list[n].style.cssText="color:orange;position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
-        //            index_img[n].setAttribute("class","active1");
-        //            index_dd[n].style.color="orange";
-        //        }
-        //    })(y);
-        //}
-
     })();
 
 
@@ -303,7 +275,7 @@ window.onload=function() {
     (function(){
         var index_news_focus = document.getElementsByClassName("index_latest_dec");
         var index_news_detail = document.getElementsByClassName("index_latest_detail");
-        for (var k = 0; k < index_news_focus.length; k++) {
+        for (var k = 0; k < index_news_focus.length; k++) {            //利用循环遍历两个div数组，获得索引，先清除样式，再循环添加样式
             index_news_focus[k].index = k;
             index_news_focus[k].onmouseover = function () {
                 for (var j = 0; j < index_news_detail.length; j++) {

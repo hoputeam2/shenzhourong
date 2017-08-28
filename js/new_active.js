@@ -49,12 +49,6 @@ window.onload=function(){
     var img=document.getElementById('client_apply');
 
     console.log(scrollTop);
-//        事件绑定
-
-//        img.addEventListener("",function(){
-////                scrollone();
-//        })
-
     if(scrollTop>1451){
         img.style.transition="all 1s";
         img.style.transform="translate(0,10px)";
