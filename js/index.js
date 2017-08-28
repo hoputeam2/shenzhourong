@@ -7,9 +7,12 @@ window.onload=function() {
     }
     /*大图滚动*/
     function picmoving(speed,terminal,isleft){
+        /*获取到轮播图片的DIV*/
         var list = getId("index_img_list");
+        /*获取到DIV的left值*/
         var left_val = parseInt(list.style.left);
         var btn_idx;
+        /*获取到图片对应按钮*/
         var button = getId("index_imgBtn").getElementsByTagName("span");
 
         if(left_val===terminal){
@@ -27,7 +30,9 @@ window.onload=function() {
     }
     /*最新消息滚动*/
     function TXTmoving(speed,terminal){
+        /*获取到装滚动文字的ul*/
         var TXTlist=getId("index_messageUl");
+        /*获取到ul的top的值*/
         var top_val = parseInt(TXTlist.style.top);
         if(top_val===terminal){
             top_val=0;
@@ -45,13 +50,14 @@ window.onload=function() {
     var button = getId("index_imgBtn").getElementsByTagName("span");
     content.timer = null;
 
+    /*给箭头按钮绑定事件*/
     next.addEventListener("click", function () {
         picmoving(-1905, -3810, 0);
     });
     prev.addEventListener("click", function () {
         picmoving(1905, 0, -3810);
     });
-
+    /*按钮悬浮切换对应内容及改变样式*/
     for (var i = 0; i < button.length; i++) {
         (function (n) {
             button[i].addEventListener("mouseover", function () {
@@ -65,7 +71,7 @@ window.onload=function() {
         })(i)
 
     }
-
+    /*定时器部分*/
     content.timer = setInterval(function () {
         picmoving(-1905, -3810, 0);
     }, 3000);

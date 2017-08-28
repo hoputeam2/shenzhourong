@@ -12,7 +12,7 @@ a{
     text-decoration: none;
 }
 
-
+/*导航栏样式*/
 nav{
     width: 100vw;
     height: 60px;
@@ -35,7 +35,6 @@ nav #main_nav{
 }
 nav a{
     color: #FFFFFF;
-    text-decoration: none;
 }
 #main_nav li{
     width: 130px;
@@ -103,7 +102,6 @@ nav a{
     display: block;
 }
 
-
 /*导航栏结束*/
 
 /*页面导航*/
@@ -142,7 +140,7 @@ nav a{
 }
 /*页面导航结束*/
 
-/*无人机*/
+/*无人机模块样式*/
 #pro_UAV{
     height: 605px;
     background-color: #F2F2F2;
@@ -160,6 +158,7 @@ nav a{
 .pro_detailsGrayLeft img{
     margin-top: 80px;
 }
+/*按钮*/
 #production_content .pro_button{
     width: 190px;
     height: 50px;
@@ -192,7 +191,7 @@ nav a{
 }
  /*无人机结束*/
 
- /*信贷管理系统*/
+ /*信贷管理系统模块*/
 #pro_creditAndLoan{
     margin:auto;
     width: 1200px;
@@ -216,15 +215,15 @@ nav a{
     margin:80px 27px 0 0;
     color: #2597BB;
 }
-#dl1{
+#examine{
     background: url("../img/protect_images/icon32.png") no-repeat;
     background-position: 62px 28px;
 }
-#dl2{
+#finance{
     background: url("../img/protect_images/icon33.png") no-repeat;
     background-position: 73px 22px;
 }
-#dl3{
+#collection{
     background:url("../img/protect_images/icon34.png") no-repeat;
     background-position: 67px 23px;
 }
@@ -268,6 +267,7 @@ nav a{
     top: 100px;
     transition:all .5s ease-in-out
 }
+/*轮播箭头样式*/
 #pro_carouseArrow{
     width: 1200px;
     height: 1px;
@@ -288,6 +288,7 @@ nav a{
 #pro_NextPic{
     float: right;
 }
+/*箭头样式结束*/
 .pro_carouseText{
     width: 540px;
     height: 300px;
@@ -435,7 +436,6 @@ nav a{
 #index_fixedBox{
     width: 60px;
     height: 400px;
-    /*float: right;*/
     position: fixed;
     right: 4px;
     top:355px;
@@ -444,7 +444,6 @@ nav a{
 }
 #index_fixedBox ul{
     list-style-type: none;
-    /*overflow: hidden;*/
 }
 #index_fixedBox ul li{
     width: 100%;
@@ -519,7 +518,6 @@ nav a{
     border-right: 0;
 }
 #index_fixedBox ul .tel span{
-    /*border: 1px solid red;*/
 
     font-size: 15px;
 }
@@ -544,26 +542,3 @@ nav a{
     display: none;
 }
 /*固定DIV结束*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

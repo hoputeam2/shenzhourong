@@ -16,16 +16,19 @@ function addEvent(obj,event,fn){
 
 /*导航吸顶变换样式*/
 function navscroll(){
+  /*获取到导航栏*/
     var tit = document.getElementsByTagName("nav")[0];
+  /*获取到导航栏中的图片*/
     var navimg=tit.getElementsByTagName("img")[0];
+  /*滚轮滚动距离*/
     var btop = document.body.scrollTop||document.documentElement.scrollTop;
+  /*获取到页面导航栏*/
     var pagenav = getId("pro_pagenav");
+  /*获取到导航中的超链接*/
     var a = tit.getElementsByTagName("a");
 
     /*滚动条在0-360之间时导航栏吸顶*/
-    /*滚动条拉到360之后页面导航栏吸顶覆盖住原导航栏*/
-    /*回到顶部时变为原导航栏样式*/
-    if(btop>0&&btop<360){
+        if(btop>0&&btop<360){
         tit.setAttribute("style","background-color:white;");
 
         for(var i = 0;i< a.length;i++){
@@ -35,9 +38,11 @@ function navscroll(){
         navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
         pagenav.setAttribute("style","");
     }
+    /*滚动条拉到360之后页面导航栏吸顶覆盖住原导航栏*/
     else if(btop>360){
         pagenav.setAttribute("style","position:fixed;top:0;z-index:999;background-color:white");
     }
+    /*回到顶部时变为原导航栏样式*/
     else{
         tit.setAttribute("style","");
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
@@ -49,10 +54,14 @@ function navscroll(){
 }
         /*轮播移动和改变相应样式*/
         function moving(speed,terminal,isleft){
+          /*获取到装轮播内容的DIV*/
             var list = getId("pro_carouselist");
+          /*获取到DIV的left值*/
             var left_val = parseInt(list.style.left);
             var btn_idx;
+          /*获取到轮播跟随的箭头*/
             var button = document.getElementsByTagName("p");
+          /*获取到轮播内容对应的LOGO dl*/
             var product = document.getElementsByTagName("dl");
 
             if(left_val===terminal){
@@ -65,15 +74,21 @@ function navscroll(){
 
             /*改变LOGO以及p标签中箭头的样式*/
             for(var k=0;k<button.length;k++){
+              /*清空样式*/
                 button[k].setAttribute("class","")
             }
+            /*对应箭头类名切换*/
             button[btn_idx].setAttribute("class","on");
 
             for(var c=0;c<product.length;c++){
+            /*清空产品LOGO样式*/
                 product[c].setAttribute("class","");
+            /*清空LOGO中图片的样式*/
                 product[c].getElementsByTagName("img")[0].setAttribute("style","");
             }
+            /*LOGO样式改变*/
             product[btn_idx].setAttribute("class","logoturn");
+            /*LOGO图片样式改变*/
             product[btn_idx].getElementsByTagName("img")[0].setAttribute("style","opacity:0");
         }
 //回到顶部
@@ -172,16 +187,3 @@ window.onload=function(){
     };
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-

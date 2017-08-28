@@ -7,7 +7,6 @@
 #index_fixedBox{
     width: 60px;
     height: 400px;
-    /*float: right;*/
     position: fixed;
     right: 4px;
     top:355px;
@@ -16,7 +15,6 @@
 }
 #index_fixedBox ul{
     list-style-type: none;
-    /*overflow: hidden;*/
 }
 #index_fixedBox ul li{
     width: 100%;
@@ -757,10 +755,10 @@ input{
     color: #ffffff;
     font-size: 28px;
     border: 0;
-    background-color:gold;
+    background-color:orange;
 }
 #client_try input:hover{
-    background-color: orange;
+    background-color: #ff4500;
 }
 
 /*一站式，大数据*/
