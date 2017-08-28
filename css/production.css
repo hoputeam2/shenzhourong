@@ -298,6 +298,9 @@ nav a{
     font-size:14px;
     color: white;
 }
+#examineSystem{
+    margin:-15px 60px 0 0;
+}
 .pro_carouseTitle{
     display: block;
     font-size: 24px;
