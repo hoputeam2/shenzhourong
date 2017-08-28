@@ -230,7 +230,7 @@ window.onload=function() {
         var times1=null;
         var index_focus_box=document.getElementById("index_person_dec");
         var index_box_list=index_focus_box.getElementsByClassName("index_person_ditail");   //获得下面文字部分
-        var index_img=index_focus_box.getElementsByTagName("dt");    //人物头像
+        var index_img=index_focus_box.getElementsByTagName("dt");    //人物图片
         var index_dd=index_focus_box.getElementsByTagName("dd");    //人物姓名介绍
         var click_obj=document.getElementsByClassName("test");
         var start=0;
@@ -262,7 +262,7 @@ window.onload=function() {
             index_focus_box.onmouseover=function(){      //鼠标悬停时清除定时器
                 clearInterval(times);
                 clearInterval(times1);
-               
+
             }
         })(i);
         index_focus_box.onmouseout=function(){          //鼠标移走重新启动定时器
