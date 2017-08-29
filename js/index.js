@@ -221,61 +221,69 @@ window.onload=function() {
     };
 
 
-
-
-        //人物切换
-
-    (function(){
-        var times=null;
-        var times1=null;
-        var index_focus_box=document.getElementById("index_person_dec");
-        var index_box_list=index_focus_box.getElementsByClassName("index_person_ditail");   //获得下面文字部分
-        var index_img=index_focus_box.getElementsByTagName("dt");    //人物图片
-        var index_dd=index_focus_box.getElementsByTagName("dd");    //人物姓名介绍
-        var click_obj=document.getElementsByClassName("test");
-        var start=0;
-        for(var k=0;k<5;k++){
-            click_obj[k].idx=k;
-        }
-        for(var i=0;i<index_box_list.length;i++){
-            index_img[i].index=index_box_list[i].index=i;
-        }
-        times=setInterval(function(){
-            tric();
-        },1000);
-        function tric(){                  //遍历文字部分数组，先清除样式，再添加样式
-            var idx=start++%(index_box_list.length);
-            for(var i=0;i<index_box_list.length;i++){
-                index_box_list[i].style.display="none";
-                index_img[i].setAttribute("class","");
-                for(var j=0;j<index_dd.length;j++){
-                    index_dd[j].style.color="#fff";
-                }
-             }
-            //人头部分设置样式
-            index_box_list[idx].style.cssText="color:orange;position:absolute;top:250px;left:40px;display:block;width: 1200px;text-align: center;";
-            index_img[idx].setAttribute("class","active1");
-            index_dd[idx].style.color="orange";
-        }
-
-        (function(){
-            index_focus_box.onmouseover=function(){      //鼠标悬停时清除定时器
-                clearInterval(times);
-                clearInterval(times1);
-
+   //人物切换
+   var person_content=document.getElementById("index_person_content");
+   var person_span=person_content.getElementsByTagName("span");   //装图片和姓名的span
+   var person_img=person_content.getElementsByTagName("img");     //人物头像
+   var person_text=person_content.getElementsByClassName("index_person_ditail")[0];   //介绍文字部分
+   var arr=[
+       "在不断变化的市场环境中，神州融不断革新风控技术，并整合消费金融生态上下游的力量，连接各类信贷场景与银行资金，是值得信赖的合作伙伴。",
+       "神州融秉承“打造银行级消费金融解决方案”的理念，对自身的专业技术，系统架构、流程规范、安全合规性都坚持了严苛的标准和要求，相信大数据风控会助力消费金融行业更安全快速的发展。",
+       "从“大数据风控专家”到提供“消费金融解决方案领导者”，神州融一直走在科技金融行业前列，为客户的业务发展保驾护航，在激烈的市场竞争中获得稳健的发展。",
+       "神州融对消费金融行业的深刻理解和强大的技术实力，能够针对客户的独特需求设计定制化、开创性的解决方案。先进的业务理念和扎实的技术手段，可以降低非金融从业机构进入消费金融领域的门槛。",
+       "在我们所接触的大数据风控供应商中，神州融的服务最全面也最专业的，从征信数据、IT系统、评分建模到资金对接，使客户无论处在业务发展的哪个阶段，都能获得专业的服务与支持。"
+   ];
+    var time1=null;
+    var time2=null;
+    var start=0;          //定义变量保存索引
+    var current_idx;            //定义一个变量保存当前位置索引
+    time1=setInterval(function(){            //设置定时器
+        slide();
+    },1500);
+        function slide(){                            //构造函数
+            var idx=start++%[person_span.length];       //start每次自加1并对span长度 5 取模，可循环得到0,1,2,3,4，可看成当前索引
+            for(var i=0;i<person_span.length;i++){        //循环人头部分，先清除样式
+                person_img[i].setAttribute("class","");
+                person_span[i].setAttribute("class","");
             }
-        })(i);
-        index_focus_box.onmouseout=function(){          //鼠标移走重新启动定时器
-            clearInterval(times);
-            clearInterval(times1);
-            times1=setInterval(function(){
-                tric(start);
-            },1000)
-        };
-    })();
+            person_img[idx].setAttribute("class","index_person_img");        //每次循环，重新添加样式
+            person_span[idx].setAttribute("class","index_person_list");
+            person_text.innerHTML=arr[idx];                  //显示idx索引 对应数组中的索引的文字部分
+        }
+       for(var i=0;i<person_span.length;i++){               //先循环人头部分
+           (function(n){                                     //利用闭包函数的独立执行性
+               person_span[n].addEventListener("mouseover",function(){     //给span绑定鼠标悬停事件
+                   clearInterval(time1);                    //清除定时器
+                   clearInterval(time2);
+                    for(var j=0;j<arr.length;j++){
+                       if(n===j){                    //判断，当前索引=数组索引，显示对应的数组索引中的文字
+                           person_text.innerHTML=arr[n];
+                       }
+                   }
+                   for(var k=0;k<person_span.length;k++){
+                       person_img[k].setAttribute("class","");      //对应的先清除样式，再循环的添加样式
+                       person_span[k].setAttribute("class","");
+                   }
+                   person_img[n].setAttribute("class","index_person_img");
+                   person_span[n].setAttribute("class","index_person_list");
+                   person_text.innerHTML=arr[n];
+                   current_idx=n;                         //将当前位置索引赋值给变量current_idx
+               },false);
 
-
-
+               person_span[n].addEventListener("mouseout",function(){                //绑定鼠标移出事件
+                   time2=setInterval(function(){
+                       var idx=current_idx++%[person_span.length];           //当前索引自加对5取模，保证鼠标移走后能继续从当前索引位置下继续走
+                       for(var i=0;i<person_span.length;i++){
+                           person_img[i].setAttribute("class","");       //同时先清空样式，再循环添加样式
+                           person_span[i].setAttribute("class","");
+                       }
+                       person_img[idx].setAttribute("class","index_person_img");
+                       person_span[idx].setAttribute("class","index_person_list");
+                       person_text.innerHTML=arr[idx];
+                   },1500)
+               },false)
+           })(i)
+       }
         //最新动态切换
     (function(){
         var index_news_focus = document.getElementsByClassName("index_latest_dec");

@@ -573,41 +573,43 @@ nav #main_nav{
     background-repeat:no-repeat ;
 
 }
-#index_person_dec{
-     width: 1200px;
-     height: 430px;
-     margin: 0 auto;
-     position: relative;
- }
-.index_person_list{
-    color: orange;
-    width: 240px;
-    height: 220px;
-    float: left;
-    line-height: 40px;
-}
-
-.index_person_ditail{
-    display: none;
-}
-.show{
-    display: block;
-    color:orange;
-    position:absolute;
-    top:250px;
-    left:40px;
+#index_person_content{
     width: 1200px;
-    text-align: center;
+    height: 430px;
+    margin: 0 auto;
 }
-.index_person_list dt{
-    width: 111px;
-    height: 111px;
+#index_person_head{
+    width: 1200px;
+    height: 230px;
+    margin: 0 auto;
 }
-.index_person_list dd{
-    width: 111px;
-    height: 25px;
+#index_person_head span{
+    margin-left: 100px;
+    display: block;
     text-align: center;
-    color: #edab00;
+    float: left;
+    width: 118px;
+    font-size:16px;
+    height: 200px;
+    color: #fff;
+}
+#index_person_head .index_person_list{
+    color: orange;
+}
+.index_person_img{
+    border: 2px solid orange;
+    border-radius:50% ;
+}
+#index_person_trans{
+    width: 1200px;
+    height: 200px;
+}
+.index_person_ditail{
+    width: 1200px;
+    height: 200px;
+    font-size: 18px;
+    text-align: center;
+    color: orange;
 }
 
 /*最新动态部分*/
