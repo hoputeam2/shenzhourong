@@ -103,7 +103,6 @@ nav #main_nav{
 #client_box{
     width: 60px;
     height: 400px;
-    /*float: right;*/
     position: fixed;
     right: 4px;
     top:355px;
@@ -112,7 +111,6 @@ nav #main_nav{
 }
 #client_box ul{
     list-style-type: none;
-    /*overflow: hidden;*/
 }
 #client_box ul li{
     width: 100%;
@@ -149,26 +147,22 @@ background-image: url("../img/about_images/icon17.png");
 
 #client_box ul .tel:hover a{
 
-    background: url("../img/about_images/icon20dzf.png");
-    background-repeat: no-repeat;
+    background: url("../img/about_images/icon20dzf.png") no-repeat;
     background-position: center;
 }
 #client_box ul .wx:hover a{
 
-    background: url("../img/about_images/icon21dzf.png");
-    background-repeat: no-repeat;
+    background: url("../img/about_images/icon21dzf.png") no-repeat;
     background-position: center;
 }
 #client_box ul .QQ:hover a{
 
-    background: url("../img/about_images/icon18dzf.png");
-    background-repeat: no-repeat;
+    background: url("../img/about_images/icon18dzf.png") no-repeat;
     background-position: center;
 }
 #client_box ul .arrow:hover a{
 
-    background: url("../img/about_images/icon23.png");
-    background-repeat: no-repeat;
+    background: url("../img/about_images/icon23.png") no-repeat;
     background-position: center;
 }
 /*电话显示隐藏*/
@@ -273,11 +267,10 @@ strong a{
 #client_picA,#client_picC{
     width: 492px;
     height: 321px;
-    background-image:url("../img/client_images/01%20_2.jpg") ;
+    background:url("../img/client_images/01%20_2.jpg") no-repeat ;
     overflow: hidden;
     background-position: center;
     background-size: 100%;
-    background-repeat: no-repeat;
     transition:all 0.4s ease-in-out;
     float: right;
     margin-top: 50px;
@@ -366,10 +359,7 @@ strong a{
     height: 200px;
     border:0 solid red;
     text-align: center;
-
     margin: auto;
-
-    /*line-height: 50px;*/
     position: relative;
     top: 114px;
 }
@@ -478,7 +468,10 @@ input{
     height: 21px;
     border: 1px solid green;
 }
-
+hr{
+   float: left;
+    width: 1210px;
+}
 footer{
     float: left;
     font-size: 16px;

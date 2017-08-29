@@ -30,8 +30,8 @@ window.onload=function(){
         var height=document.documentElement.clientHeight;
 //        滚动条滚动事件
         window.onscroll=function(){
-
-            var top=document.documentElement.scrollTop||document.body.scrollTop;//scrollTop为滚动条滑动的距离
+//       scrollTop为滚动条滑动的距离
+            var top=document.documentElement.scrollTop||document.body.scrollTop;
             if (top>=height) {
                 obj.style.display='block'
             }
@@ -47,11 +47,6 @@ window.onload=function(){
         var img=document.getElementById('client_apply');
 
         console.log(scrollTop);
-//        事件绑定
-
-//        img.addEventListener("",function(){
-////                scrollone();
-//        })
 
         if(scrollTop>1451){
             img.style.transition="all 1s";
