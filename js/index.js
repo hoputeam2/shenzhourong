@@ -5,6 +5,46 @@ window.onload=function() {
     function getId(id) {
         return document.getElementById(id)?document.getElementById(id):null;
     }
+
+    //头部js
+    document.onscroll=function(){
+        var tit = document.getElementsByTagName("nav")[0];
+        var tittop=tit.offsetTop;
+        var navimg=tit.getElementsByTagName("img")[0];
+        var a = tit.getElementsByTagName("a");
+        var btop = document.body.scrollTop||document.documentElement.scrollTop;
+        //       获取body的高度
+        var clientHeight = document.documentElement.clientHeight;
+        //       滚动条滚动事件
+        var height = document.documentElement.scrollTop || document.body.scrollTop;
+        //       console.log(height);
+        var obj = document.getElementById("up");
+        /*滚动超过一个屏幕显示回到顶部的div*/
+        if (height >= clientHeight) {
+            obj.style.display = 'block';
+        }
+        else {
+            obj.style.display = 'none'
+        }
+
+        /*导航栏*/
+        if(btop>tittop){
+            tit.setAttribute("style","background-color:white;color:black;");
+            for(var i = 0;i< a.length;i++){
+                a[i].setAttribute("style","color:black")
+            }
+            navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
+        }
+        else{
+            tit.setAttribute("style","");
+            for(var i = 0;i< a.length;i++){
+                a[i].setAttribute("style","")
+            }
+            navimg.setAttribute("src","../img/first_images/145x45baise.png");
+        }
+
+    };
+
     /*大图滚动*/
     function picmoving(speed,terminal,isleft){
         /*获取到轮播图片的DIV*/
@@ -152,7 +192,7 @@ window.onload=function() {
 //定时器
     timer = setInterval(function () {
         moving(-1200, -2400, "0px");
-    }, 1700);
+    }, 2500);
 
     container.onmouseover = function () {              //鼠标悬停时清除定时器
         clearInterval(timer);
@@ -163,7 +203,7 @@ window.onload=function() {
         clearInterval(timer1);
         timer1 = setInterval(function () {
             moving(-1200, -2400, "0px");
-        }, 1700);
+        }, 3500);
     };
 
 
@@ -208,7 +248,7 @@ window.onload=function() {
 //添加定时器
     section_timer=setInterval(function(){
         Switch(0,-4800,-1200)
-    },1600);
+    },3500);
 
     container_main.onmouseover=function(){            //鼠标悬停时清除定时器
         clearInterval(section_timer);
@@ -217,7 +257,7 @@ window.onload=function() {
     container_main.onmouseout=function(){            //鼠标移走重新启动定时器
         section_timer1=setInterval(function(){
             Switch(0, -4800, -1200)
-        },1600);
+        },3500);
     };
 
 
@@ -235,11 +275,11 @@ window.onload=function() {
    ];
     var time1=null;
     var time2=null;
-    var start=0;          //定义变量保存索引
+    var start=1;          //定义变量保存索引
     var current_idx;            //定义一个变量保存当前位置索引
     time1=setInterval(function(){            //设置定时器
         slide();
-    },1500);
+    },3000);
         function slide(){                            //构造函数
             var idx=start++%[person_span.length];       //start每次自加1并对span长度 5 取模，可循环得到0,1,2,3,4，可看成当前索引
             for(var i=0;i<person_span.length;i++){        //循环人头部分，先清除样式
@@ -280,7 +320,7 @@ window.onload=function() {
                        person_img[idx].setAttribute("class","index_person_img");
                        person_span[idx].setAttribute("class","index_person_list");
                        person_text.innerHTML=arr[idx];
-                   },1500)
+                   },3000)
                },false)
            })(i)
        }
@@ -303,44 +343,4 @@ window.onload=function() {
 
 };
 
-
-
-//头部js
-document.onscroll=function(){
-    var tit = document.getElementsByTagName("nav")[0];
-    var tittop=tit.offsetTop;
-    var navimg=tit.getElementsByTagName("img")[0];
-    var a = tit.getElementsByTagName("a");
-    var btop = document.body.scrollTop||document.documentElement.scrollTop;
-    //       获取body的高度
-    var clientHeight = document.documentElement.clientHeight;
-//       滚动条滚动事件
-    var height = document.documentElement.scrollTop || document.body.scrollTop;
-//       console.log(height);
-    var obj = document.getElementById("up");
-    /*滚动超过一个屏幕显示回到顶部的div*/
-    if (height >= clientHeight) {
-        obj.style.display = 'block';
-    }
-    else {
-        obj.style.display = 'none'
-    }
-
-    /*导航栏*/
-    if(btop>tittop){
-        tit.setAttribute("style","background-color:white;color:black;");
-        for(var i = 0;i< a.length;i++){
-            a[i].setAttribute("style","color:black")
-        }
-        navimg.setAttribute("src","../img/first_images/iphone_logo02.png");
-    }
-    else{
-        tit.setAttribute("style","");
-        for(var i = 0;i< a.length;i++){
-            a[i].setAttribute("style","")
-        }
-        navimg.setAttribute("src","../img/first_images/145x45baise.png");
-    }
-
-};
 
