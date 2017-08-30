@@ -311,7 +311,7 @@ nav #main_nav{
 }
 .new_active_list{
     list-style: none;
-    padding: 0;
+    margin-bottom: 30px;
 }
 .new_active_list li{
     display: inline;
@@ -439,6 +439,10 @@ input{
 #client_code p{
     width: 150px;
     line-height: 28px;
+}
+hr{
+    float: left;
+    width: 1210px
 }
 footer{
     float: left;
