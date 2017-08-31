@@ -144,8 +144,8 @@ window.onload=function() {
     var timer = null;
     var timer1 = null;
     var container = document.getElementById("index_example_change");
-    var index_example_prev = document.getElementById("index_example_prev");   //左箭头
-    var index_example_next = document.getElementById("index_example_next");    //右箭头
+    var index_example_prev = document.getElementById("index_example_prev");   //hover时显示的左箭头
+    var index_example_next = document.getElementById("index_example_next");    //hover时显示的右箭头
     var index_example_list = document.getElementById("index_example_pic");      //装图片的容器
     var index_example_button = document.getElementById("index_example_buttons").getElementsByTagName("span");   //小圆圈按钮集合
     //绑定事件
@@ -178,7 +178,7 @@ window.onload=function() {
         index_example_button[index_left_value / -1200].setAttribute("class", "on");
     }
 
-    //控制下方的圆圈切换
+    //控制下方的圆圈按钮切换
     function circle(that, n) {                    //遍历圆圈数组，先清除样式，再添加样式
         for (var i = 0; i < index_example_button.length; i++) {
             index_example_button[i].setAttribute("class", "");
@@ -261,11 +261,11 @@ window.onload=function() {
     };
 
 
-   //人物切换
+   //人物切换部分
    var person_content=document.getElementById("index_person_content");
    var person_span=person_content.getElementsByTagName("span");   //装图片和姓名的span
    var person_img=person_content.getElementsByTagName("img");     //人物头像
-   var person_text=person_content.getElementsByClassName("index_person_ditail")[0];   //介绍文字部分
+   var person_text=person_content.getElementsByClassName("index_person_detail")[0];   //介绍文字部分
    var arr=[
        "在不断变化的市场环境中，神州融不断革新风控技术，并整合消费金融生态上下游的力量，连接各类信贷场景与银行资金，是值得信赖的合作伙伴。",
        "神州融秉承“打造银行级消费金融解决方案”的理念，对自身的专业技术，系统架构、流程规范、安全合规性都坚持了严苛的标准和要求，相信大数据风控会助力消费金融行业更安全快速的发展。",
@@ -335,7 +335,7 @@ window.onload=function() {
                     index_news_detail[j].style.display = "none";
                     index_news_focus[j].style = "black";
                 }
-                this.style.color = "#1c9cd1";
+                this.style.color= "#1c9cd1";
                 index_news_detail[this.index].style.display = "block";
             }
         }

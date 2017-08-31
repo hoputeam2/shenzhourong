@@ -323,17 +323,17 @@ nav #main_nav{
 
 /*官方动态轮播结束*/
 
+/*上面风控无人机切换部分*/
 #wrapper{
     margin: 0 auto;
     font-family: "微软雅黑";
 }
-/*上面风控无人机切换部分*/
 #container_main {
     width: 1200px;
-    margin: 60px auto 0;
+    margin: 60px auto;
 }
 
-/*5个切换按钮*/
+/*上面5个切换按钮部分*/
 .container_head{
     width:1200px;
     height: 150px;
@@ -371,7 +371,7 @@ nav #main_nav{
 #on .section5{  background: url("../img/first_images/icon5.png") no-repeat center;  }
 
 
-/*板块详情*/
+/*下方文字板块详情*/
 #section_details{
     overflow: hidden;
     position: relative;
@@ -536,7 +536,6 @@ nav #main_nav{
     margin-left: 10px;
     border-radius: 50%;
     border:1px solid #faf5f5;
-
 }
 .on{
     background: #f6f1f9;
@@ -556,7 +555,6 @@ nav #main_nav{
 #index_example_change:hover .index_example_arrow{
     display: block;
     cursor: pointer;
-
 }
 #index_example_prev {
     left: 0;
@@ -569,9 +567,7 @@ nav #main_nav{
     width: 100%;
     height: 430px;
     padding: 60px 0 45px 0;
-    background-image: url("../img/first_images/bg22.jpg") ;
-    background-repeat:no-repeat ;
-
+    background:url("../img/first_images/bg22.jpg") no-repeat;
 }
 #index_person_content{
     width: 1200px;
@@ -604,7 +600,7 @@ nav #main_nav{
     width: 1200px;
     height: 200px;
 }
-.index_person_ditail{
+.index_person_detail{
     width: 1200px;
     height: 200px;
     font-size: 18px;
@@ -698,7 +694,6 @@ nav #main_nav{
     line-height: 60px;
     text-align: center;
 }
-
 .index_somelogo_list{
     list-style: none;
     padding: 0;
