@@ -3,6 +3,11 @@
     margin:0;
     font-size:14px;
 }
+#about_content{
+    width: 1900px;
+    overflow: hidden;
+    margin: auto;
+}
 /*about头部开始*/
 nav{
 

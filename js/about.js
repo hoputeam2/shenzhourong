@@ -24,8 +24,8 @@ window.onscroll=function(){
     else{
         tit.setAttribute("style","");
         tit2.setAttribute("style","");
-        for(var i = 0;i< a.length;i++){
-            a[i].setAttribute("style","")
+        for(var j = 0;j< a.length;j++){
+            a[j].setAttribute("style","")
         }
         navimg.setAttribute("src","../img/first_images/145x45baise.png");
     }

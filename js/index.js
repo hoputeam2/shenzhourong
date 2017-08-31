@@ -37,8 +37,8 @@ window.onload=function() {
         }
         else{
             tit.setAttribute("style","");
-            for(var i = 0;i< a.length;i++){
-                a[i].setAttribute("style","")
+            for(var j = 0;j< a.length;j++){
+                a[j].setAttribute("style","")
             }
             navimg.setAttribute("src","../img/first_images/145x45baise.png");
         }
@@ -98,16 +98,16 @@ window.onload=function() {
         picmoving(1905, 0, -3810);
     });
     /*按钮悬浮切换对应内容及改变样式*/
-    for (var i = 0; i < button.length; i++) {
+    for (var k = 0; k < button.length; k++) {
         (function (n) {
-            button[i].addEventListener("mouseover", function () {
+            button[k].addEventListener("mouseover", function () {
                 list.style.left = n * (-1905) + "px";
                 for (var j = 0; j < button.length; j++) {
                     button[j].setAttribute("class", "")
                 }
                 button[n].setAttribute("class", "on")
             })
-        })(i)
+        })(k)
     }
     /*定时器部分*/
     content.timer = setInterval(function () {
@@ -155,12 +155,12 @@ window.onload=function() {
     index_example_next.addEventListener("click", function () {
         moving(-1200, -2400, "0px");
     });
-    for (var i = 0; i < index_example_button.length; i++) {
+    for (var l = 0; l < index_example_button.length; l++) {
         (function (n) {
             index_example_button[n].onclick = function () {
                 circle(this, n);
             }
-        })(i);
+        })(l);
     }
     //编写函数
     function moving(speed, terminal, flag) {            //运动的速度，达到的极限值，判断左右方向

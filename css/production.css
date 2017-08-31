@@ -4,8 +4,10 @@
     outline: none;
 }
 #production_content{
-    width: 100vw;
+    width: 1900px;
     height:4800px;
+    overflow: hidden;
+    margin: auto;
 }
 a{
     color: #000000;
@@ -467,7 +469,7 @@ nav a{
     display: block;
     cursor: pointer;
 }
-/*图片*/
+/*右侧固定框样式*/
 #index_fixedBox ul .tel a{
     background-image: url("../img/about_images/icon16.png");
 }
@@ -483,27 +485,19 @@ nav a{
 
 #index_fixedBox ul .tel:hover a{
 
-    background: url("../img/about_images/icon20dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
 }
 #index_fixedBox ul .wx:hover a{
 
-    background: url("../img/about_images/icon21dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
 }
 #index_fixedBox ul .QQ:hover a{
 
-    background: url("../img/about_images/icon18dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
 }
 #index_fixedBox ul .arrow:hover a{
 
-    background: url("../img/about_images/icon23.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
 }
 /*电话显示隐藏*/
 #index_fixedBox ul .tel>div{

@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+#new_active_container{
+    width: 1900px;
+    overflow: hidden;
+    margin: auto;
+}
 /*右边固定部分*/
 #index_fixedBox{
     width: 60px;
@@ -15,7 +20,6 @@
 }
 #index_fixedBox ul{
     list-style-type: none;
-    /*overflow: hidden;*/
 }
 #index_fixedBox ul li{
     width: 100%;

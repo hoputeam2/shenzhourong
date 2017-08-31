@@ -17,8 +17,8 @@ window.onload=function(){
         }
         else {
             tit.setAttribute("style", "");
-            for (var i = 0; i < a.length; i++) {
-                a[i].setAttribute("style", "")
+            for (var j = 0; j < a.length; j++) {
+                a[j].setAttribute("style", "")
             }
             navimg.setAttribute("src", "../img/first_images/145x45baise.png");
         }
@@ -50,10 +50,6 @@ window.onload=function(){
 
     console.log(scrollTop);
 //        事件绑定
-
-//        img.addEventListener("",function(){
-////                scrollone();
-//        })
 
     if(scrollTop>1451){
         img.style.transition="all 1s";

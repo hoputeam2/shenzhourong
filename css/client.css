@@ -5,6 +5,11 @@
     font-family: "微软雅黑";
 }
 
+#client_container{
+    width: 1900px;
+    overflow: hidden;
+    margin: auto;
+}
 
 nav{
     width: 100vw;
