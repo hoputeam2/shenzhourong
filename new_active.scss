@@ -7,6 +7,7 @@ $ul_padding:0;       //去除ul的默认内边距
 $a_decline:none;     //去除a的下划线
 $a_hover:#1c9cd1;    //a悬停时的样式
 $cursor:pointer;
+$come:block;   //display:block
 //混合宏的样式
 @mixin all{
   margin: 0;
@@ -24,8 +25,25 @@ $cursor:pointer;
   background: #EEEEEE;
   margin: 40px 0 15px 0;
 }
-
-
+@mixin sub_li{    //二级导航中li的样式
+  float: none;
+  margin: 0;
+}
+@mixin sub_li_hover{
+  background-color: #2597BA;
+}
+@mixin three_sub{
+  background-color: white;
+  width: 130px;
+  color: #000000;
+  line-height: 40px;
+  float: left;
+  opacity: .8;
+  display: none;
+  position: relative;
+  list-style: $ul_list_style;
+  text-align: center;
+}
 //头部样式
 *{
   @include all;
@@ -129,6 +147,66 @@ $cursor:pointer;
   }
 }
 
+//主导航部分
+nav{
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  left:0;
+  color: #FFF;
+  z-index: 999;
+  img{
+    margin:5px 100px;
+  }
+  #main_nav{
+    list-style: $ul_list_style;
+    float: right;
+    margin-right: 12vw;
+    width: 780px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    li{
+      width: 130px;
+      float: left;
+      cursor: $cursor;
+      a{
+        color: #ffffff;
+        text-decoration: $a_decline;
+      }
+    }
+  }
+}
+//二级菜单
+#index_proSecNav{
+  height:210px ;
+  @include three_sub;
+}
+#index_prolist:hover #index_proSecNav,#index_newlist:hover #index_newSecNav,#index_aboutlist:hover #index_aboutSecNav{
+  display: $come;
+}
+#index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
+   @include sub_li;
+}
+#index_proSecNav li:hover,#index_newSecNav li:hover,#index_aboutSecNav li:hover{
+   @include sub_li_hover;
+}
+#index_newSecNav{
+  height:125px ;
+  @include three_sub;
+}
+#index_aboutSecNav{
+  width: 130px;
+  @include three_sub;
+}
+#content{
+  background-image: url("img/newActive_images/top.jpg");
+  height: 359px;
+}
+//导航栏结束
+
+
 
 //主体部分的样式
 #new_active_content{
@@ -139,6 +217,7 @@ $cursor:pointer;
 //主体部分的左边栏
 #new_active_left{
   width: 300px;
+  margin-top: 17px;
   float: $float_left;
 }
 //左边栏的三个菜单
@@ -154,9 +233,9 @@ $cursor:pointer;
 .new_active_nav li{
   border-bottom: 1px solid #E5e5e5;
   text-indent: 10px;
-}
-.new_active_nav li a{
-  text-decoration: $a_decline;
+  a{
+    text-decoration: $a_decline;
+  }
 }
 .new_active_info .new_active_title{
   @include left-style;
@@ -171,10 +250,10 @@ $cursor:pointer;
   font-size: 13px;
   height: 25px;
   line-height: 25px;
-}
-.new_active_read li a{
-  text-decoration: $a_decline;
-  color:#616976;
+  a{
+     text-decoration: $a_decline;
+     color:#616976;
+   }
 }
 .new_active_read li a:hover,.new_active_nav li a:hover,.new_active_detail a:hover{
   color: $a_hover;
@@ -246,5 +325,125 @@ $cursor:pointer;
 }
 
 //尾部样式
+#client_apply{
+  width: 1905px;
+  height: 438px;
+  background-image:url(img/first_images/bg33.jpg);
+}
+#client_try{
+  width: 800px;
+  height: 200px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 114px;
+  span {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    line-height:58px;
+  }
+  p{
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70px;
+  }
+  input{
+    width: 201px;
+    height: 57px;
+    color: #ffffff;
+    font-size: 28px;
+    border: 0;
+    background-color:gold;
+    &:hover{
+      background-color: orange;
+    }
+  }
+}
+//一站式，大数据
+#client_class {
+  width: 1905px;
+  height: 108px;
+  background-color: #ffffff;
+  a {
+    color: #000000;
+    text-decoration: $a_decline;
+  }
+  ul {
+    width: 1109px;
+    height: 100px;
+    margin: auto;
+    list-style-type: $a_decline;
+  }
+  li{
+    width: 216px;
+    height: 86px;
+    font-size: 20px;
+    font-weight:bolder;
+    margin-top: 6px;
+    border-right: 1px solid dimgray;
+    float:left;
+    text-align: center;
+    line-height: 100px;
+    img{
+      vertical-align: middle;
+    }
+  }
+}
+//底部
+#client_foot{
+  width: 1905px;
+  height: 412px;
+  background-color:#E5E5E5;
+}
+#client_foot-box {
+  width: 1214px;
+  height: 400px;
+  color: dimgray;
+  border: 0 solid goldenrod;
+  margin:$margin;
+  ul{
+    float:left;
+    list-style-type: $ul_list_style;
+    margin: 26px 30px;
+    li{
+      font-size: 13px;
+      margin-top: 18px;
+    }
+  }
+  .client_list{
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+  a{
+     color:dimgray ;
+     text-decoration: $a_decline;
+   }
+}
+#client_code{
+  width: 112px;
+  height: 186px;
+  float: right;
+  margin-top: 36px;
+  p{
+    width: 150px;
+    line-height: 28px;
+  }
+}
+hr{
+  float: left;
+  width: 1210px
+}
+footer{
+  float: left;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  top: 21px;
+  left: 263px;
+}
+
 
 
