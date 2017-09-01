@@ -136,11 +136,11 @@ nav #main_nav{
     display: block;
     cursor: pointer;
 }
-/*图片*/
+/*QQ,微信小图标*/
 #client_box ul .tel a{
     background-image: url("../img/about_images/icon16.png");
 }
-#client_box ul .wx a{
+#client_box ul .WeChat a{
 background-image: url("../img/about_images/icon17.png");
 }
 #client_box ul .QQ a{
@@ -152,23 +152,19 @@ background-image: url("../img/about_images/icon17.png");
 
 #client_box ul .tel:hover a{
 
-    background: url("../img/about_images/icon20dzf.png") no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
 }
-#client_box ul .wx:hover a{
+#client_box ul .WeChat:hover a{
 
-    background: url("../img/about_images/icon21dzf.png") no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
 }
 #client_box ul .QQ:hover a{
 
-    background: url("../img/about_images/icon18dzf.png") no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
 }
 #client_box ul .arrow:hover a{
 
-    background: url("../img/about_images/icon23.png") no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
 }
 /*电话显示隐藏*/
 #client_box ul .tel>div{
@@ -185,16 +181,13 @@ background-image: url("../img/about_images/icon17.png");
     border-right: 0;
 }
 #client_box ul .tel span{
-    /*border: 1px solid red;*/
-
     font-size: 15px;
 }
 #client_box ul .tel:hover div{
-
     display: block;
 }
 /*二维码显示隐藏*/
-#client_box ul .wx>div{
+#client_box ul .WeChat>div{
     display: none;
     width: 106px;
     height: 106px;
@@ -203,14 +196,14 @@ background-image: url("../img/about_images/icon17.png");
     top: -56px;
     left: -116px;
 }
-#client_box ul .wx:hover div{
+#client_box ul .WeChat:hover div{
     display: block;
 }
-#up{
+#arrow_up{
     display: none;
 }
 
-/*整个DIV*/
+/*页面样式*/
 #client_content{
     width: 1905px;
 }
@@ -272,9 +265,8 @@ strong a{
 #client_picA,#client_picC{
     width: 492px;
     height: 321px;
-    background:url("../img/client_images/01%20_2.jpg") no-repeat ;
+    background:url("../img/client_images/01%20_2.jpg") no-repeat center ;
     overflow: hidden;
-    background-position: center;
     background-size: 100%;
     transition:all 0.4s ease-in-out;
     float: right;
@@ -315,7 +307,7 @@ strong a{
 /*案例ABC  --end*/
 
 
-/*翻页*/
+/*换页*/
 #client_page-turing{
     width: 1905px;
     height: 113px;
@@ -350,7 +342,7 @@ strong a{
     text-align: center;
     background-color:#5797BA ;
 }
-/*翻页 --end*/
+/*申请试用*/
 #client_apply{
     width: 1905px;
     height: 438px;
@@ -426,7 +418,7 @@ input{
 #client_class li img{
     vertical-align: middle;
 }
-
+/*底部*/
 #client_foot{
     width: 1905px;
     height: 412px;
