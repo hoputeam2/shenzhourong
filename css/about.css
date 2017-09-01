@@ -361,7 +361,6 @@ div{
 #client_box{
     width: 60px;
     height: 400px;
-    /*float: right;*/
     position: fixed;
     right: 4px;
     top:355px;
@@ -370,7 +369,6 @@ div{
 }
 #client_box ul{
     list-style-type: none;
-    /*overflow: hidden;*/
 }
 #client_box ul li{
     width: 100%;
@@ -395,7 +393,7 @@ div{
 #client_box ul .tel a{
     background-image: url("../img/about_images/icon16.png");
 }
-#client_box ul .wx a{
+#client_box ul .WeChat a{
     background-image: url("../img/about_images/icon17.png");
 }
 #client_box ul .QQ a{
@@ -407,27 +405,19 @@ div{
 
 #client_box ul .tel:hover a{
 
-    background: url("../img/about_images/icon20dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
 }
-#client_box ul .wx:hover a{
+#client_box ul .WeChat:hover a{
 
-    background: url("../img/about_images/icon21dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
 }
 #client_box ul .QQ:hover a{
 
-    background: url("../img/about_images/icon18dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
 }
 #client_box ul .arrow:hover a{
 
-    background: url("../img/about_images/icon23.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
 }
 /*电话显示隐藏*/
 #client_box ul .tel>div{
@@ -444,8 +434,6 @@ div{
     border-right: 0;
 }
 #client_box ul .tel span{
-    /*border: 1px solid red;*/
-
     font-size: 15px;
 }
 #client_box ul .tel:hover div{
@@ -453,7 +441,7 @@ div{
     display: block;
 }
 /*二维码显示隐藏*/
-#client_box ul .wx>div{
+#client_box ul .WeChat>div{
     display: none;
     width: 106px;
     height: 106px;
@@ -462,10 +450,10 @@ div{
     top: -56px;
     left: -116px;
 }
-#client_box ul .wx:hover div{
+#client_box ul .WeChat:hover div{
     display: block;
 }
-#up{
+#arrow_up{
     display: none;
 }
 

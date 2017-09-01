@@ -25,7 +25,7 @@ window.onload=function(){
 
 
 //    回到顶部
-        var obj=document.getElementById("up");
+        var obj=document.getElementById("arrow_up");
 //       获取body的高度
         var height=document.documentElement.clientHeight;
 //        滚动条滚动事件
@@ -45,9 +45,6 @@ window.onload=function(){
         var scrollTop=document.body.scrollTop;
 //       获取id
         var img=document.getElementById('client_apply');
-
-        console.log(scrollTop);
-
         if(scrollTop>1451){
             img.style.transition="all 1s";
             img.style.transform="translate(0,10px)";
