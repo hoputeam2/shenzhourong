@@ -11,7 +11,6 @@
 #index_fixedBox{
     width: 60px;
     height: 400px;
-    /*float: right;*/
     position: fixed;
     right: 4px;
     top:355px;
@@ -53,28 +52,16 @@
     background-image: url("../img/first_images/icon19.png");
 }
 #index_fixedBox ul .tel:hover a{
-
-    background: url("../img/about_images/icon20dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
 }
 #index_fixedBox ul .wx:hover a{
-
-    background: url("../img/about_images/icon21dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
 }
 #index_fixedBox ul .QQ:hover a{
-
-    background: url("../img/about_images/icon18dzf.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
 }
 #index_fixedBox ul .arrow:hover a{
-
-    background: url("../img/about_images/icon23.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
 }
 /*电话显示隐藏*/
 #index_fixedBox ul .tel>div{
@@ -95,7 +82,6 @@
     font-size: 15px;
 }
 #index_fixedBox ul .tel:hover div{
-
     display: block;
 }
 /*二维码显示隐藏*/
@@ -179,7 +165,7 @@ nav #main_nav{
     color: #000000;
     line-height: 40px;
     float: left;
-    opacity: 0.8;
+    opacity: .8;
     display: none;
     position: relative;
     list-style: none;
@@ -212,11 +198,13 @@ nav #main_nav{
     background-image: url("../img/newActive_images/top.jpg");
     height: 359px;
 }
+
+
 /*主体部分的样式*/
 #new_active_content{
-    margin:0 auto;
+    /*margin:0 auto;*/
     width: 1150px;
-    font-family: "微软雅黑";
+    /*font-family: "Microsoft YaHei";*/
 }
 /*主体部分的左边栏*/
 #new_active_left{
