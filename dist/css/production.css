@@ -226,7 +226,7 @@ nav {
   height: 300px;
   position: relative;
   top: 100px;
-  transition: all 0.5s ease-in-out; }
+  transition: all .5s ease-in-out; }
 
 #pro_carouseArrow {
   width: 1200px;
@@ -437,5 +437,3 @@ nav {
     background: url("img/about_images/icon23.png") no-repeat center; }
   #index_fixedBox #up {
     display: none; }
-
-/*# sourceMappingURL=production.css.map */

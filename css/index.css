@@ -10,7 +10,6 @@
     position: fixed;
     right: 4px;
     top:355px;
-    border: 0 solid orangered;
     z-index: 3;
 }
 #index_fixedBox ul{
@@ -107,7 +106,7 @@
     display: block;
 }
 #index_fixedBox #up{
-display: none;
+    display: none;
 }
 
 /*导航栏*/
@@ -149,7 +148,7 @@ nav #main_nav{
     height:210px ;
     line-height: 40px;
     color: #000000;
-    opacity: 0.8;
+    opacity: .8;
     display: none;
     position: relative;
     list-style: none;
@@ -176,7 +175,7 @@ nav #main_nav{
     color: #000000;
     line-height: 40px;
     float: left;
-    opacity: 0.8;
+    opacity: .8;
     display: none;
     position: relative;
     list-style: none;
@@ -192,7 +191,7 @@ nav #main_nav{
     height:160px ;
     color: #000000;
     line-height: 40px;
-    opacity: 0.8;
+    opacity: .8;
     display: none;
     position: relative;
     list-style: none;
@@ -727,7 +726,6 @@ nav #main_nav{
 #client_try{
     width: 800px;
     height: 200px;
-    border:0 solid red;
     text-align: center;
     margin: auto;
     position: relative;
@@ -799,7 +797,6 @@ input{
     width: 1214px;
     height: 400px;
     color: dimgray;
-    border: 0 solid goldenrod;
     margin: auto;
 }
 #client_foot-box ul{
@@ -841,12 +838,4 @@ footer{
     left: 263px;
 }
 
-
-
 /*测试*/
-
-.active1{
-    border:2px solid orange;
-    overflow: hidden;
-    border-radius: 50%;
-}

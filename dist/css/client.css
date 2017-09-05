@@ -166,7 +166,7 @@
   #client_container #client_head {
     width: 1905px;
     height: 359px;
-    background-image: url("../img/client_images/top03.jpg"); }
+    background-image: url("/img/client_images/top03.jpg"); }
   #client_container #client_caseA, #client_container #client_caseC {
     width: 1905px;
     height: 496px;
@@ -206,7 +206,7 @@
   #client_container #client_picA, #client_container #client_picC {
     width: 492px;
     height: 321px;
-    background: url("../img/client_images/01%20_2.jpg") no-repeat center;
+    background: url("/img/client_images/01%20_2.jpg") no-repeat center;
     overflow: hidden;
     background-size: 100%;
     transition: all 0.4s ease-in-out;
@@ -215,8 +215,8 @@
     #client_container #client_picA:hover, #client_container #client_picC:hover {
       background-size: 115%; }
   #client_container #client_picC {
-    background-image: url("../img/client_images/01%20_3.jpg"); }
-  #client_container #client_caseA a, #client_container #client_caseB a, #client_container #client_picC a {
+    background-image: url("/img/client_images/01%20_3.jpg"); }
+  #client_container #client_caseA a, #client_container #client_caseB a, #client_container #client_caseC a {
     text-decoration: none; }
   #client_container #client_caseB {
     width: 1905px;
@@ -261,7 +261,7 @@
   #client_container #client_apply {
     width: 1905px;
     height: 438px;
-    background-image: url("../img/first_images/bg33.jpg");
+    background-image: url("/img/first_images/bg33.jpg");
     z-index: 1; }
   #client_container #client_try {
     width: 800px;

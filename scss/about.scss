@@ -1,0 +1,476 @@
+//一些共同的样式
+$margin:0 auto;    //居中显示
+$font-family: "Microsoft YaHei";
+$float_left:left;    //左浮动
+$float_right:right;    //右浮动
+$ul_list_style:none;  //去除ul前方的点
+$ul_padding:0;       //去除ul的默认内边距
+$a_decline:none;     //去除a的下划线
+$a_hover:#1c9cd1;    //a悬停时的样式
+$cursor:pointer;
+$come:block;   //display:block
+//混合宏的样式
+@mixin all{
+  margin: 0;
+  padding: 0;
+}
+@mixin Nav_li{
+  float: none;
+  margin: 0;
+}
+@mixin Nav_li_hover{
+  background-color: #2597BA;
+}
+
+
+*{
+  @include all;
+  font-size:14px;
+}
+#about_content{
+  width: 1900px;
+  overflow: hidden;
+  margin: $margin;
+}
+/*about头部开始*/
+nav{
+  width: 1900px;
+  height: 60px;
+  float: $float_left;
+  position: fixed;
+  top:0;
+  color: #fff;
+  /*about导航logo*/
+  img{
+    margin:10px 0 0 350px;
+    width: 145px;
+  }
+  a{
+    color: #ffffff;
+    text-decoration: $a_decline;
+  }
+}
+
+
+/*about头部右边导航list*/
+#main_nav{
+  list-style: $ul_list_style;
+  float: $float_right;
+  margin-right: 330px;
+  width: 780px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  /*about二级菜单*/
+  li{
+    width: 130px;
+    float: $float_left;
+    cursor: $cursor;
+  }
+}
+
+/*about下拉栏产品服务*/
+#index_proSecNav{
+  background-color: white;
+  width: 130px;
+  height:210px ;
+  line-height: 40px;
+  color: #000000;
+  opacity: .8;
+  display: none;
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+#index_prolist:hover #index_proSecNav{
+  display: block;
+}
+#index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
+  @include Nav_li;
+}
+#index_proSecNav li:hover,#index_newSecNav li:hover,#index_aboutSecNav li:hover{
+ @include Nav_li_hover;
+}
+/*about下拉栏最新动态*/
+#index_newSecNav{
+  background-color: white;
+  width: 130px;
+  height:125px ;
+  color: #000000;
+  line-height: 40px;
+  float: $float_left;
+  opacity: .8;
+  display: none;
+  position: relative;
+  list-style: $ul_list_style;
+  text-align: center;
+}
+#index_newlist:hover #index_newSecNav{
+  display: $come;
+}
+/*about下拉栏关于我们*/
+#index_aboutSecNav{
+  background-color: white;
+  width: 130px;
+  height:160px ;
+  color: #000000;
+  line-height: 40px;
+  opacity: .8;
+  display: none;
+  position: relative;
+  list-style: $ul_list_style;
+  text-align: center;
+}
+#index_aboutlist:hover #index_aboutSecNav{
+  display: $come;
+}
+/*about头部背景图*/
+#bg{
+  width: 1900px;
+  height: 420px;
+  background-image: url("img/about_images/top.jpg");
+}
+/*about头部结束*/
+
+
+/*about中间主要部分开始*/
+div{
+  display: $come;
+}
+#about-container{
+  width:100%;
+  overflow:hidden;
+  margin-top: -69px;
+}
+/*about主要部分导航*/
+
+#about-containerNav{
+  width:100%;
+  background:#fff;
+}
+#about-containerLeftnav{
+  width: 1200px;
+  height:58px;
+  line-height:58px;
+  margin:$margin;
+}
+/*about左边介绍导航*/
+#about-containerLeftnav>ul{
+  list-style-type: $ul_list_style;
+}
+#about-containerLeftnav>ul>li{
+  float: $float_left;
+  margin-right:50px;
+}
+#about-containerLeftnav>ul>li>a{
+  text-decoration: $a_decline;
+  color: #434242;
+}
+#about-containerLeftnav>ul>li>a:hover,a:active{
+  color:#2597ba;
+}
+/*about右边免费试用*/
+#about-free{
+  float:$float_right;
+  width:132px;
+  height:58px;
+  line-height:58px;
+  text-align: center;
+  text-decoration: $a_decline;
+  color:#ffffff;
+  background: #2597ba;
+}
+/*about主要信息部分*/
+#about-containerInfo{
+  background: #eeeeee;
+  color:#434242;
+  padding:56px 0 100px;
+}
+#about-containerInfo>div{
+  line-height:25px;
+  width:1200px;
+  margin:$margin;
+}
+/*about中间主要部分结束*/
+
+/*about申请使用部分开始*/
+/*about申请使用背景*/
+#about-try{
+  width:100%;
+  height:491px;
+  background:url("img/first_images/bg33.jpg") no-repeat ;
+}
+/*about申请使用文字*/
+#about-try>span{
+  display: $come;
+  text-align: center;
+  color:#fff;
+  font-size:36px;
+  padding:148px 0 24px;
+  line-height:50px;
+}
+#about-try>div{
+  display: $come;
+  text-align: center;
+  color:#fff;
+  font-size:18px;
+  padding-bottom:45px;
+}
+/*about申请使用按钮*/
+#about-applyProbationButton{
+  display: $come;
+  text-align: center;
+  color:#fff;
+  font-size:24px;
+  width:201px;
+  height:57px;
+  line-height:57px;
+  background: #edab00;
+  margin:$margin;
+  text-decoration: $a_decline;
+  &:hover{
+    background: #f59701;
+  }
+}
+/*about申请使用部分结束*/
+
+/*about五大服务开始*/
+#about-fivServeFunc{
+  width:100%;
+  height:120px;
+  color:#434242;
+  display: $come;
+}
+/*about五大服务列表*/
+#about-serveInfo{
+  width:1130px;
+  padding:0 35px;
+  margin:$margin;
+}
+/*about单个服务功能*/
+#about-serveInfo>ul>li{
+  list-style-type: $ul_list_style;
+  float: $float_left;
+  margin-right:34px;
+  padding:25px 0;
+  width:187px;
+  height:70px;
+}
+#about-serveInfo>ul>li>a{
+  display: $come;
+  width:187px;
+  height:70px;
+  text-decoration: $a_decline;
+  font-size:24px;
+  color:#535353;
+  border-right:1px solid #c9c9c9;
+  line-height: 70px;
+  padding-right:18px;
+  text-align: right;
+}
+.about-serve1{
+  background:url("img/first_images/iconyi.png") no-repeat left center;
+}
+.about-serve2{
+  background:url("img/first_images/iconda.png") no-repeat left center;
+}
+.about-serve3{
+  background:url("../img/first_images/iconyin.png") no-repeat left center;
+}
+.about-serve4{
+  background:url("img/first_images/iconquan.png") no-repeat left center;
+}
+.about-serve5{
+  background:url("img/first_images/iconzi.png") no-repeat left center;
+}
+/*about五大服务结束*/
+
+
+/*about底部*/
+#about-foot{
+  background: #e5e5e5;
+  padding:40px 0;
+}
+#about-footMain{
+  width:1200px;
+  margin:$margin;
+  text-align:center;
+}
+/*about底部上开始*/
+#about-footTop{
+  width:1200px;
+  height:166px;
+}
+/*about底部上信息开始*/
+#about-footInfo{
+  width:920px;
+  height:166px;
+}
+#about-footInfo>ul{
+  float:$float_left;
+  text-align:left;
+  margin-right:90px;
+  list-style-type: $ul_list_style;
+}
+#about-footInfo>ul>li>a{
+  text-decoration: $a_decline;
+  color:#535353;
+  font-size:12px;
+  line-height:25px;
+}
+#about-footInfo>ul>li>span>a{
+  font-size:16px;
+  display:$come;
+  margin-bottom:20px;
+  text-decoration: $a_decline;
+  color:#535353;
+}
+/*about底部上二维码*/
+#about-footQRcode{
+  width:106px;
+  height:162px;
+  float: $float_right;
+  margin-top:-166px;
+  margin-left:186px;
+}
+#about-footQRcode>span{
+  font-weight:bold;
+  color:#535353;
+  display: $come;
+  line-height:18px;
+  margin-top:10px;
+}
+/*about底部上信息结束*/
+/*about底部上结束*/
+
+/*about底部下友情链接*/
+#about-footBottom{
+  text-align: $float_left;
+  padding:34px 0 20px;
+  border-bottom:1px solid #c5c5c5;
+}
+#about-footBottom>span{
+  font-size:12px;
+  color:#535353;
+}
+#about-footBottom>a{
+  font-size:12px;
+  color:#535353;
+  text-decoration: $a_decline;
+}
+
+/*about底部版权*/
+#about-footCopyright{
+  width:1200px;
+  height:100px;
+}
+#about-footCopyrightMain{
+  width:1000px;
+  margin:$margin;
+  padding-top:25px;
+  line-height:25px;
+  color:#434242;
+}
+#about-footCopyrightMain>span>a{
+  text-decoration: $a_decline;
+  color:#434242;
+}
+
+
+/*右边固定部分*/
+#index_fixedBox{
+  width: 60px;
+  height: 400px;
+  position: fixed;
+  right: 4px;
+  top:355px;
+  z-index: 3;
+  ul{
+    list-style-type: $ul_list_style;
+    $common_h:50px;
+    li{
+      width: 100%;
+      height: $common_h;
+      border: 1px solid #2597ba;
+      position: relative;
+      background: #FFFFFF;
+      margin-top: 4px;
+    }
+    a{
+      width: 60px;
+      height: $common_h;
+      border-right: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      cursor: $cursor;
+    }
+    //图片
+    .tel a {
+      background: url("img/about_images/icon16.png") no-repeat center;
+    }
+    .wx a{
+      background: url("img/about_images/icon17.png") no-repeat center;
+    }
+    .QQ a{
+      background: url("img/about_images/icon18.png") no-repeat center;
+    }
+    .arrow a {
+      background: url("img/first_images/icon19.png") no-repeat center;
+    }
+    //电话显示隐藏
+    .tel>div{
+      display: none;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: #FFFFFF;
+      position: absolute;
+      top: -1px;
+      left: -201px;
+      border: 1px solid #2597ba;
+      color: #2597ba;
+      border-right: 0;
+    }
+    .tel span{
+      font-size: 15px;
+    }
+    .tel:hover div{
+      display: block;
+    }
+    //二维码显示隐藏
+    .wx>div{
+      display: none;
+      width: 106px;
+      height: 106px;
+      border: 1px solid #2597ba;
+      position: absolute;
+      top: -56px;
+      left: -116px;
+    }
+    .wx:hover div{
+      display: block;
+    }
+  }
+  //相应的hover样式
+  .tel:hover a {
+    background: url("img/about_images/icon20dzf.png") no-repeat center;
+  }
+  .wx:hover a{
+    background: url("img/about_images/icon21dzf.png") no-repeat center;
+  }
+  .QQ:hover a{
+    background: url("img/about_images/icon18dzf.png") no-repeat center;
+  }
+  .arrow:hover a{
+    background: url("img/about_images/icon23.png") no-repeat center;
+  }
+  #up{
+    display: none;
+  }
+}
+/*右边固定结束*/
+
+
