@@ -1,0 +1,514 @@
+//一些共同的样式
+$margin:0 auto;    //居中显示
+$font-family: "Microsoft YaHei";
+$float_left:left;    //左浮动
+$ul_list_style:none;  //去除ul前方的点
+$ul_padding:0;       //去除ul的默认内边距
+$a_decline:none;     //去除a的下划线
+$float_right:right;
+$cursor:pointer;
+$come:block;   //display:block
+
+//混合宏的样式
+@mixin all{
+  margin: 0;
+  padding: 0;
+}
+@mixin sub_li{    //二级导航中li的样式
+  float: none;
+  margin: 0;
+}
+@mixin sub_li_hover{
+  background-color: #2597BA;
+}
+@mixin three_sub{
+  background-color: white;
+  width: 130px;
+  color: #000000;
+  line-height: 40px;
+  float: left;
+  opacity: .8;
+  display: none;
+  position: relative;
+  list-style: $ul_list_style;
+  text-align: center;
+}
+@mixin pro_RL{
+  width: 600px;
+  height: 605px;
+  float: left;
+
+
+}
+*{
+  @include all;
+  outline: none;
+}
+#production_content{
+  width: 1900px;
+  height:4800px;
+  overflow: hidden;
+  margin: $margin;
+}
+a{
+  color: #000000;
+  text-decoration: $a_decline;
+}
+//导航栏样式
+nav{
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  left:0;
+  color: #FFF;
+  z-index: 999;
+  img{
+    margin:5px 100px;
+  }
+  #main_nav{
+    list-style: $ul_list_style;
+    float: $float_right;
+    margin-right: 12vw;
+    width: 780px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    li{
+      width: 130px;
+      float: $float_left;
+      cursor: $cursor;
+      a{
+        color: #ffffff;
+        text-decoration: $a_decline;
+      }
+    }
+  }
+}
+//二级菜单
+#index_proSecNav{
+  height:210px ;
+  @include three_sub;
+}
+#index_prolist:hover #index_proSecNav,#index_newlist:hover #index_newSecNav,#index_aboutlist:hover #index_aboutSecNav{
+  display: $come;
+}
+#index_proSecNav li,#index_newSecNav li,#index_aboutSecNav li{
+  @include sub_li;
+}
+#index_proSecNav li:hover,#index_newSecNav li:hover,#index_aboutSecNav li:hover{
+  @include sub_li_hover;
+}
+#index_newSecNav{
+  height:125px ;
+  @include three_sub;
+}
+#index_aboutSecNav{
+  width: 130px;
+  @include three_sub;
+}
+#content{
+  background-image: url("img/newActive_images/top.jpg");
+  height: 359px;
+}
+//导航栏结束
+//中间导航
+#pro_pagenav{
+  width: 100vw;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  ul{
+    margin-left:10vw ;
+  }
+  li{
+    font-size: 14px;
+    float: $float_left;
+    width: 125px;
+    margin-right: 20px;
+    list-style-type: $ul_list_style;
+    cursor: $cursor;
+    &:hover{
+      color: #2597BA;
+    }
+  }
+  button{;
+    width:135px ;
+    height: 60px;
+    float: right;
+    font-size: 16px;
+    color: white;
+    margin-right: 10vw;
+    background-color: #2597BA;
+    border: 1px solid #2597BA;
+  }
+}
+
+//无人机模块样式
+#pro_UAV{
+  height: 605px;
+  background-color: #F2F2F2;
+}
+.pro_detailsgray{
+  width: 1200px;
+  height: 605px;
+  margin: $margin;
+}
+.pro_detailsGrayLeft,.pro_detailsWhiteRight{
+  @include pro_RL;
+}
+.pro_detailsGrayLeft img{
+  margin-top: 80px;
+}
+//按钮
+#production_content {
+  .pro_button{
+    width: 190px;
+    height: 50px;
+    margin:40px 135px ;
+    background-color: orange;
+    border: 1px solid orange;
+    font-size: 20px;
+    color: white;
+    cursor: $cursor;
+    &:hover{
+      background-color: orangered;
+    }
+  }
+}
+.pro_detailsGrayRight,.pro_detailsWhiteLeft{
+  @include pro_RL;
+  color: dimgray;
+  line-height: 30px;
+  font-size: 14px;
+}
+.pro_detailsGrayRight span,#pro_CALleft span,.pro_detailsWhiteLeft span{
+  display: $come;
+}
+.pro_title{
+  margin-top: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2597BA;
+}
+//信贷管理系统模块
+#pro_creditAndLoan{
+  margin:$margin;
+  width: 1200px;
+  height:480px ;
+}
+#pro_CALleft{
+  width:700px;
+  height: 480px;
+  line-height: 30px;
+  float: $float_left;
+  color: dimgray;
+  font-size: 14px;
+  dl{
+    width:200px ;
+    height: 130px;
+    float: $float_left;
+    border: 1px solid #2597BB;
+    text-align: center;
+    padding-top: 25px;
+    margin:80px 27px 0 0;
+    color: #2597BB;
+  }
+  .logoturn{
+     background-color: #2597BA;
+     color: white;
+   }
+  p{
+      position: relative;
+      top: 30px;
+      display: none;
+    }
+  .on{
+    display: $come;
+  }
+}
+#examine{
+  background: url("img/protect_images/icon32.png") no-repeat 62px 28px;
+}
+#finance{
+  background: url("img/protect_images/icon33.png") no-repeat 73px 22px;
+}
+#collection {
+  background: url("img/protect_images/icon34.png") no-repeat 67px 23px;
+}
+#pro_CALright{
+  width: 450px;
+  height: 450px;
+  padding-top: 30px;
+  float: $float_right;
+}
+//产品详情轮播
+#pro_carouse{
+  height: 500px;
+  background-color: #2597BB;
+}
+#pro_carouseDetails{
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+#pro_carouselist{
+  width: 3900px;
+  height: 300px;
+  position: relative;
+  top: 100px;
+  transition:all .5s ease-in-out
+}
+//轮播箭头样式
+#pro_carouseArrow{
+  width: 1200px;
+  height: 1px;
+  z-index: 999;
+  position: relative;
+  top:217px;
+  font-weight: bold;
+  span{
+    font-size: 70px;
+    display: $come;
+    color: #FFF;
+    cursor: $cursor;
+  }
+}
+#pro_PrevPic{
+  float: $float_left;
+}
+#pro_NextPic{
+  float: $float_right;
+}
+//箭头样式结束
+.pro_carouseText{
+  width: 540px;
+  height: 300px;
+  float: $float_left;
+  margin: -108px 60px 0 30px;
+  line-height:1.5;
+  font-size:14px;
+  color: white;
+}
+#examineSystem{
+  margin:-15px 60px 0 0;
+}
+.pro_carouseTitle{
+  display: $come;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+//大数据征信
+#pro_bigData{
+  height: 605px;
+  background-color: #F2F2F2;
+}
+//银行对接
+#pro_bankDock{
+  width: 1200px;
+  height: 605px;
+  margin: $margin;
+}
+.pro_detailsWhiteRight img{
+  margin:100px 0 0 150px;
+}
+.pro_whitebutton{
+  width: 190px;
+  height: 50px;
+  margin:40px 210px ;
+  background-color: orange;
+  border: 1px solid orange;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  &:hover{
+    background-color: orangered;
+  }
+}
+//结束
+
+#pro_consult{
+  height: 605px;
+  background-color: #F2F2F2;
+}
+//底部
+#foot_pic{
+  width: 100vw;
+  height:380px ;
+  padding-top: 80px;
+  margin: $margin;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  background: url("img/first_images/bg33.jpg") no-repeat;
+  button{
+    width: 190px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: orange;
+    border: 1px solid orange;
+    font-size: 20px;
+    color: white;
+    cursor: $cursor;
+    &:hover{
+      background-color: orangered;
+    }
+  }
+}
+#foot_servelist{
+  width:1200px;
+  height:90px ;
+  margin: $margin;
+  padding: 10px 0;
+  li{
+    width: 200px;
+    height: 80px;
+    margin-right: 20px;
+    border-right: 1px solid darkgray;
+    font-size: 20px;
+    list-style-type: $ul_list_style;
+    float: $float_left;
+  }
+  a{
+    color: #000000;
+    text-decoration: $a_decline;
+  }
+  img{
+    vertical-align: middle;
+  }
+}
+#foot_fastentrance{
+  width: 100vw;
+  height: 450px;
+  background-color: #DBDBDB;
+  color: dimgray;
+  ul{
+    float: $float_left;
+    list-style: $ul_list_style;
+    margin:70px 70px 0 30px;
+  }
+}
+#foot_list{
+  width: 90vw;
+  height: 280px;
+  margin: $margin;
+  font-size: 14px;
+  line-height: 30px;
+  border-bottom: 2px solid gray;
+  .foot_listTitle{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  a{
+    color: dimgray;
+    text-decoration: $a_decline;
+  }
+}
+#foot_wechat{
+  width: 110px;
+  height: 170px;
+  float: $float_right;
+  margin-top: 30px;
+}
+#foot_copyright{
+  padding-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+}
+
+//右边固定部分
+#index_fixedBox{
+  width: 60px;
+  height: 400px;
+  position: fixed;
+  right: 4px;
+  top:355px;
+  z-index: 3;
+  ul{
+    list-style-type: $ul_list_style;
+    $common_h:50px;
+    li{
+      width: 100%;
+      height: $common_h;
+      border: 1px solid #2597ba;
+      position: relative;
+      background: #FFFFFF;
+      margin-top: 4px;
+    }
+    a{
+      width: 60px;
+      height: $common_h;
+      border-right: 0;
+      background: no-repeat center;
+      display: $come;
+      cursor: $cursor;
+    }
+    //图片
+    .tel a {
+      background: url("img/about_images/icon16.png") no-repeat center;
+    }
+    .wx a{
+      background: url("img/about_images/icon17.png") no-repeat center;
+    }
+    .QQ a{
+      background: url("img/about_images/icon18.png") no-repeat center;
+    }
+    .arrow a {
+      background: url("img/first_images/icon19.png") no-repeat center;
+    }
+    //电话显示隐藏
+    .tel>div{
+      display: none;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: #FFFFFF;
+      position: absolute;
+      top: -1px;
+      left: -201px;
+      border: 1px solid #2597ba;
+      color: #2597ba;
+      border-right: 0;
+    }
+    .tel span{
+      font-size: 15px;
+    }
+    .tel:hover div{
+      display: $come;
+    }
+    //二维码显示隐藏
+    .wx>div{
+      display: none;
+      width: 106px;
+      height: 106px;
+      border: 1px solid #2597ba;
+      position: absolute;
+      top: -56px;
+      left: -116px;
+    }
+    .wx:hover div{
+      display: $come;
+    }
+  }
+  //相应的hover样式
+  .tel:hover a {
+    background: url("img/about_images/icon20dzf.png") no-repeat center;
+  }
+  .wx:hover a{
+    background: url("img/about_images/icon21dzf.png") no-repeat center;
+  }
+  .QQ:hover a{
+    background: url("img/about_images/icon18dzf.png") no-repeat center;
+  }
+  .arrow:hover a{
+    background: url("img/about_images/icon23.png") no-repeat center;
+  }
+  #up{
+    display: none;
+  }
+}
