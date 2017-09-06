@@ -129,7 +129,7 @@ nav{
 #bg{
   width: 1900px;
   height: 420px;
-  background-image: url("img/about_images/top.jpg");
+  background-image: url("../img/about_images/top.jpg");
 }
 /*about头部结束*/
 
@@ -199,7 +199,7 @@ div{
 #about-try{
   width:100%;
   height:491px;
-  background:url("img/first_images/bg33.jpg") no-repeat ;
+  background:url("../img/first_images/bg33.jpg") no-repeat ;
 }
 /*about申请使用文字*/
 #about-try>span{
@@ -270,19 +270,19 @@ div{
   text-align: right;
 }
 .about-serve1{
-  background:url("img/first_images/iconyi.png") no-repeat left center;
+  background:url("../img/first_images/iconyi.png") no-repeat left center;
 }
 .about-serve2{
-  background:url("img/first_images/iconda.png") no-repeat left center;
+  background:url("../img/first_images/iconda.png") no-repeat left center;
 }
 .about-serve3{
   background:url("../img/first_images/iconyin.png") no-repeat left center;
 }
 .about-serve4{
-  background:url("img/first_images/iconquan.png") no-repeat left center;
+  background:url("../img/first_images/iconquan.png") no-repeat left center;
 }
 .about-serve5{
-  background:url("img/first_images/iconzi.png") no-repeat left center;
+  background:url("../img/first_images/iconzi.png") no-repeat left center;
 }
 /*about五大服务结束*/
 
@@ -408,16 +408,16 @@ div{
     }
     //图片
     .tel a {
-      background: url("img/about_images/icon16.png") no-repeat center;
+      background: url("../img/about_images/icon16.png") no-repeat center;
     }
     .wx a{
-      background: url("img/about_images/icon17.png") no-repeat center;
+      background: url("../img/about_images/icon17.png") no-repeat center;
     }
     .QQ a{
-      background: url("img/about_images/icon18.png") no-repeat center;
+      background: url("../img/about_images/icon18.png") no-repeat center;
     }
     .arrow a {
-      background: url("img/first_images/icon19.png") no-repeat center;
+      background: url("../img/first_images/icon19.png") no-repeat center;
     }
     //电话显示隐藏
     .tel>div{
@@ -456,21 +456,19 @@ div{
   }
   //相应的hover样式
   .tel:hover a {
-    background: url("img/about_images/icon20dzf.png") no-repeat center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
   }
   .wx:hover a{
-    background: url("img/about_images/icon21dzf.png") no-repeat center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
   }
   .QQ:hover a{
-    background: url("img/about_images/icon18dzf.png") no-repeat center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
   }
   .arrow:hover a{
-    background: url("img/about_images/icon23.png") no-repeat center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
   }
   #up{
     display: none;
   }
 }
 /*右边固定结束*/
-
-

@@ -254,7 +254,7 @@ $ul_list_style:none;       //去掉ul的小圆点
   #client_head{
     width: 1905px;
     height: 359px;
-    background-image:url("/img/client_images/top03.jpg") ;
+    background-image:url("../img/client_images/top03.jpg") ;
   }
   #client_caseA,#client_caseC{
     width: 1905px;
@@ -301,7 +301,7 @@ $ul_list_style:none;       //去掉ul的小圆点
   #client_picA,#client_picC{
     width: 492px;
     height: 321px;
-    background:url("/img/client_images/01%20_2.jpg") no-repeat center ;
+    background:url("../img/client_images/01%20_2.jpg") no-repeat center ;
     overflow: hidden;
     background-size: 100%;
     transition:all 0.4s ease-in-out;
@@ -313,7 +313,7 @@ $ul_list_style:none;       //去掉ul的小圆点
     }
   }
   #client_picC{
-    background-image:url("/img/client_images/01%20_3.jpg") ;
+    background-image:url("../img/client_images/01%20_3.jpg") ;
   }
 //案例ABC超链接
   #client_caseA,#client_caseB,#client_caseC,{
@@ -382,7 +382,7 @@ $ul_list_style:none;       //去掉ul的小圆点
   #client_apply{
     width: 1905px;
     height: 438px;
-    background-image:url("/img/first_images/bg33.jpg");
+    background-image:url("../img/first_images/bg33.jpg");
     z-index:1;
   }
   #client_try{

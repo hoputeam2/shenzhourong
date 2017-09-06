@@ -108,7 +108,7 @@ nav{
   @include three_sub;
 }
 #content{
-  background-image: url("img/newActive_images/top.jpg");
+  background-image: url("../img/newActive_images/top.jpg");
   height: 359px;
 }
 //导航栏结束
@@ -228,13 +228,13 @@ nav{
   }
 }
 #examine{
-  background: url("img/protect_images/icon32.png") no-repeat 62px 28px;
+  background: url("../img/protect_images/icon32.png") no-repeat 62px 28px;
 }
 #finance{
-  background: url("img/protect_images/icon33.png") no-repeat 73px 22px;
+  background: url("../img/protect_images/icon33.png") no-repeat 73px 22px;
 }
 #collection {
-  background: url("img/protect_images/icon34.png") no-repeat 67px 23px;
+  background: url("../img/protect_images/icon34.png") no-repeat 67px 23px;
 }
 #pro_CALright{
   width: 450px;
@@ -343,7 +343,7 @@ nav{
   color: white;
   text-align: center;
   line-height: 30px;
-  background: url("img/first_images/bg33.jpg") no-repeat;
+  background: url("../img/first_images/bg33.jpg") no-repeat;
   button{
     width: 190px;
     height: 50px;
@@ -449,16 +449,16 @@ nav{
     }
     //图片
     .tel a {
-      background: url("img/about_images/icon16.png") no-repeat center;
+      background: url("../img/about_images/icon16.png") no-repeat center;
     }
     .wx a{
-      background: url("img/about_images/icon17.png") no-repeat center;
+      background: url("../img/about_images/icon17.png") no-repeat center;
     }
     .QQ a{
-      background: url("img/about_images/icon18.png") no-repeat center;
+      background: url("../img/about_images/icon18.png") no-repeat center;
     }
     .arrow a {
-      background: url("img/first_images/icon19.png") no-repeat center;
+      background: url("../img/first_images/icon19.png") no-repeat center;
     }
     //电话显示隐藏
     .tel>div{
@@ -497,16 +497,16 @@ nav{
   }
   //相应的hover样式
   .tel:hover a {
-    background: url("img/about_images/icon20dzf.png") no-repeat center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
   }
   .wx:hover a{
-    background: url("img/about_images/icon21dzf.png") no-repeat center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
   }
   .QQ:hover a{
-    background: url("img/about_images/icon18dzf.png") no-repeat center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
   }
   .arrow:hover a{
-    background: url("img/about_images/icon23.png") no-repeat center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
   }
   #up{
     display: none;

@@ -89,7 +89,7 @@ nav {
   text-align: center; }
 
 #content {
-  background-image: url("img/newActive_images/top.jpg");
+  background-image: url("../img/newActive_images/top.jpg");
   height: 359px; }
 
 #pro_pagenav {
@@ -196,13 +196,13 @@ nav {
     display: block; }
 
 #examine {
-  background: url("img/protect_images/icon32.png") no-repeat 62px 28px; }
+  background: url("../img/protect_images/icon32.png") no-repeat 62px 28px; }
 
 #finance {
-  background: url("img/protect_images/icon33.png") no-repeat 73px 22px; }
+  background: url("../img/protect_images/icon33.png") no-repeat 73px 22px; }
 
 #collection {
-  background: url("img/protect_images/icon34.png") no-repeat 67px 23px; }
+  background: url("../img/protect_images/icon34.png") no-repeat 67px 23px; }
 
 #pro_CALright {
   width: 450px;
@@ -301,7 +301,7 @@ nav {
   color: white;
   text-align: center;
   line-height: 30px;
-  background: url("img/first_images/bg33.jpg") no-repeat; }
+  background: url("../img/first_images/bg33.jpg") no-repeat; }
   #foot_pic button {
     width: 190px;
     height: 50px;
@@ -393,13 +393,13 @@ nav {
       display: block;
       cursor: pointer; }
     #index_fixedBox ul .tel a {
-      background: url("img/about_images/icon16.png") no-repeat center; }
+      background: url("../img/about_images/icon16.png") no-repeat center; }
     #index_fixedBox ul .wx a {
-      background: url("img/about_images/icon17.png") no-repeat center; }
+      background: url("../img/about_images/icon17.png") no-repeat center; }
     #index_fixedBox ul .QQ a {
-      background: url("img/about_images/icon18.png") no-repeat center; }
+      background: url("../img/about_images/icon18.png") no-repeat center; }
     #index_fixedBox ul .arrow a {
-      background: url("img/first_images/icon19.png") no-repeat center; }
+      background: url("../img/first_images/icon19.png") no-repeat center; }
     #index_fixedBox ul .tel > div {
       display: none;
       width: 200px;
@@ -428,12 +428,12 @@ nav {
     #index_fixedBox ul .wx:hover div {
       display: block; }
   #index_fixedBox .tel:hover a {
-    background: url("img/about_images/icon20dzf.png") no-repeat center; }
+    background: url("../img/about_images/icon20dzf.png") no-repeat center; }
   #index_fixedBox .wx:hover a {
-    background: url("img/about_images/icon21dzf.png") no-repeat center; }
+    background: url("../img/about_images/icon21dzf.png") no-repeat center; }
   #index_fixedBox .QQ:hover a {
-    background: url("img/about_images/icon18dzf.png") no-repeat center; }
+    background: url("../img/about_images/icon18dzf.png") no-repeat center; }
   #index_fixedBox .arrow:hover a {
-    background: url("img/about_images/icon23.png") no-repeat center; }
+    background: url("../img/about_images/icon23.png") no-repeat center; }
   #index_fixedBox #up {
     display: none; }

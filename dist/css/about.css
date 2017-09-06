@@ -101,7 +101,7 @@ nav {
 #bg {
   width: 1900px;
   height: 420px;
-  background-image: url("img/about_images/top.jpg"); }
+  background-image: url("../img/about_images/top.jpg"); }
 
 /*about头部结束*/
 /*about中间主要部分开始*/
@@ -167,7 +167,7 @@ div {
 #about-try {
   width: 100%;
   height: 491px;
-  background: url("img/first_images/bg33.jpg") no-repeat; }
+  background: url("../img/first_images/bg33.jpg") no-repeat; }
 
 /*about申请使用文字*/
 #about-try > span {
@@ -236,19 +236,19 @@ div {
   text-align: right; }
 
 .about-serve1 {
-  background: url("img/first_images/iconyi.png") no-repeat left center; }
+  background: url("../img/first_images/iconyi.png") no-repeat left center; }
 
 .about-serve2 {
-  background: url("img/first_images/iconda.png") no-repeat left center; }
+  background: url("../img/first_images/iconda.png") no-repeat left center; }
 
 .about-serve3 {
   background: url("../img/first_images/iconyin.png") no-repeat left center; }
 
 .about-serve4 {
-  background: url("img/first_images/iconquan.png") no-repeat left center; }
+  background: url("../img/first_images/iconquan.png") no-repeat left center; }
 
 .about-serve5 {
-  background: url("img/first_images/iconzi.png") no-repeat left center; }
+  background: url("../img/first_images/iconzi.png") no-repeat left center; }
 
 /*about五大服务结束*/
 /*about底部*/
@@ -364,13 +364,13 @@ div {
       display: block;
       cursor: pointer; }
     #index_fixedBox ul .tel a {
-      background: url("img/about_images/icon16.png") no-repeat center; }
+      background: url("../img/about_images/icon16.png") no-repeat center; }
     #index_fixedBox ul .wx a {
-      background: url("img/about_images/icon17.png") no-repeat center; }
+      background: url("../img/about_images/icon17.png") no-repeat center; }
     #index_fixedBox ul .QQ a {
-      background: url("img/about_images/icon18.png") no-repeat center; }
+      background: url("../img/about_images/icon18.png") no-repeat center; }
     #index_fixedBox ul .arrow a {
-      background: url("img/first_images/icon19.png") no-repeat center; }
+      background: url("../img/first_images/icon19.png") no-repeat center; }
     #index_fixedBox ul .tel > div {
       display: none;
       width: 200px;
@@ -399,13 +399,13 @@ div {
     #index_fixedBox ul .wx:hover div {
       display: block; }
   #index_fixedBox .tel:hover a {
-    background: url("img/about_images/icon20dzf.png") no-repeat center; }
+    background: url("../img/about_images/icon20dzf.png") no-repeat center; }
   #index_fixedBox .wx:hover a {
-    background: url("img/about_images/icon21dzf.png") no-repeat center; }
+    background: url("../img/about_images/icon21dzf.png") no-repeat center; }
   #index_fixedBox .QQ:hover a {
-    background: url("img/about_images/icon18dzf.png") no-repeat center; }
+    background: url("../img/about_images/icon18dzf.png") no-repeat center; }
   #index_fixedBox .arrow:hover a {
-    background: url("img/about_images/icon23.png") no-repeat center; }
+    background: url("../img/about_images/icon23.png") no-repeat center; }
   #index_fixedBox #up {
     display: none; }
 

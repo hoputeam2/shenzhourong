@@ -83,16 +83,16 @@ $come:block;   //display:block
     }
     //图片
     .tel a {
-      background: url("img/about_images/icon16.png") no-repeat center;
+      background: url("../img/about_images/icon16.png") no-repeat center;
     }
     .wx a{
-      background: url("img/about_images/icon17.png") no-repeat center;
+      background: url("../img/about_images/icon17.png") no-repeat center;
     }
     .QQ a{
-      background: url("img/about_images/icon18.png") no-repeat center;
+      background: url("../img/about_images/icon18.png") no-repeat center;
     }
     .arrow a {
-      background: url("img/first_images/icon19.png") no-repeat center;
+      background: url("../img/first_images/icon19.png") no-repeat center;
     }
     //电话显示隐藏
     .tel>div{
@@ -131,16 +131,16 @@ $come:block;   //display:block
   }
   //相应的hover样式
   .tel:hover a {
-    background: url("img/about_images/icon20dzf.png") no-repeat center;
+    background: url("../img/about_images/icon20dzf.png") no-repeat center;
   }
   .wx:hover a{
-    background: url("img/about_images/icon21dzf.png") no-repeat center;
+    background: url("../img/about_images/icon21dzf.png") no-repeat center;
   }
   .QQ:hover a{
-    background: url("img/about_images/icon18dzf.png") no-repeat center;
+    background: url("../img/about_images/icon18dzf.png") no-repeat center;
   }
   .arrow:hover a{
-    background: url("img/about_images/icon23.png") no-repeat center;
+    background: url("../img/about_images/icon23.png") no-repeat center;
   }
   #up{
     display: none;
@@ -201,7 +201,7 @@ nav{
   @include three_sub;
 }
 #content{
-  background-image: url("img/newActive_images/top.jpg");
+  background-image: url("../img/newActive_images/top.jpg");
   height: 359px;
 }
 //导航栏结束
@@ -328,7 +328,7 @@ nav{
 #client_apply{
   width: 1905px;
   height: 438px;
-  background-image:url(img/first_images/bg33.jpg);
+  background-image:url("../img/first_images/bg33.jpg");
 }
 #client_try{
   width: 800px;
@@ -444,6 +444,3 @@ footer{
   top: 21px;
   left: 263px;
 }
-
-
-

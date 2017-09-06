@@ -18,6 +18,25 @@ gulp.task("watch",function(){
   gulp.watch("./scss/*.scss",["sass"])
 })
 
+gulp.task('rev', function () {
+return gulp.src(['rev/**/*.json', './html/*.html'])
+  .pipe( revCollector({
+        replaceReved: true,
+        dirReplacements: {
+            '../css': '../cssmin',
+            '../js': '../jsmin',
+          }
+        })
+      )
+      .pipe(minhtml({
+        empty:true,
+        spare:true
+        }
+      ))
+      .pipe(gulp.dest("./dist/htmlmin"))
+
+})
+
 gulp.task("cssmin",function(){
     gulp.src("./dist/css/*.css")
         .pipe(rev())
@@ -51,16 +70,3 @@ gulp.task("imgmin",function(){
         .pipe(rev.manifest())
         .pipe(gulp.dest("./rev/img"))
 });
-
-
-gulp.task('rev', function () {
-return gulp.src(['rev/**/*.json', 'dist/htmlmin/*.html'])
-  .pipe( revCollector({
-        replaceReved: true,
-        dirReplacements: {
-            '../css': '../cssmin',
-            '../js': '../jsmin'
-      }
-    })
-  )
-})
